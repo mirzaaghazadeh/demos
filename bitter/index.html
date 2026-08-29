@@ -68,7 +68,8 @@ header.scrolled{border-bottom-color:var(--border)}
 /* phones */
 .phones{display:flex;justify-content:center;align-items:flex-end;gap:0;position:relative;min-height:560px}
 .phone{width:240px;aspect-ratio:9/19.2;border-radius:38px;border:9px solid #1B2C42;background:#1B2C42;overflow:hidden;position:relative;box-shadow:0 30px 60px -20px rgba(27,44,66,.35);flex:none;display:flex;flex-direction:column}
-.phone iframe{width:100%;flex:1;border:0;display:block;background:#fff}
+.phone iframe{position:absolute;top:0;right:0;border:0;display:block;background:#fff;transform-origin:top right}
+.screen{flex:1;position:relative;overflow:hidden}
 .statusbar{flex:none;height:30px;background:#fff;position:relative;display:flex;align-items:center;justify-content:space-between;padding:0 14px;font-family:system-ui,-apple-system,sans-serif;font-size:12px;font-weight:700;color:#1B2C42}
 .statusbar .notch{position:absolute;top:5px;left:50%;transform:translateX(-50%);width:76px;height:20px;background:#1B2C42;border-radius:10px}
 .statusbar .sb-icons{display:flex;gap:4px;align-items:center;color:#1B2C42}
@@ -374,7 +375,24 @@ addEventListener('scroll',function(){
     +'</span></div>';
   document.querySelectorAll('.phone').forEach(function(ph){
     if(!ph.querySelector('.statusbar')) ph.insertAdjacentHTML('afterbegin',SB);
+    var f=ph.querySelector('iframe');
+    if(f && !ph.querySelector('.screen')){
+      var sc=document.createElement('div'); sc.className='screen';
+      ph.replaceChild(sc,f); sc.appendChild(f);
+    }
   });
+  function fit(){
+    document.querySelectorAll('.phone').forEach(function(ph){
+      var sc=ph.querySelector('.screen'); if(!sc) return;
+      var f=sc.querySelector('iframe'); if(!f) return;
+      var s=sc.clientWidth/375;
+      f.style.width='375px';
+      f.style.height=(sc.clientHeight/s)+'px';
+      f.style.transform='scale('+s+')';
+    });
+  }
+  fit();
+  addEventListener('resize',function(){requestAnimationFrame(fit)});
 })();
 </script>
 </body>

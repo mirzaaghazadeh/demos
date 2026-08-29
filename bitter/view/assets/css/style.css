@@ -29,6 +29,9 @@ body {
   -moz-user-select: none;
   -webkit-user-select: none; }
 
+html {
+  overflow-x: clip; }
+
 a {
   transition: .2s all;
   color: #565EFF;
