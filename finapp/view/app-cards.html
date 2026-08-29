@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#000000">
+    <title>فین اپ</title>
+    <meta name="description" content="Finapp HTML Mobile Template">
+    <meta name="keywords" content="bootstrap, wallet, banking, fintech mobile template, cordova, phonegap, mobile, html, responsive" />
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" sizes="32x32">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icon/192x192.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="manifest" href="__manifest.json">
+</head>
+
+<body>
+
+    <!-- loader -->
+    <div id="loader">
+        <img src="assets/img/loading-icon.png" alt="icon" class="loading-icon">
+    </div>
+    <!-- * loader -->
+
+    <!-- App Header -->
+    <div class="appHeader">
+        <div class="left">
+            <a href="#" class="headerButton goBack">
+                <ion-icon name="chevron-back-outline"></ion-icon>
+            </a>
+        </div>
+        <div class="pageTitle">
+            کارت های من
+        </div>
+        <div class="right">
+            <a href="#" class="headerButton" data-bs-toggle="modal" data-bs-target="#addCardActionSheet">
+                <ion-icon name="add-outline"></ion-icon>
+            </a>
+        </div>
+    </div>
+    <!-- * App Header -->
+
+
+    <!-- Add Card Action Sheet -->
+    <div class="modal fade action-sheet" id="addCardActionSheet" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">کارتی بیافزایید</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="action-sheet-content">
+                        <form>
+                            <div class="form-group basic">
+                                <div class="input-wrapper">
+                                    <label class="label" for="cardnumber1">شماره کارت</label>
+                                    <input type="number" id="cardnumber1" class="form-control"
+                                        placeholder="شماره کارت را وارد نمایید">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group basic">
+                                        <div class="input-wrapper">
+                                            <label class="label">تاریخ انقضا</label>
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <select class="form-control custom-select" id="exp-month">
+                                                        <option value="01">01</option>
+                                                        <option value="02">02</option>
+                                                        <option value="03">03</option>
+                                                        <option value="04">04</option>
+                                                        <option value="05">05</option>
+                                                        <option value="06">06</option>
+                                                        <option value="07">07</option>
+                                                        <option value="08">08</option>
+                                                        <option value="09">09</option>
+                                                        <option value="10">10</option>
+                                                        <option value="11">11</option>
+                                                        <option value="12">12</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-6">
+                                                    <select class="form-control custom-select" id="exp-year">
+                                                        <option value="1401">1401</option>
+                                                        <option value="1402">1402</option>
+                                                        <option value="1403">1403</option>
+                                                        <option value="1404">1404</option>
+                                                        <option value="1405">1405</option>
+                                                        <option value="1406">1406</option>
+                                                        <option value="1407">1407</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group basic">
+                                        <div class="input-wrapper">
+                                            <label class="label" for="cardcvv">
+                                                CVV
+                                                <a href="#" class="ms-05" data-bs-toggle="tooltip"
+                                                    data-bs-placement="top" title="کدد cvv کارت شما">
+                                                    این چیه؟
+                                                </a>
+                                            </label>
+                                            <input type="number" id="cardcvv" class="form-control"
+                                                placeholder="کد 3 رقمی کارت">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group basic mt-2">
+                                <button type="button" class="btn btn-primary btn-block btn-lg"
+                                    data-bs-dismiss="modal">اضافه کردن</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- * Add Card Action Sheet -->
+
+    <!-- App Capsule -->
+    <div id="appCapsule">
+
+        <div class="section mt-2">
+
+            <!-- card block -->
+            <div class="card-block mb-2">
+                <div class="card-main">
+                    <div class="card-button dropdown">
+                        <button type="button" class="btn btn-link btn-icon" data-bs-toggle="dropdown">
+                            <ion-icon name="ellipsis-horizontal"></ion-icon>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a class="dropdown-item" href="#">
+                                <ion-icon name="pencil-outline"></ion-icon>ویرایش کنید
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <ion-icon name="close-outline"></ion-icon>برداشتن
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <ion-icon name="arrow-up-circle-outline"></ion-icon>ارتقا دهید
+                            </a>
+                        </div>
+                    </div>
+                    <div class="balance">
+                        <span class="label">موجودی</span>
+                        <h1 class="title">1,256,90 تومان</h1>
+                    </div>
+                    <div class="in">
+                        <div class="card-number">
+                            <span class="label">شماره کارت</span>
+                            9905 ••••
+                        </div>
+                        <div class="bottom">
+                            <div class="card-expiry">
+                                <span class="label">انقضا</span>
+                                12 / 25
+                            </div>
+                            <div class="card-ccv">
+                                <span class="label">CCV</span>
+                                553
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- * card block -->
+
+            <!-- card block -->
+            <div class="card-block bg-secondary mb-2">
+                <div class="card-main">
+                    <div class="card-button dropdown">
+                        <button type="button" class="btn btn-link btn-icon" data-bs-toggle="dropdown">
+                            <ion-icon name="ellipsis-horizontal"></ion-icon>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a class="dropdown-item" href="#">
+                                <ion-icon name="pencil-outline"></ion-icon>ویرایش کنید
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <ion-icon name="close-outline"></ion-icon>برداشتن
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <ion-icon name="arrow-up-circle-outline"></ion-icon>ارتقا دهید
+                            </a>
+                        </div>
+                    </div>
+                    <div class="balance">
+                        <span class="label">موجودی</span>
+                        <h1 class="title">521,44 تومان</h1>
+                    </div>
+                    <div class="in">
+                        <div class="card-number">
+                            <span class="label">شماره کارت</span>
+                            9905 ••••
+                        </div>
+                        <div class="bottom">
+                            <div class="card-expiry">
+                                <span class="label">انقضا</span>
+                                12 / 25
+                            </div>
+                            <div class="card-ccv">
+                                <span class="label">CCV</span>
+                                553
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- * card block -->
+
+            <!-- card block -->
+            <div class="card-block bg-success mb-2">
+                <div class="card-main">
+                    <div class="card-button dropdown">
+                        <button type="button" class="btn btn-link btn-icon" data-bs-toggle="dropdown">
+                            <ion-icon name="ellipsis-horizontal"></ion-icon>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a class="dropdown-item" href="#">
+                                <ion-icon name="pencil-outline"></ion-icon>ویرایش کنید
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <ion-icon name="close-outline"></ion-icon>برداشتن
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <ion-icon name="arrow-up-circle-outline"></ion-icon>ارتقا دهید
+                            </a>
+                        </div>
+                    </div>
+                    <div class="balance">
+                        <span class="label">موجودی</span>
+                        <h1 class="title">52,60 تومان</h1>
+                    </div>
+                    <div class="in">
+                        <div class="card-number">
+                            <span class="label">شماره کارت</span>
+                            9905 ••••
+                        </div>
+                        <div class="bottom">
+                            <div class="card-expiry">
+                                <span class="label">انقضا</span>
+                                12 / 25
+                            </div>
+                            <div class="card-ccv">
+                                <span class="label">CCV</span>
+                                553
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- * card block -->
+
+            <!-- card block -->
+            <div class="card-block bg-danger mb-2">
+                <div class="card-main">
+                    <div class="card-button dropdown">
+                        <button type="button" class="btn btn-link btn-icon" data-bs-toggle="dropdown">
+                            <ion-icon name="ellipsis-horizontal"></ion-icon>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a class="dropdown-item" href="#">
+                                <ion-icon name="pencil-outline"></ion-icon>ویرایش کنید
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <ion-icon name="close-outline"></ion-icon>برداشتن
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <ion-icon name="arrow-up-circle-outline"></ion-icon>ارتقا دهید
+                            </a>
+                        </div>
+                    </div>
+                    <div class="balance">
+                        <span class="label">موجودی</span>
+                        <h1 class="title">1,256,90 تومان</h1>
+                    </div>
+                    <div class="in">
+                        <div class="card-number">
+                            <span class="label">شماره کارت</span>
+                            9905 ••••
+                        </div>
+                        <div class="bottom">
+                            <div class="card-expiry">
+                                <span class="label">انقضا</span>
+                                12 / 25
+                            </div>
+                            <div class="card-ccv">
+                                <span class="label">CCV</span>
+                                553
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- * card block -->
+
+            <!-- card block -->
+            <div class="card-block bg-warning mb-2">
+                <div class="card-main">
+                    <div class="card-button dropdown">
+                        <button type="button" class="btn btn-link btn-icon" data-bs-toggle="dropdown">
+                            <ion-icon name="ellipsis-horizontal"></ion-icon>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a class="dropdown-item" href="#">
+                                <ion-icon name="pencil-outline"></ion-icon>ویرایش کنید
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <ion-icon name="close-outline"></ion-icon>برداشتن
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <ion-icon name="arrow-up-circle-outline"></ion-icon>ارتقا دهید
+                            </a>
+                        </div>
+                    </div>
+                    <div class="balance">
+                        <span class="label">موجودی</span>
+                        <h1 class="title">1,256,90 تومان</h1>
+                    </div>
+                    <div class="in">
+                        <div class="card-number">
+                            <span class="label">شماره کارت</span>
+                            9905 ••••
+                        </div>
+                        <div class="bottom">
+                            <div class="card-expiry">
+                                <span class="label">انقضا</span>
+                                12 / 25
+                            </div>
+                            <div class="card-ccv">
+                                <span class="label">CCV</span>
+                                553
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- * card block -->
+
+            <!-- card block -->
+            <div class="card-block bg-info mb-2">
+                <div class="card-main">
+                    <div class="card-button dropdown">
+                        <button type="button" class="btn btn-link btn-icon" data-bs-toggle="dropdown">
+                            <ion-icon name="ellipsis-horizontal"></ion-icon>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a class="dropdown-item" href="#">
+                                <ion-icon name="pencil-outline"></ion-icon>ویراش کنید
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <ion-icon name="close-outline"></ion-icon>برداشتن
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <ion-icon name="arrow-up-circle-outline"></ion-icon>ارتقا دهید
+                            </a>
+                        </div>
+                    </div>
+                    <div class="balance">
+                        <span class="label">موجودی</span>
+                        <h1 class="title">1,256,90 تومان</h1>
+                    </div>
+                    <div class="in">
+                        <div class="card-number">
+                            <span class="label">شماره کارت</span>
+                            9905 ••••
+                        </div>
+                        <div class="bottom">
+                            <div class="card-expiry">
+                                <span class="label">انقضا</span>
+                                12 / 25
+                            </div>
+                            <div class="card-ccv">
+                                <span class="label">CCV</span>
+                                553
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- * card block -->
+
+            <!-- card block -->
+            <div class="card-block bg-dark mb-2">
+                <div class="card-main">
+                    <div class="card-button dropdown">
+                        <button type="button" class="btn btn-link btn-icon" data-bs-toggle="dropdown">
+                            <ion-icon name="ellipsis-horizontal"></ion-icon>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a class="dropdown-item" href="#">
+                                <ion-icon name="pencil-outline"></ion-icon>ویرایش کنید
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <ion-icon name="close-outline"></ion-icon>برداشتن
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <ion-icon name="arrow-up-circle-outline"></ion-icon>ارتقا دهید
+                            </a>
+                        </div>
+                    </div>
+                    <div class="balance">
+                        <span class="label">موجودی</span>
+                        <h1 class="title">1,256,90 تومان</h1>
+                    </div>
+                    <div class="in">
+                        <div class="card-number">
+                            <span class="label">شماره کارت</span>
+                            9905 ••••
+                        </div>
+                        <div class="bottom">
+                            <div class="card-expiry">
+                                <span class="label">انقضا</span>
+                                12 / 25
+                            </div>
+                            <div class="card-ccv">
+                                <span class="label">CCV</span>
+                                553
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- * card block -->
+
+        </div>
+
+
+    </div>
+    <!-- * App Capsule -->
+
+
+    <!-- App Bottom Menu -->
+    <div class="appBottomMenu">
+        <a href="index.html" class="item">
+            <div class="col">
+                <ion-icon name="pie-chart-outline"></ion-icon>
+                <strong>بررسی اجمالی</strong>
+            </div>
+        </a>
+        <a href="app-pages.html" class="item">
+            <div class="col">
+                <ion-icon name="document-text-outline"></ion-icon>
+                <strong>صفحات</strong>
+            </div>
+        </a>
+        <a href="app-components.html" class="item">
+            <div class="col">
+                <ion-icon name="apps-outline"></ion-icon>
+                <strong>ابزارها</strong>
+            </div>
+        </a>
+        <a href="app-cards.html" class="item active">
+            <div class="col">
+                <ion-icon name="card-outline"></ion-icon>
+                <strong>کارت های من</strong>
+            </div>
+        </a>
+        <a href="app-settings.html" class="item">
+            <div class="col">
+                <ion-icon name="settings-outline"></ion-icon>
+                <strong>تنظیمات</strong>
+            </div>
+        </a>
+    </div>
+    <!-- * App Bottom Menu -->
+
+
+    <!-- ========= JS Files =========  -->
+    <!-- Bootstrap -->
+    <script src="assets/js/lib/bootstrap.bundle.min.js"></script>
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- Splide -->
+    <script src="assets/js/plugins/splide/splide.min.js"></script>
+    <!-- Base Js File -->
+    <script src="assets/js/base.js"></script>
+
+
+</body>
+
+</html>

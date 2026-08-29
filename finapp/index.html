@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>قالب HTML موبایل فین‌آپ | Finapp — کیف پول و بانکداری موبایل</title>
+<meta name="description" content="فین‌آپ — قالب HTML موبایل کیف پول و بانکداری؛ ۶۶ صفحه آماده فارسی، ۳۷ کامپوننت، Bootstrap، سورس SASS، بخش کریپتو و PWA">
+<style>
+@font-face{font-family:IRANSansXFaNum;font-style:normal;font-weight:400;
+  src:url('view/assets/font/woff2/IRANSansXFaNum-Regular.woff2') format('woff2'),
+      url('view/assets/font/woff/IRANSansXFaNum-Regular.woff') format('woff')}
+@font-face{font-family:IRANSansXFaNum;font-style:normal;font-weight:700;
+  src:url('view/assets/font/woff2/IRANSansXFaNum-Bold.woff2') format('woff2'),
+      url('view/assets/font/woff/IRANSansXFaNum-Bold.woff') format('woff')}
+
+:root{
+  --violet:#6236FF; --violet-dark:#4B22D6; --ink:#27173E;
+  --muted:#8B85A0; --line:#E7E4F2; --paper:#FFFFFF; --soft:#F4F3FB;
+  --green:#05D0A4; --amber:#FFB400; --pink:#FF396F; --sky:#3AC0FF;
+  --radius:18px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto} *{animation:none!important;transition:none!important}}
+body{font-family:'IRANSansXFaNum',sans-serif;background:var(--paper);color:var(--muted);line-height:2;font-size:16px;overflow-x:hidden}
+h1,h2,h3,h4{color:var(--ink);line-height:1.6;font-weight:700}
+a{color:var(--violet);text-decoration:none;transition:.2s}
+.container{max-width:1140px;margin:0 auto;padding:0 24px}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:28px;height:66px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--ink);font-size:19px}
+.brand .mark{width:36px;height:36px;border-radius:11px;background:linear-gradient(135deg,var(--violet),#9B6BFF);display:grid;place-items:center;color:#fff;font-size:17px}
+.nav .links{display:flex;gap:24px;margin-inline-start:12px;font-size:14.5px}
+.nav .links a{color:var(--muted)}
+.nav .links a:hover{color:var(--violet)}
+.nav .spacer{flex:1}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 22px;border-radius:12px;font-weight:700;font-size:15px;transition:.2s;cursor:pointer;border:0}
+.btn-primary{background:var(--violet);color:#fff;box-shadow:0 8px 22px -8px rgba(98,54,255,.55)}
+.btn-primary:hover{background:var(--violet-dark);transform:translateY(-1px)}
+.btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.btn-ghost:hover{border-color:var(--violet);color:var(--violet)}
+@media(max-width:760px){.nav .links{display:none}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:72px 0 84px;background:
+  radial-gradient(560px 340px at 12% -8%, rgba(98,54,255,.14), transparent 60%),
+  radial-gradient(520px 320px at 92% 6%, rgba(58,192,255,.12), transparent 60%), #fff}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}.hero{padding:48px 0 60px}}
+.pill{display:inline-flex;align-items:center;gap:8px;background:var(--soft);border:1px solid var(--line);color:var(--violet);font-size:13px;font-weight:700;padding:6px 14px;border-radius:99px;margin-bottom:18px}
+.hero h1{font-size:38px;line-height:1.7;margin-bottom:14px}
+.hero h1 em{font-style:normal;color:var(--violet)}
+.hero p.lead{font-size:16.5px;max-width:46ch}
+.hero .ctas{display:flex;gap:14px;margin-top:26px;flex-wrap:wrap}
+.trust{display:flex;gap:22px;margin-top:26px;flex-wrap:wrap;font-size:13.5px;color:var(--muted)}
+.trust span{display:inline-flex;align-items:center;gap:7px}
+.trust svg{color:var(--green)}
+
+/* phone mockup — pure CSS, stylized wallet UI */
+.mock-wrap{position:relative;display:flex;justify-content:center}
+.blob{position:absolute;inset:auto;width:380px;height:380px;border-radius:50%;filter:blur(60px);opacity:.5;
+  background:conic-gradient(from 120deg, #6236FF44, #3AC0FF33, #FF396F22, #6236FF44);top:-20px}
+.phone{position:relative;width:280px;border-radius:38px;background:#1A0F2E;padding:12px;box-shadow:0 30px 70px -22px rgba(39,23,62,.55)}
+.screen{background:var(--soft);border-radius:28px;overflow:hidden;height:560px;display:flex;flex-direction:column}
+.notch{height:26px;display:flex;align-items:center;justify-content:center;gap:6px;background:#fff;font-size:10.5px;color:#1A0F2E}
+.notch b{font-weight:700}
+.notch .cap{width:74px;height:16px;border-radius:99px;background:#1A0F2E}
+.appbar{display:flex;justify-content:space-between;align-items:center;padding:10px 16px;background:#fff}
+.appbar .who{display:flex;align-items:center;gap:9px}
+.appbar .ava{width:32px;height:32px;border-radius:99px;background:linear-gradient(135deg,#FFB400,#FF396F)}
+.appbar .t1{font-size:10.5px;color:var(--muted);line-height:1.4}
+.appbar .t2{font-size:12.5px;color:var(--ink);font-weight:700;line-height:1.4}
+.appbar .bell{width:32px;height:32px;border-radius:11px;background:var(--soft);display:grid;place-items:center;font-size:13px;color:var(--ink)}
+.balance{margin:10px 14px;border-radius:18px;padding:16px;color:#fff;background:linear-gradient(135deg,#6236FF,#9B6BFF);position:relative;overflow:hidden}
+.balance:after{content:"";position:absolute;width:130px;height:130px;border-radius:50%;background:rgba(255,255,255,.14);top:-46px;left:-30px}
+.balance .lbl{font-size:10.5px;opacity:.85}
+.balance .amt{font-size:23px;font-weight:700;margin-top:2px}
+.balance .num{font-size:10.5px;opacity:.8;letter-spacing:2px;margin-top:2px}
+.acts{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:4px 14px 10px}
+.acts .a{background:#fff;border-radius:13px;padding:9px 4px;text-align:center;font-size:10px;color:var(--ink)}
+.acts .i{width:28px;height:28px;margin:0 auto 4px;border-radius:10px;display:grid;place-items:center;font-size:13px;color:#fff}
+.tx{background:#fff;border-radius:16px;margin:0 14px;padding:6px 14px;flex:1;overflow:hidden}
+.tx .h{display:flex;justify-content:space-between;font-size:11px;color:var(--ink);font-weight:700;padding:6px 0 2px}
+.tx .row{display:flex;align-items:center;gap:10px;padding:7px 0;border-top:1px solid var(--line);font-size:11px}
+.tx .ic{width:30px;height:30px;border-radius:11px;display:grid;place-items:center;font-size:12px;color:#fff}
+.tx .t b{display:block;color:var(--ink);font-size:11.5px;line-height:1.5}
+.tx .t span{color:var(--muted);font-size:10px}
+.tx .v{margin-inline-start:auto;font-weight:700;color:var(--ink);font-size:11.5px}
+.tx .v.plus{color:var(--green)}
+.tabbar{display:flex;justify-content:space-around;background:#fff;border-top:1px solid var(--line);padding:9px 0 11px;font-size:9.5px;color:var(--muted)}
+.tabbar .on{color:var(--violet);font-weight:700}
+.tabbar div{text-align:center;line-height:1.5}
+
+/* stats */
+.stats{border-block:1px solid var(--line);background:var(--soft)}
+.stats .row{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;padding:26px 0;text-align:center}
+@media(max-width:760px){.stats .row{grid-template-columns:repeat(2,1fr)}}
+.stats b{display:block;font-size:24px;color:var(--ink)}
+.stats span{font-size:13px}
+
+/* sections */
+section{padding:64px 0}
+.sec-head{text-align:center;max-width:640px;margin:0 auto 40px}
+.sec-head h2{font-size:27px;margin-bottom:8px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:900px){.grid3{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.grid3{grid-template-columns:1fr}}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:24px;transition:.2s}
+.card:hover{transform:translateY(-3px);box-shadow:0 16px 34px -18px rgba(39,23,62,.25);border-color:#D8D2EE}
+.card .ic{width:44px;height:44px;border-radius:13px;display:grid;place-items:center;color:#fff;margin-bottom:14px;font-size:19px}
+.card h3{font-size:16.5px;margin-bottom:6px}
+.card p{font-size:14px}
+
+/* pages showcase */
+.pages{background:var(--soft);border-block:1px solid var(--line)}
+.group{margin-bottom:26px}
+.group h3{font-size:16px;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.group h3 .n{font-size:12px;font-weight:700;color:var(--violet);background:rgba(98,54,255,.1);border-radius:99px;padding:2px 11px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips a{background:#fff;border:1px solid var(--line);border-radius:99px;padding:6px 15px;font-size:13px;color:var(--ink)}
+.chips a:hover{border-color:var(--violet);color:var(--violet);background:rgba(98,54,255,.05)}
+
+/* faq */
+.faq{max-width:760px;margin:0 auto}
+details{border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin-bottom:12px;background:var(--paper)}
+details[open]{border-color:#D8D2EE}
+summary{cursor:pointer;font-weight:700;color:var(--ink);list-style:none;display:flex;justify-content:space-between;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";color:var(--violet);font-size:20px;font-weight:400}
+details[open] summary:after{content:"−"}
+.fa-body{padding-top:10px;font-size:14px}
+
+/* cta */
+.cta{background:linear-gradient(135deg,#6236FF,#8B5CF6);border-radius:26px;color:#fff;padding:46px 40px;text-align:center;position:relative;overflow:hidden}
+.cta:after{content:"";position:absolute;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.12);top:-110px;inset-inline-start:-70px}
+.cta h2{color:#fff;font-size:25px;margin-bottom:8px;position:relative}
+.cta p{opacity:.9;position:relative}
+.cta .btn{background:#fff;color:var(--violet);margin-top:20px;position:relative}
+.cta .btn:hover{transform:translateY(-2px)}
+
+footer{border-top:1px solid var(--line);padding:26px 0;font-size:13.5px;color:var(--muted)}
+footer .container{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="#"><span class="mark">✦</span> فین‌آپ</a>
+    <div class="links">
+      <a href="#features">ویژگی‌ها</a>
+      <a href="#pages">صفحات</a>
+      <a href="#faq">سوالات متداول</a>
+    </div>
+    <div class="spacer"></div>
+    <a class="btn btn-primary" href="https://www.rtl-theme.com/finapp-html-template/" target="_blank" rel="noopener">خرید قالب</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="pill">🚀 قالب HTML موبایل — نسخه فارسی راست‌چین</span>
+      <h1>فین‌آپ؛ <em>کیف پول و بانکداری</em> را برای موبایل بساز</h1>
+      <p class="lead">۶۶ صفحه آماده و ۳۷ کامپوننت حرفه‌ای برای اپلیکیشن‌های مالی: کیف پول، کارت‌ها، تراکنش‌ها، قبوض، پس‌انداز و حتی یک بخش کامل کریپتو — با فونت ایران‌سنس‌ایکس و طراحی مدرن.</p>
+      <div class="ctas">
+        <a class="btn btn-primary" href="https://www.rtl-theme.com/finapp-html-template/" target="_blank" rel="noopener">خرید از راست‌چین</a>
+        <a class="btn btn-ghost" href="view/index.html" target="_blank" rel="noopener">مشاهده پیشنمایش زنده ↗</a>
+      </div>
+      <div class="trust">
+        <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Bootstrap</span>
+        <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> بدون jQuery</span>
+        <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> سورس SASS</span>
+        <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> آماده PWA</span>
+      </div>
+    </div>
+
+    <div class="mock-wrap">
+      <div class="blob"></div>
+      <div class="phone">
+        <div class="screen">
+          <div class="notch"><b>۹:۴۱</b><span class="cap"></span></div>
+          <div class="appbar">
+            <div class="who"><span class="ava"></span><div><div class="t1">صبح بخیر،</div><div class="t2">نوید محمدی</div></div></div>
+            <div class="bell">🔔</div>
+          </div>
+          <div class="balance">
+            <div class="lbl">موجودی کل</div>
+            <div class="amt">۴۸,۲۵۰,۰۰۰ تومان</div>
+            <div class="num">•••• ۴۶۲۹</div>
+          </div>
+          <div class="acts">
+            <div class="a"><span class="i" style="background:#6236FF">↑</span>انتقال</div>
+            <div class="a"><span class="i" style="background:#05D0A4">↓</span>دریافت</div>
+            <div class="a"><span class="i" style="background:#FFB400">＋</span>افزایش</div>
+            <div class="a"><span class="i" style="background:#FF396F">▦</span>کارت‌ها</div>
+          </div>
+          <div class="tx">
+            <div class="h">تراکنش‌های اخیر <span style="color:var(--violet)">همه</span></div>
+            <div class="row"><span class="ic" style="background:#05D0A4">☕</span><span class="t"><b>کافه لاته</b><span>امروز ۰۹:۱۲</span></span><span class="v">− ۸۵,۰۰۰</span></div>
+            <div class="row"><span class="ic" style="background:#6236FF">💼</span><span class="t"><b>حقوق شهریور</b><span>دیروز</span></span><span class="v plus">+ ۳۲,۰۰۰,۰۰۰</span></div>
+            <div class="row"><span class="ic" style="background:#FFB400">⚡</span><span class="t"><b>قبض برق</b><span>۲۹ مرداد</span></span><span class="v">− ۴۲۰,۰۰۰</span></div>
+            <div class="row"><span class="ic" style="background:#3AC0FF">🪙</span><span class="t"><b>خرید بیت‌کوین</b><span>۲۸ مرداد</span></span><span class="v">− ۵,۰۰۰,۰۰۰</span></div>
+          </div>
+          <div class="tabbar">
+            <div class="on">🏠<br>خانه</div>
+            <div>💳<br>کارت</div>
+            <div>📊<br>بازار</div>
+            <div>⚙️<br>تنظیمات</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="stats">
+  <div class="container row">
+    <div><b>۶۶</b><span>صفحه HTML</span></div>
+    <div><b>۳۷</b><span>کامپوننت آماده</span></div>
+    <div><b>۵</b><span>صفحه کریپتو</span></div>
+    <div><b>Bootstrap</b><span>چارچوب CSS</span></div>
+    <div><b>SASS</b><span>سورس قابل شخصی‌سازی</span></div>
+  </div>
+</div>
+
+<section id="features">
+  <div class="container">
+    <div class="sec-head">
+      <h2>چرا فین‌آپ؟</h2>
+      <p>هر چیزی که برای ساخت یک اپلیکیشن مالی موبایل لازم داری، از قبل طراحی و کدنویسی شده.</p>
+    </div>
+    <div class="grid3">
+      <div class="card"><span class="ic" style="background:#6236FF">📱</span><h3>طراحی موبایل‌اول</h3><p>چیدمان کاملاً بهینه برای صفحه موبایل؛ نوار پایین، هدر چسبان، منوها و کارت‌ها همه آماده‌اند.</p></div>
+      <div class="card"><span class="ic" style="background:#05D0A4">🇮🇷</span><h3>فارسی و راست‌چین</h3><p>متن‌ها فارسی، اعداد فارسی با فونت IRANSansX و چیدمان راست‌به‌چپ — بدون دردسر.</p></div>
+      <div class="card"><span class="ic" style="background:#FFB400">🪙</span><h3>بخش کامل کریپتو</h3><p>کیف پول رمزارز، بازار، جزئیات کوین، تبدیل و تراکنش‌های کریپتو؛ ۵ صفحه تخصصی.</p></div>
+      <div class="card"><span class="ic" style="background:#FF396F">🧩</span><h3>۳۷ کامپوننت</h3><p>مودال، اکشن‌شیت، تب، تایم‌لاین، نمودار Apex، چک‌باکس، اسلایدر و... هر چیزی که لازم شود.</p></div>
+      <div class="card"><span class="ic" style="background:#3AC0FF">⚡</span><h3>آماده PWA</h3><p>Service Worker و مانیفست از قبل تنظیم شده؛ قابلیت «افزودن به صفحه اصلی» هم پیاده‌سازی شده.</p></div>
+      <div class="card"><span class="ic" style="background:#27173E">🎨</span><h3>سورس SASS</h3><p>سورس Sass همراه پکیج است؛ رنگ‌ها و فونت‌ها را با چند متغیر به سلیقه خودت تغییر بده.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="pages" class="pages">
+  <div class="container">
+    <div class="sec-head">
+      <h2>همه صفحات، یک‌جا</h2>
+      <p>روی هر صفحه کلیک کنی، همان نسخه زنده را می‌بینی.</p>
+    </div>
+
+    <div class="group">
+      <h3>صفحات اپلیکیشن <span class="n">۲۴ صفحه</span></h3>
+      <div class="chips">
+        <a href="view/index.html" target="_blank">خانه</a>
+        <a href="view/app-cards.html" target="_blank">کارت‌ها</a>
+        <a href="view/app-transactions.html" target="_blank">تراکنش‌ها</a>
+        <a href="view/app-transaction-detail.html" target="_blank">جزئیات تراکنش</a>
+        <a href="view/app-bills.html" target="_blank">قبوض</a>
+        <a href="view/app-savings.html" target="_blank">پس‌انداز</a>
+        <a href="view/app-about.html" target="_blank">درباره ما</a>
+        <a href="view/app-blog.html" target="_blank">وبلاگ</a>
+        <a href="view/app-blog-post.html" target="_blank">پست وبلاگ</a>
+        <a href="view/app-contact.html" target="_blank">تماس</a>
+        <a href="view/app-faq.html" target="_blank">سوالات</a>
+        <a href="view/app-login.html" target="_blank">ورود</a>
+        <a href="view/app-register.html" target="_blank">ثبت‌نام</a>
+        <a href="view/app-forgot-password.html" target="_blank">فراموشی رمز</a>
+        <a href="view/app-sms-verification.html" target="_blank">تأیید پیامکی</a>
+        <a href="view/app-settings.html" target="_blank">تنظیمات</a>
+        <a href="view/app-notifications.html" target="_blank">اعلان‌ها</a>
+        <a href="view/app-qr-code.html" target="_blank">کیوآر‌کد</a>
+        <a href="view/app-splash.html" target="_blank">اسپلش</a>
+        <a href="view/app-404.html" target="_blank">۴۰۴</a>
+        <a href="view/app-components.html" target="_blank">نمای کلی کامپوننت‌ها</a>
+        <a href="view/app-pages.html" target="_blank">نقشه صفحات</a>
+      </div>
+    </div>
+
+    <div class="group">
+      <h3>کریپتو <span class="n">۵ صفحه</span></h3>
+      <div class="chips">
+        <a href="view/crypto-index.html" target="_blank">بازار</a>
+        <a href="view/crypto-portfolio.html" target="_blank">کیف پول من</a>
+        <a href="view/crypto-coin-detail.html" target="_blank">جزئیات کوین</a>
+        <a href="view/crypto-exchange.html" target="_blank">تبدیل</a>
+        <a href="view/crypto-transactions.html" target="_blank">تراکنش‌ها</a>
+      </div>
+    </div>
+
+    <div class="group">
+      <h3>کامپوننت‌ها <span class="n">۳۷ صفحه</span></h3>
+      <div class="chips">
+        <a href="view/component-charts.html" target="_blank">نمودارها</a>
+        <a href="view/component-modal-and-panels.html" target="_blank">مودال و پنل</a>
+        <a href="view/component-action-sheet.html" target="_blank">اکشن‌شیت</a>
+        <a href="view/component-carousel.html" target="_blank">کاروسل</a>
+        <a href="view/component-timeline.html" target="_blank">تایم‌لاین</a>
+        <a href="view/component-tabs.html" target="_blank">تب‌ها</a>
+        <a href="view/component-inputs.html" target="_blank">فرم‌ها</a>
+        <a href="view/component-listview.html" target="_blank">لیست‌ها</a>
+        <a href="view/component-icons.html" target="_blank">آیکون‌ها</a>
+        <a href="view/component-typography.html" target="_blank">تایپوگرافی</a>
+        <a href="view/component-toast.html" target="_blank">توست</a>
+        <a href="view/component-toggle.html" target="_blank">سوییچ‌ها</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container faq">
+    <div class="sec-head">
+      <h2>سوالات متداول</h2>
+    </div>
+    <details><summary>نصب و استفاده چطور است؟</summary><div class="fa-body">کافیست فایل‌ها را روی هر هاستی آپلود کنید؛ قالب کاملاً استاتیک است و به تنظیمات خاصی نیاز ندارد. فایل راهنمای PDF هم داخل پکیج هست.</div></details>
+    <details><summary>آیا نسخه فارسی و راست‌چین است؟</summary><div class="fa-body">بله؛ تمام متن‌ها فارسی، اعداد فارسی و چیدمان راست‌به‌چپ با فونت IRANSansX ارائه می‌شود.</div></details>
+    <details><summary>به‌روزرسانی چگونه ارائه می‌شود؟</summary><div class="fa-body">خرید از راست‌چین شامل ۶ ماه پشتیبانی رایگان است و به‌روزرسانی‌ها از طریق پنل کاربری اطلاع‌رسانی و به‌صورت رایگان در دسترس قرار می‌گیرد.</div></details>
+    <details><summary>می‌توانم رنگ‌ها و فونت را تغییر بدهم؟</summary><div class="fa-body">بله؛ سورس کامل SASS همراه پکیج است و با تغییر چند متغیر، هویت بصری قالب شخصی‌سازی می‌شود.</div></details>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="container">
+    <div class="cta">
+      <h2>اپلیکیشن مالی‌ات را امروز شروع کن</h2>
+      <p>فین‌آپ را یک‌بار بخر، برای همه پروژه‌های موبایلی‌ات استفاده کن.</p>
+      <a class="btn" href="https://www.rtl-theme.com/finapp-html-template/" target="_blank" rel="noopener">خرید قالب از راست‌چین</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <span>فین‌آپ — قالب HTML موبایل کیف پول و بانکداری</span>
+    <span><a href="https://www.rtl-theme.com/finapp-html-template/" target="_blank" rel="noopener">صفحه محصول در راست‌چین</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

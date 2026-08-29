@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#000000">
+    <title>فین اپ</title>
+    <meta name="description" content="Finapp HTML Mobile Template">
+    <meta name="keywords"
+        content="bootstrap, wallet, banking, fintech mobile template, cordova, phonegap, mobile, html, responsive" />
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" sizes="32x32">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icon/192x192.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="manifest" href="__manifest.json">
+</head>
+
+<body>
+
+    <!-- loader -->
+    <div id="loader">
+        <img src="assets/img/loading-icon.png" alt="icon" class="loading-icon">
+    </div>
+    <!-- * loader -->
+
+    <!-- App Header -->
+    <div class="appHeader">
+        <div class="left">
+            <a href="#" class="headerButton goBack">
+                <ion-icon name="chevron-back-outline"></ion-icon>
+            </a>
+        </div>
+        <div class="pageTitle">به صفحه اصلی اضافه کنید</div>
+        <div class="right"></div>
+    </div>
+    <!-- * App Header -->
+
+    <!-- App Capsule -->
+    <div id="appCapsule">
+
+        <div class="section full mt-2">
+            <div class="section-title">پیش نمایش</div>
+            <ul class="listview image-listview inset">
+                <li>
+                    <a href="#" class="item" onclick="androidAddtoHome();">
+                        <div class="icon-box bg-success">
+                            <ion-icon name="logo-android"></ion-icon>
+                        </div>
+                        <div class="in">
+                            <div>Android</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="item" onclick="iosAddtoHome();">
+                        <div class="icon-box bg-secondary">
+                            <ion-icon name="logo-apple"></ion-icon>
+                        </div>
+                        <div class="in">
+                            <div>iOS</div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+
+
+        <!-- iOS Add to Home Action Sheet -->
+        <div class="modal inset fade action-sheet ios-add-to-home" id="ios-add-to-home-screen" tabindex="-1"
+            role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">افزودن به صفحه اصلی</h5>
+                        <a href="#" class="close-button" data-bs-dismiss="modal">
+                            <ion-icon name="close"></ion-icon>
+                        </a>
+                    </div>
+                    <div class="modal-body">
+                        <div class="action-sheet-content text-center">
+                            <div class="mb-1"><img src="assets/img/icon/192x192.png" alt="image"
+                                    class="imaged w64 mb-2">
+                            </div>
+                            <div>
+                                نصب <strong>فین اپ</strong> در صفحه اصلی آیفون شما
+                            </div>
+                            <div>
+                                ضربه زدن <ion-icon name="share-outline"></ion-icon> و به صفحه اصلی اضافه کنید.
+                            </div>
+                            <div class="mt-2">
+                                <button class="btn btn-primary btn-block" data-bs-dismiss="modal">بستن</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- * iOS Add to Home Action Sheet -->
+
+
+        <!-- Android Add to Home Action Sheet -->
+        <div class="modal inset fade action-sheet android-add-to-home" id="android-add-to-home-screen" tabindex="-1"
+            role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">افزودن به صفحه اصلی</h5>
+                        <a href="#" class="close-button" data-bs-dismiss="modal">
+                            <ion-icon name="close"></ion-icon>
+                        </a>
+                    </div>
+                    <div class="modal-body">
+                        <div class="action-sheet-content text-center">
+                            <div class="mb-1">
+                                <img src="assets/img/icon/192x192.png" alt="image" class="imaged w64 mb-2">
+                            </div>
+                            <div>
+                                نصب <strong>فین اپ</strong> در صفحه اصلی اندروید شما.
+                            </div>
+                            <div>
+                                ضربه زدن <ion-icon name="ellipsis-vertical"></ion-icon> و به صفحه اصلی اضافه کنید.
+                            </div>
+                            <div class="mt-2">
+                                <button class="btn btn-primary btn-block" data-bs-dismiss="modal">بستن</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- * Android Add to Home Action Sheet -->
+
+
+
+        <div class="section mt-2 mb-4">
+            <div class="section-title">استفاده</div>
+            <div class="card">
+                <div class="card-body">
+                    <h4>آماده کردن</h4>
+                    <p class="mb-3">
+                        فراموش نکنید که کدهای اچ‌تی‌ام‌ال را در صفحه html که می‌خواهید استفاده کنید قرار دهید.
+                    </p>
+                    <h4>ماشه</h4>
+                    <p class="mb-3">
+                        می توانید کامپوننت Add to Home را با استفاده از آن نشان دهید <code>AddtoHome();</code> کد جاوا اسکریپت
+                        هر زمان که صفحه بارگیری می شود نشان می دهد.
+                    </p>
+                    <h4>پس از تاخیر فعال شود</h4>
+                    <p class="mb-3">
+                        می توانید زمان تاخیر را تعیین کنید.
+                        <br>
+                        <strong>مثال:</strong>
+                        <br>
+                        <code>AddtoHome("5000");</code>
+                        <br>
+                        5 ثانیه پس از بارگیری صفحه فعال شود.
+                    </p>
+                    <h4>فقط یک بار ماشه کنید</h4>
+                    <p class="mb-0">
+                        مودال را فقط یک بار برای کاربران فعال کنید.
+                        <br>
+                        <code>AddtoHome("5000", "once");</code>
+                        <br>
+                        با این مثال، می‌توانید کامپوننت افزودن به خانه را تنها یک بار برای کاربر فعال کنید.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <!-- * App Capsule -->
+
+    <!-- App Bottom Menu -->
+    <div class="appBottomMenu">
+        <a href="index.html" class="item">
+            <div class="col">
+                <ion-icon name="pie-chart-outline"></ion-icon>
+                <strong>بررسی اجمالی</strong>
+            </div>
+        </a>
+        <a href="app-pages.html" class="item">
+            <div class="col">
+                <ion-icon name="document-text-outline"></ion-icon>
+                <strong>صفحات</strong>
+            </div>
+        </a>
+        <a href="app-components.html" class="item">
+            <div class="col">
+                <ion-icon name="apps-outline"></ion-icon>
+                <strong>ابزارها</strong>
+            </div>
+        </a>
+        <a href="app-cards.html" class="item">
+            <div class="col">
+                <ion-icon name="card-outline"></ion-icon>
+                <strong>کارت های من</strong>
+            </div>
+        </a>
+        <a href="app-settings.html" class="item">
+            <div class="col">
+                <ion-icon name="settings-outline"></ion-icon>
+                <strong>تنظیمات</strong>
+            </div>
+        </a>
+    </div>
+    <!-- * App Bottom Menu -->
+
+
+    <!-- ========= JS Files =========  -->
+    <!-- Bootstrap -->
+    <script src="assets/js/lib/bootstrap.bundle.min.js"></script>
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- Splide -->
+    <script src="assets/js/plugins/splide/splide.min.js"></script>
+    <!-- Base Js File -->
+    <script src="assets/js/base.js"></script>
+
+
+</body>
+
+</html>

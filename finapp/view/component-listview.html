@@ -1,0 +1,823 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#000000">
+    <title>فین اپ</title>
+    <meta name="description" content="Finapp HTML Mobile Template">
+    <meta name="keywords" content="bootstrap, wallet, banking, fintech mobile template, cordova, phonegap, mobile, html, responsive" />
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" sizes="32x32">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icon/192x192.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="manifest" href="__manifest.json">
+</head>
+
+<body>
+
+    <!-- loader -->
+    <div id="loader">
+        <img src="assets/img/loading-icon.png" alt="icon" class="loading-icon">
+    </div>
+    <!-- * loader -->
+
+    <!-- App Header -->
+    <div class="appHeader">
+        <div class="left">
+            <a href="#" class="headerButton goBack">
+                <ion-icon name="chevron-back-outline"></ion-icon>
+            </a>
+        </div>
+        <div class="pageTitle">لیست نمای</div>
+        <div class="right">
+        </div>
+    </div>
+    <!-- * App Header -->
+
+    <!-- App Capsule -->
+    <div id="appCapsule">
+
+        <div class="listview-title mt-2">لیست نمای ساده و کامل</div>
+        <ul class="listview simple-listview">
+            <li>جان فونسکا</li>
+            <li>سوفی</li>
+            <li>فرانک</li>
+        </ul>
+
+        <div class="listview-title mt-2">فهرست نمای ساده</div>
+        <ul class="listview simple-listview inset">
+            <li>جان فونسکا</li>
+            <li>سوفی</li>
+            <li>فرانک</li>
+        </ul>
+
+        <div class="listview-title mt-2">لینک لیست نمای کامل</div>
+        <ul class="listview link-listview">
+            <li>
+                <a href="#">
+                    جان فونسکا
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    سوفی سیلورتون
+                    <span class="text-muted">متن</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    فرانک شوگرن
+                    <span class="badge badge-primary">3</span>
+                </a>
+            </li>
+        </ul>
+
+        <div class="listview-title mt-2">پیوند لیست نمای درج شده</div>
+        <ul class="listview link-listview inset">
+            <li>
+                <a href="#">
+                    جان فونسکا
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    سوفی سیلورتون
+                    <span class="text-muted">متن</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    فرانک شوگرن
+                    <span class="badge badge-primary">3</span>
+                </a>
+            </li>
+        </ul>
+
+
+        <div class="listview-title mt-2">مشاهده لیست تصویر کامل</div>
+        <ul class="listview image-listview">
+            <li>
+                <div class="item">
+                    <img src="assets/img/sample/avatar/avatar1.jpg" alt="image" class="image">
+                    <div class="in">
+                        <div>جان فونسکا</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="item">
+                    <img src="assets/img/sample/avatar/avatar4.jpg" alt="image" class="image">
+                    <div class="in">
+                        <div>سوفی سیلورتون</div>
+                        <span class="text-muted">متن</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="item">
+                    <img src="assets/img/sample/avatar/avatar3.jpg" alt="image" class="image">
+                    <div class="in">
+                        <div>فرانک شوگرن</div>
+                        <span class="badge badge-primary">3</span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <div class="listview-title mt-2">فهرست تصویر درج شده</div>
+        <ul class="listview image-listview inset">
+            <li>
+                <div class="item">
+                    <img src="assets/img/sample/avatar/avatar1.jpg" alt="image" class="image">
+                    <div class="in">
+                        <div>جان فونسکا</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="item">
+                    <img src="assets/img/sample/avatar/avatar4.jpg" alt="image" class="image">
+                    <div class="in">
+                        <div>سوفی سیلورتون</div>
+                        <span class="text-muted">متن</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="item">
+                    <img src="assets/img/sample/avatar/avatar3.jpg" alt="image" class="image">
+                    <div class="in">
+                        <div>فرانک شوگرن</div>
+                        <span class="badge badge-primary">3</span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <div class="listview-title mt-2">لینک تصویر لیست نمای کامل</div>
+        <ul class="listview image-listview">
+            <li>
+                <a href="#" class="item">
+                    <img src="assets/img/sample/avatar/avatar1.jpg" alt="image" class="image">
+                    <div class="in">
+                        <div>جان فونسکا</div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="item">
+                    <img src="assets/img/sample/avatar/avatar4.jpg" alt="image" class="image">
+                    <div class="in">
+                        <div>سوفی سیلورتون</div>
+                        <span class="text-muted">متن</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="item">
+                    <img src="assets/img/sample/avatar/avatar3.jpg" alt="image" class="image">
+                    <div class="in">
+                        <div>فرانک شوگرن</div>
+                        <span class="badge badge-primary">3</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <div class="listview-title mt-2">پیوند تصویر فهرست نمای درج شده</div>
+        <ul class="listview image-listview inset">
+            <li>
+                <a href="#" class="item">
+                    <img src="assets/img/sample/avatar/avatar1.jpg" alt="image" class="image">
+                    <div class="in">
+                        <div>جان فونسکا</div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="item">
+                    <img src="assets/img/sample/avatar/avatar4.jpg" alt="image" class="image">
+                    <div class="in">
+                        <div>سوفی سیلورتون</div>
+                        <span class="text-muted">متن</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="item">
+                    <img src="assets/img/sample/avatar/avatar3.jpg" alt="image" class="image">
+                    <div class="in">
+                        <div>فرانک شوگرن</div>
+                        <span class="badge badge-primary">3</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <div class="listview-title mt-2">نماد لیست نمای کامل</div>
+        <ul class="listview image-listview">
+            <li>
+                <div class="item">
+                    <div class="icon-box bg-primary">
+                        <ion-icon name="wallet-outline"></ion-icon>
+                    </div>
+                    <div class="in">
+                        <div>کیف پول</div>
+                        <span class="text-muted">5,500 تومان</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="item">
+                    <div class="icon-box bg-primary">
+                        <ion-icon name="card-outline"></ion-icon>
+                    </div>
+                    <div class="in">
+                        <div>کارت ها</div>
+                        <span class="badge badge-primary">2</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="item">
+                    <div class="icon-box bg-primary">
+                        <ion-icon name="cash-outline"></ion-icon>
+                    </div>
+                    <div class="in">
+                        <div>سپرده</div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <div class="listview-title mt-2">نماد لیست نمای درج شده</div>
+        <ul class="listview image-listview inset">
+            <li>
+                <div class="item">
+                    <div class="icon-box bg-primary">
+                        <ion-icon name="wallet-outline"></ion-icon>
+                    </div>
+                    <div class="in">
+                        <div>کیف پول</div>
+                        <span class="text-muted">5,500 تومان</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="item">
+                    <div class="icon-box bg-primary">
+                        <ion-icon name="card-outline"></ion-icon>
+                    </div>
+                    <div class="in">
+                        <div>کارت ها</div>
+                        <span class="badge badge-primary">2</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="item">
+                    <div class="icon-box bg-primary">
+                        <ion-icon name="cash-outline"></ion-icon>
+                    </div>
+                    <div class="in">
+                        <div>سپرده</div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <div class="listview-title mt-2">نماد پیوند لیست مشاهده کامل</div>
+        <ul class="listview image-listview">
+            <li>
+                <a href="#" class="item">
+                    <div class="icon-box bg-primary">
+                        <ion-icon name="wallet-outline"></ion-icon>
+                    </div>
+                    <div class="in">
+                        <div>کیف پول</div>
+                        <span class="text-muted">5,500 تومان</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="item">
+                    <div class="icon-box bg-primary">
+                        <ion-icon name="card-outline"></ion-icon>
+                    </div>
+                    <div class="in">
+                        <div>کارت ها</div>
+                        <span class="badge badge-primary">2</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="item">
+                    <div class="icon-box bg-primary">
+                        <ion-icon name="cash-outline"></ion-icon>
+                    </div>
+                    <div class="in">
+                        <div>سپرده</div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <div class="listview-title mt-2">نماد پیوند فهرست نمای درج شده</div>
+        <ul class="listview image-listview inset">
+            <li>
+                <a href="#" class="item">
+                    <div class="icon-box bg-primary">
+                        <ion-icon name="wallet-outline"></ion-icon>
+                    </div>
+                    <div class="in">
+                        <div>کیف پول</div>
+                        <span class="text-muted">5,500 تومان</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="item">
+                    <div class="icon-box bg-primary">
+                        <ion-icon name="card-outline"></ion-icon>
+                    </div>
+                    <div class="in">
+                        <div>کارت ها</div>
+                        <span class="badge badge-primary">2</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="item">
+                    <div class="icon-box bg-primary">
+                        <ion-icon name="cash-outline"></ion-icon>
+                    </div>
+                    <div class="in">
+                        <div>سپرده</div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <div class="listview-title mt-2">با هدر و پاورقی کامل</div>
+        <ul class="listview image-listview">
+            <li>
+                <a href="#" class="item">
+                    <img src="assets/img/sample/avatar/avatar1.jpg" alt="image" class="image">
+                    <div class="in">
+                        <div>
+                            <header>کاربر</header>
+                            جان فونسکا
+                            <footer>فلوریدا</footer>
+                        </div>
+                        <span class="text-muted">ویرایش کنید</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="item">
+                    <img src="assets/img/sample/avatar/avatar4.jpg" alt="image" class="image">
+                    <div class="in">
+                        <div>
+                            <header>مدیر</header>
+                            سوفی سیلورتون
+                            <footer>پاریس</footer>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="item">
+                    <img src="assets/img/sample/avatar/avatar3.jpg" alt="image" class="image">
+                    <div class="in">
+                        <div>
+                            <header>کاربر</header>
+                            فرانک شوگرن
+                            <footer>مادرید</footer>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <div class="listview-title mt-2">با درج سرصفحه و پاورقی</div>
+        <ul class="listview image-listview inset">
+            <li>
+                <a href="#" class="item">
+                    <img src="assets/img/sample/avatar/avatar1.jpg" alt="image" class="image">
+                    <div class="in">
+                        <div>
+                            <header>کاربر</header>
+                            جان فونسکا
+                            <footer>فلوریدا</footer>
+                        </div>
+                        <span class="text-muted">ویرایش کنید</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="item">
+                    <img src="assets/img/sample/avatar/avatar4.jpg" alt="image" class="image">
+                    <div class="in">
+                        <div>
+                            <header>مدیر</header>
+                            سوفی سیلورتون
+                            <footer>پاریس</footer>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="item">
+                    <img src="assets/img/sample/avatar/avatar3.jpg" alt="image" class="image">
+                    <div class="in">
+                        <div>
+                            <header>کاربر</header>
+                            فرانک شوگرن
+                            <footer>مادرید</footer>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <div class="listview-title mt-2">فقط متن کامل</div>
+        <ul class="listview image-listview text">
+            <li>
+                <a href="#" class="item">
+                    <div class="in">
+                        <div>جان فونسکا</div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="item">
+                    <div class="in">
+                        <div>سوفی سیلورتون</div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="item">
+                    <div class="in">
+                        <div>فرانک شوگرن</div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <div class="listview-title mt-2">فقط متن درج شده است</div>
+        <ul class="listview image-listview text inset">
+            <li>
+                <a href="#" class="item">
+                    <div class="in">
+                        <div>جان فونسکا</div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="item">
+                    <div class="in">
+                        <div>سوفی سیلورتون</div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="item">
+                    <div class="in">
+                        <div>فرانک شوگرن</div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <div class="listview-title mt-2">مشاهده لیست پیوند رسانه کامل</div>
+        <ul class="listview image-listview media">
+            <li>
+                <a href="#" class="item">
+                    <div class="imageWrapper">
+                        <img src="assets/img/sample/photo/1.jpg" alt="image" class="imaged w64">
+                    </div>
+                    <div class="in">
+                        <div>
+                            عکس ها
+                            <div class="text-muted">زیر متن</div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="item">
+                    <div class="imageWrapper">
+                        <img src="assets/img/sample/photo/2.jpg" alt="image" class="imaged w64">
+                    </div>
+                    <div class="in">
+                        <div>
+                            فیلم های
+                            <div class="text-muted">زیر متن</div>
+                        </div>
+                        <span class="badge badge-primary">53</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="item">
+                    <div class="imageWrapper">
+                        <img src="assets/img/sample/photo/3.jpg" alt="image" class="imaged w64">
+                    </div>
+                    <div class="in">
+                        <div>
+                            آلبوم ها
+                            <div class="text-muted">زیر متن</div>
+                        </div>
+                        <span class="text-muted">متن</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <div class="listview-title mt-2">فهرست نمای پیوند رسانه درج شده</div>
+        <ul class="listview image-listview media inset mb-2">
+            <li>
+                <a href="#" class="item">
+                    <div class="imageWrapper">
+                        <img src="assets/img/sample/photo/1.jpg" alt="image" class="imaged w64">
+                    </div>
+                    <div class="in">
+                        <div>
+                            عکس ها
+                            <div class="text-muted">زیر متن</div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="item">
+                    <div class="imageWrapper">
+                        <img src="assets/img/sample/photo/2.jpg" alt="image" class="imaged w64">
+                    </div>
+                    <div class="in">
+                        <div>
+                            فیلم های
+                            <div class="text-muted">زیر متن</div>
+                        </div>
+                        <span class="badge badge-primary">53</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="item">
+                    <div class="imageWrapper">
+                        <img src="assets/img/sample/photo/3.jpg" alt="image" class="imaged w64">
+                    </div>
+                    <div class="in">
+                        <div>
+                            آلبوم ها
+                            <div class="text-muted">زیر متن</div>
+                        </div>
+                        <span class="text-muted">متن</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+
+    </div>
+    <!-- * App Capsule -->
+
+    <!-- App Bottom Menu -->
+    <div class="appBottomMenu">
+        <a href="index.html" class="item">
+            <div class="col">
+                <ion-icon name="pie-chart-outline"></ion-icon>
+                <strong>بررسی اجمالی</strong>
+            </div>
+        </a>
+        <a href="app-pages.html" class="item">
+            <div class="col">
+                <ion-icon name="document-text-outline"></ion-icon>
+                <strong>صفحات</strong>
+            </div>
+        </a>
+        <a href="app-components.html" class="item">
+            <div class="col">
+                <ion-icon name="apps-outline"></ion-icon>
+                <strong>ابزارها</strong>
+            </div>
+        </a>
+        <a href="app-cards.html" class="item">
+            <div class="col">
+                <ion-icon name="card-outline"></ion-icon>
+                <strong>کارت های من</strong>
+            </div>
+        </a>
+        <a href="app-settings.html" class="item">
+            <div class="col">
+                <ion-icon name="settings-outline"></ion-icon>
+                <strong>تنظیمات</strong>
+            </div>
+        </a>
+    </div>
+    <!-- * App Bottom Menu -->
+
+    <!-- App Sidebar -->
+    <div class="modal fade panelbox panelbox-left" id="sidebarPanel" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <!-- profile box -->
+                    <div class="profileBox pt-2 pb-2">
+                        <div class="image-wrapper">
+                            <img src="assets/img/sample/avatar/avatar1.jpg" alt="image" class="imaged  w36">
+                        </div>
+                        <div class="in">
+                            <strong>سباستین دو</strong>
+                            <div class="text-muted">4029209</div>
+                        </div>
+                        <a href="#" class="btn btn-link btn-icon sidebar-close" data-bs-dismiss="modal">
+                            <ion-icon name="close-outline"></ion-icon>
+                        </a>
+                    </div>
+                    <!-- * profile box -->
+                    <!-- balance -->
+                    <div class="sidebar-balance">
+                        <div class="listview-title">موجودی</div>
+                        <div class="in">
+                            <h1 class="amount">تومان 2,562.50</h1>
+                        </div>
+                    </div>
+                    <!-- * balance -->
+
+                    <!-- action group -->
+                    <div class="action-group">
+                        <a href="index.html" class="action-button">
+                            <div class="in">
+                                <div class="iconbox">
+                                    <ion-icon name="add-outline"></ion-icon>
+                                </div>
+                                سپرده
+                            </div>
+                        </a>
+                        <a href="index.html" class="action-button">
+                            <div class="in">
+                                <div class="iconbox">
+                                    <ion-icon name="arrow-down-outline"></ion-icon>
+                                </div>
+                                کنار کشیدن
+                            </div>
+                        </a>
+                        <a href="index.html" class="action-button">
+                            <div class="in">
+                                <div class="iconbox">
+                                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                                </div>
+                                ارسال
+                            </div>
+                        </a>
+                        <a href="app-cards.html" class="action-button">
+                            <div class="in">
+                                <div class="iconbox">
+                                    <ion-icon name="card-outline"></ion-icon>
+                                </div>
+                                کارت های من
+                            </div>
+                        </a>
+                    </div>
+                    <!-- * action group -->
+
+                    <!-- menu -->
+                    <div class="listview-title mt-1">منو</div>
+                    <ul class="listview flush transparent no-line image-listview">
+                        <li>
+                            <a href="index.html" class="item">
+                                <div class="icon-box bg-primary">
+                                    <ion-icon name="pie-chart-outline"></ion-icon>
+                                </div>
+                                <div class="in">
+                                    بررسی اجمالی
+                                    <span class="badge badge-primary">10</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="app-pages.html" class="item">
+                                <div class="icon-box bg-primary">
+                                    <ion-icon name="document-text-outline"></ion-icon>
+                                </div>
+                                <div class="in">
+                                    صفحات
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="app-components.html" class="item">
+                                <div class="icon-box bg-primary">
+                                    <ion-icon name="apps-outline"></ion-icon>
+                                </div>
+                                <div class="in">
+                                    ابزارها
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="app-cards.html" class="item">
+                                <div class="icon-box bg-primary">
+                                    <ion-icon name="card-outline"></ion-icon>
+                                </div>
+                                <div class="in">
+                                    کارت های من
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- * menu -->
+
+                    <!-- others -->
+                    <div class="listview-title mt-1">دیگران</div>
+                    <ul class="listview flush transparent no-line image-listview">
+                        <li>
+                            <a href="app-settings.html" class="item">
+                                <div class="icon-box bg-primary">
+                                    <ion-icon name="settings-outline"></ion-icon>
+                                </div>
+                                <div class="in">
+                                    تنظیمات
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="component-messages.html" class="item">
+                                <div class="icon-box bg-primary">
+                                    <ion-icon name="chatbubble-outline"></ion-icon>
+                                </div>
+                                <div class="in">
+                                    پشتیبانی
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="app-login.html" class="item">
+                                <div class="icon-box bg-primary">
+                                    <ion-icon name="log-out-outline"></ion-icon>
+                                </div>
+                                <div class="in">
+                                    خروج
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- * others -->
+
+                    <!-- send money -->
+                    <div class="listview-title mt-1">ارسال پول</div>
+                    <ul class="listview image-listview flush transparent no-line">
+                        <li>
+                            <a href="#" class="item">
+                                <img src="assets/img/sample/avatar/avatar2.jpg" alt="image" class="image">
+                                <div class="in">
+                                    <div>آرتم سازونوف</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="item">
+                                <img src="assets/img/sample/avatar/avatar4.jpg" alt="image" class="image">
+                                <div class="in">
+                                    <div>سوفی آسولد</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="item">
+                                <img src="assets/img/sample/avatar/avatar3.jpg" alt="image" class="image">
+                                <div class="in">
+                                    <div>کوبوس ون دو وگته</div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- * send money -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- * App Sidebar -->
+
+    <!-- ========= JS Files =========  -->
+    <!-- Bootstrap -->
+    <script src="assets/js/lib/bootstrap.bundle.min.js"></script>
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- Splide -->
+    <script src="assets/js/plugins/splide/splide.min.js"></script>
+    <!-- Base Js File -->
+    <script src="assets/js/base.js"></script>
+
+
+</body>
+
+</html>
