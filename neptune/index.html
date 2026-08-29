@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>نپتون — قالب HTML پنل مدیریت | Neptune Admin Dashboard</title>
+<meta name="description" content="قالب HTML پنل مدیریت نپتون — داشبورد ادمین ریسپانسیو با بیش از ۲۵۰ صفحه آماده، ۴ پوسته روشن و تیره، بوت‌استرپ ۵ و فونت ایران‌سنس.">
+<style>
+@font-face{font-family:'IRANSans';font-style:normal;font-weight:400;src:url('view/assets/font/woff2/IRANSansWeb%28FaNum%29.woff2') format('woff2')}
+@font-face{font-family:'IRANSans';font-style:normal;font-weight:700;src:url('view/assets/font/woff2/IRANSansWeb%28FaNum%29_Bold.woff2') format('woff2')}
+@font-face{font-family:'IRANSans';font-style:normal;font-weight:500;src:url('view/assets/font/woff2/IRANSansWeb%28FaNum%29_Medium.woff2') format('woff2')}
+
+:root{--blue:#2269F5;--blue2:#61acfc;--ink:#293442;--muted:#4d546b;--bg:#F4F7FA;--border:#e3e6ea;--deep:#0A1830;--deep2:#0E2246}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'IRANSans',sans-serif;background:var(--bg);color:var(--muted);line-height:1.9;font-size:16px;overflow-x:hidden;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+a{text-decoration:none;color:inherit}
+.num{font-feature-settings:'ss01'}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(10,24,48,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(97,172,252,.15)}
+.hwrap{max-width:1160px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:14px 24px}
+.logo{display:flex;align-items:center;gap:10px;color:#fff;font-weight:700;font-size:1.25rem}
+.logo .dot{width:26px;height:26px;border-radius:50%;background:radial-gradient(circle at 32% 30%,#61acfc,#2269F5 62%,#123a8f);box-shadow:0 0 14px rgba(34,105,245,.8)}
+.logo small{color:#61acfc;font-weight:400;font-size:.8rem;opacity:.85}
+nav{display:flex;gap:26px;align-items:center}
+nav a{color:#c9d6ee;font-size:.95rem;transition:.2s}
+nav a:hover{color:#fff}
+.hbtn{background:var(--blue);color:#fff !important;padding:9px 22px;border-radius:10px;font-weight:700}
+.hbtn:hover{background:#1a56d6}
+@media(max-width:720px){nav a:not(.hbtn){display:none}}
+
+/* hero */
+.hero{background:radial-gradient(1100px 480px at 78% -10%,rgba(34,105,245,.28),transparent 60%),radial-gradient(700px 380px at 12% 110%,rgba(97,172,252,.16),transparent 60%),linear-gradient(160deg,var(--deep),var(--deep2));color:#fff;padding:76px 24px 84px;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;left:-140px;top:50%;transform:translateY(-50%);width:420px;height:420px;border-radius:50%;border:1.5px solid rgba(97,172,252,.18);pointer-events:none}
+.hero::before{content:'';position:absolute;left:-60px;top:50%;transform:translateY(-50%);width:260px;height:260px;border-radius:50%;background:radial-gradient(circle at 35% 32%,rgba(97,172,252,.5),rgba(34,105,245,.65) 55%,rgba(14,34,70,.9) 78%);box-shadow:0 0 80px rgba(34,105,245,.35);pointer-events:none}
+.wrap{max-width:1160px;margin:auto}
+.hgrid{display:grid;grid-template-columns:1.05fr 1fr;gap:52px;align-items:center;position:relative;z-index:2}
+@media(max-width:960px){.hgrid{grid-template-columns:1fr}}
+.kicker{display:inline-flex;align-items:center;gap:8px;background:rgba(34,105,245,.18);border:1px solid rgba(97,172,252,.35);color:#9cc7ff;font-size:.85rem;padding:6px 16px;border-radius:99px;margin-bottom:20px}
+.hero h1{font-size:2.6rem;font-weight:700;line-height:1.5;color:#fff}
+.hero h1 em{font-style:normal;color:var(--blue2)}
+.hero p.lead{margin:18px 0 26px;color:#c9d6ee;font-size:1.08rem;max-width:520px}
+.badges{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:30px}
+.badge{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);color:#dbe7fb;font-size:.82rem;padding:5px 14px;border-radius:8px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;font-family:inherit;font-weight:700;font-size:1rem;padding:14px 30px;border-radius:12px;border:2px solid transparent;cursor:pointer;transition:.2s}
+.btn-p{background:var(--blue);color:#fff}
+.btn-p:hover{background:#1a56d6;transform:translateY(-2px)}
+.btn-g{background:transparent;color:#dbe7fb;border-color:rgba(219,231,251,.4)}
+.btn-g:hover{border-color:#fff;color:#fff}
+
+/* browser mockup — pure CSS desktop dashboard */
+.browser{background:#0d1a33;border:1px solid rgba(97,172,252,.25);border-radius:16px;box-shadow:0 30px 70px rgba(2,8,23,.6),0 0 0 6px rgba(97,172,252,.06);overflow:hidden}
+.browser .bbar{height:38px;background:#122347;display:flex;align-items:center;gap:7px;padding:0 16px}
+.browser .bbar i{width:11px;height:11px;border-radius:50%;display:block}
+.bbar i:nth-child(1){background:#FF4857}.bbar i:nth-child(2){background:#ff9500}.bbar i:nth-child(3){background:#4bad48}
+.bbar .url{flex:1;margin-inline-start:10px;background:#0a1830;border-radius:6px;height:20px;display:flex;align-items:center;padding:0 12px;color:#5f7db3;font-size:.68rem;font-family:system-ui,sans-serif;direction:ltr}
+.app{display:flex;min-height:340px;background:#F4F7FA}
+.side{width:158px;flex:none;background:var(--ink);padding:14px 12px;display:flex;flex-direction:column;gap:4px}
+.side .sbrand{display:flex;align-items:center;gap:7px;color:#fff;font-weight:700;font-size:.8rem;margin-bottom:12px}
+.side .sbrand i{width:16px;height:16px;border-radius:50%;background:radial-gradient(circle at 32% 30%,#61acfc,#2269F5)}
+.side span{display:block;color:#8b97b5;font-size:.68rem;padding:6px 10px;border-radius:7px}
+.side span.on{background:var(--blue);color:#fff}
+.main{flex:1;padding:14px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.top{display:flex;align-items:center;justify-content:space-between}
+.top b{color:var(--ink);font-size:.85rem}
+.top .av{display:flex;align-items:center;gap:7px}
+.top .av i{width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,#61acfc,#2269F5)}
+.top .av u{width:56px;height:8px;border-radius:4px;background:#dfe6f0;display:block}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.card{background:#fff;border-radius:10px;padding:10px;box-shadow:0 1px 3px rgba(41,52,66,.06)}
+.card u{display:block;width:26px;height:26px;border-radius:8px;margin-bottom:7px}
+.card:nth-child(1) u{background:linear-gradient(135deg,#61acfc,#2269F5)}
+.card:nth-child(2) u{background:linear-gradient(135deg,#6fdc8c,#4bad48)}
+.card:nth-child(3) u{background:linear-gradient(135deg,#ffb46e,#ff9500)}
+.card:nth-child(4) u{background:linear-gradient(135deg,#ff8f9b,#FF4857)}
+.card b{display:block;color:var(--ink);font-size:.8rem}
+.card s{text-decoration:none;font-size:.62rem;color:#9aa3b8}
+.chart{background:#fff;border-radius:10px;padding:12px;box-shadow:0 1px 3px rgba(41,52,66,.06);flex:1}
+.chart .t{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.chart .t b{color:var(--ink);font-size:.75rem}
+.chart .t s{text-decoration:none;font-size:.6rem;color:#9aa3b8}
+.bars{display:flex;align-items:flex-end;gap:7px;height:96px;padding:0 4px}
+.bars i{flex:1;border-radius:4px 4px 0 0;background:linear-gradient(180deg,var(--blue2),var(--blue));display:block}
+.bars i:nth-child(2n){background:linear-gradient(180deg,#cfe3fd,#9cc7ff)}
+.bars i:nth-child(3){height:88%}.bars i:nth-child(1){height:52%}.bars i:nth-child(2){height:64%}.bars i:nth-child(4){height:74%}.bars i:nth-child(5){height:96%}.bars i:nth-child(6){height:58%}.bars i:nth-child(7){height:81%}.bars i:nth-child(8){height:44%}.bars i:nth-child(9){height:70%}.bars i:nth-child(10){height:62%}.bars i:nth-child(11){height:90%}.bars i:nth-child(12){height:55%}
+.rows{background:#fff;border-radius:10px;padding:10px 12px;box-shadow:0 1px 3px rgba(41,52,66,.06)}
+.rows .r{display:flex;align-items:center;gap:9px;padding:6px 0;border-bottom:1px solid #eef2f7}
+.rows .r:last-child{border:0}
+.rows .r i{width:16px;height:16px;border-radius:5px;background:#DFF0FE;flex:none}
+.rows .r u{width:34%;height:7px;border-radius:4px;background:#e7ecf4;display:block}
+.rows .r s{width:14%;height:7px;border-radius:4px;background:#d3e4fb;display:block;margin-inline-start:auto}
+@media(max-width:560px){.cards{grid-template-columns:repeat(2,1fr)}.side{width:52px}.side span,.side .sbrand b{display:none}.side .sbrand{justify-content:center}}
+
+/* stats strip */
+.strip{background:#fff;border-block:1px solid var(--border);padding:34px 24px}
+.strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+@media(max-width:760px){.strip .wrap{grid-template-columns:repeat(2,1fr)}}
+.strip b{display:block;font-size:1.7rem;color:var(--blue);font-weight:700}
+.strip span{font-size:.9rem}
+
+/* sections */
+section{padding:76px 24px}
+.sec-head{text-align:center;max-width:640px;margin:0 auto 44px}
+.sec-head h2{font-size:1.9rem;color:var(--ink);font-weight:700;margin-bottom:10px}
+.sec-head h2 i{font-style:normal;color:var(--blue)}
+.sec-head p{font-size:1rem}
+
+/* variants */
+.variants{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+@media(max-width:960px){.variants{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.variants{grid-template-columns:1fr}}
+.vcard{background:#fff;border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:.25s;display:block}
+.vcard:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(41,52,66,.13);border-color:var(--blue2)}
+.vprev{height:130px;position:relative;overflow:hidden}
+.vprev .mini{position:absolute;inset:18px 22px auto 22px;height:96px;border-radius:8px 8px 0 0;display:flex;overflow:hidden;border:1px solid rgba(0,0,0,.08)}
+.vprev .m1{width:34%;flex:none}
+.vprev .m2{flex:1;padding:8px;display:flex;flex-direction:column;gap:6px}
+.vprev .m2 i{display:block;border-radius:4px}
+.vprev .m2 i:nth-child(1){height:10px;width:55%}
+.vprev .m2 i:nth-child(2){height:26px}
+.vprev .m2 i:nth-child(3){height:26px;width:80%}
+.vprev.light{background:#DFF0FE}
+.vprev.light .mini{background:#F4F7FA}
+.vprev.light .m1{background:var(--ink)}
+.vprev.light .m2 i{background:#fff;box-shadow:0 1px 2px rgba(41,52,66,.1)}
+.vprev.dark{background:#122243}
+.vprev.dark .mini{background:#0B1830}
+.vprev.dark .m1{background:#060f22}
+.vprev.dark .m2 i{background:#1b2f55}
+.vbody{padding:16px 18px 20px}
+.vbody b{color:var(--ink);font-size:1.05rem;display:block;margin-bottom:4px}
+.vbody span{font-size:.85rem;color:var(--muted)}
+.vbody .go{color:var(--blue);font-weight:700;font-size:.85rem;margin-top:10px;display:inline-block}
+
+/* features */
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:960px){.features{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.features{grid-template-columns:1fr}}
+.feat{background:#fff;border:1px solid var(--border);border-radius:16px;padding:26px 22px;transition:.25s}
+.feat:hover{border-color:var(--blue2);box-shadow:0 14px 34px rgba(34,105,245,.1)}
+.feat .ic{width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,#DFF0FE,#cfe3fd);display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:14px}
+.feat b{display:block;color:var(--ink);font-size:1.05rem;margin-bottom:6px}
+.feat p{font-size:.9rem}
+
+/* pages */
+.pages{background:#fff;border-block:1px solid var(--border)}
+.pgroups{display:flex;flex-direction:column;gap:26px}
+.pgroup h3{color:var(--ink);font-size:1.05rem;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.pgroup h3::after{content:'';flex:1;height:1px;background:var(--border)}
+.chips{display:flex;flex-wrap:wrap;gap:9px}
+.chip{background:var(--bg);border:1px solid var(--border);color:var(--muted);font-size:.85rem;padding:7px 16px;border-radius:99px;transition:.2s}
+.chip:hover{background:var(--blue);border-color:var(--blue);color:#fff}
+
+/* faq */
+.faq{max-width:760px;margin:auto;display:flex;flex-direction:column;gap:12px}
+details{background:#fff;border:1px solid var(--border);border-radius:12px;padding:0 20px}
+details summary{cursor:pointer;padding:16px 0;font-weight:700;color:var(--ink);list-style:none;display:flex;justify-content:space-between;align-items:center;gap:10px}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:'+';color:var(--blue);font-size:1.3rem;font-weight:400}
+details[open] summary::after{content:'−'}
+details p{padding:0 0 16px;font-size:.95rem}
+
+/* cta */
+.cta-sec{background:radial-gradient(900px 340px at 50% 120%,rgba(34,105,245,.5),transparent 65%),linear-gradient(160deg,var(--deep),var(--deep2));text-align:center;color:#fff}
+.cta-sec h2{font-size:2rem;font-weight:700;color:#fff;margin-bottom:12px}
+.cta-sec p{color:#c9d6ee;margin-bottom:30px;max-width:520px;margin-inline:auto}
+
+footer{background:#060f22;color:#7f8db0;padding:30px 24px;text-align:center;font-size:.9rem}
+footer a{color:#9cc7ff}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="hwrap">
+    <a class="logo" href="#"><span class="dot"></span>نپتون <small>Neptune</small></a>
+    <nav>
+      <a href="#variants">پوسته‌ها</a>
+      <a href="#features">ویژگی‌ها</a>
+      <a href="#pages">صفحه‌ها</a>
+      <a href="#faq">سوالات</a>
+      <a class="hbtn" href="https://www.rtl-theme.com/neptune-html-template/" target="_blank" rel="noopener">خرید قالب</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="hgrid">
+      <div>
+        <span class="kicker">✦ قالب HTML پنل مدیریت — نسخه ۱.۲</span>
+        <h1>داشبورد ادمین <em>نپتون</em>؛ عمق اقیانوس، در پنل مدیریت شما</h1>
+        <p class="lead">بیش از ۲۵۰ صفحه آماده در ۴ پوسته روشن و تیره، کامپوننت‌های کامل رابط کاربری، نمودارهای زنده و فرم‌های حرفه‌ای — کاملاً راست‌چین با فونت ایران‌سنس.</p>
+        <div class="badges">
+          <span class="badge">بوت‌استرپ ۵</span>
+          <span class="badge">راست‌چین کامل</span>
+          <span class="badge">فونت ایران‌سنس</span>
+          <span class="badge">ApexCharts</span>
+          <span class="badge">۴ پوسته</span>
+          <span class="badge">دو چیدمان منو</span>
+        </div>
+        <div class="cta">
+          <a class="btn btn-p" href="view/templates/Admin1/index.html" target="_blank" rel="noopener">مشاهده دموی زنده</a>
+          <a class="btn btn-g" href="https://www.rtl-theme.com/neptune-html-template/" target="_blank" rel="noopener">خرید از راست‌چین</a>
+        </div>
+      </div>
+      <div class="browser" aria-hidden="true">
+        <div class="bbar"><i></i><i></i><i></i><span class="url">neptune.local/admin/index.html</span></div>
+        <div class="app">
+          <div class="side">
+            <div class="sbrand"><i></i><b>نپتون</b></div>
+            <span class="on">داشبورد</span><span>قیمت‌ها</span><span>صورتحساب</span><span>تنظیمات</span><span>احراز هویت</span><span>تایپوگرافی</span><span>نمادها</span>
+          </div>
+          <div class="main">
+            <div class="top"><b>داشبورد</b><span class="av"><u></u><i></i></span></div>
+            <div class="cards">
+              <div class="card"><u></u><b>۱۲٬۴۸۰</b><s>فروش امروز</s></div>
+              <div class="card"><u></u><b>۸۴۲</b><s>سفارش جدید</s></div>
+              <div class="card"><u></u><b>۳٬۹۱۰</b><s>بازدید</s></div>
+              <div class="card"><u></u><b>۹۶٪</b><s>رضایت</s></div>
+            </div>
+            <div class="chart">
+              <div class="t"><b>گزارش فروش هفتگی</b><s>۱۴۰۵</s></div>
+              <div class="bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            </div>
+            <div class="rows">
+              <div class="r"><i></i><u></u><s></s></div>
+              <div class="r"><i></i><u></u><s></s></div>
+              <div class="r"><i></i><u></u><s></s></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="strip">
+  <div class="wrap">
+    <div><b>+۲۵۰</b><span>صفحه آماده</span></div>
+    <div><b>۴</b><span>پوسته روشن و تیره</span></div>
+    <div><b>۵</b><span>بوت‌استرپ نسخه ۵</span></div>
+    <div><b>۱۰۰٪</b><span>راست‌چین و فارسی</span></div>
+  </div>
+</div>
+
+<section id="variants">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>چهار پوسته، <i>یک قلب</i></h2>
+      <p>دو چیدمان متفاوت منو (استاندارد و مدرن) که هرکدام نسخه روشن و تیره دارند — همه با همون کامپوننت‌ها و کد یکپارچه.</p>
+    </div>
+    <div class="variants">
+      <a class="vcard" href="view/templates/Admin1/index.html" target="_blank" rel="noopener">
+        <div class="vprev light"><div class="mini"><div class="m1"></div><div class="m2"><i></i><i></i><i></i></div></div></div>
+        <div class="vbody"><b>Admin1 — روشن</b><span>چیدمان استاندارد با سایدبار تیره</span><span class="go">مشاهده دمو ←</span></div>
+      </a>
+      <a class="vcard" href="view/templates/Admin1-Dark/index.html" target="_blank" rel="noopener">
+        <div class="vprev dark"><div class="mini"><div class="m1"></div><div class="m2"><i></i><i></i><i></i></div></div></div>
+        <div class="vbody"><b>Admin1 — تیره</b><span>همان چیدمان، حالت شب کامل</span><span class="go">مشاهده دمو ←</span></div>
+      </a>
+      <a class="vcard" href="view/templates/Admin2/index.html" target="_blank" rel="noopener">
+        <div class="vprev light"><div class="mini"><div class="m1"></div><div class="m2"><i></i><i></i><i></i></div></div></div>
+        <div class="vbody"><b>Admin2 — روشن</b><span>چیدمان مدرن با هدرهای متنوع</span><span class="go">مشاهده دمو ←</span></div>
+      </a>
+      <a class="vcard" href="view/templates/Admin2-Dark/index.html" target="_blank" rel="noopener">
+        <div class="vprev dark"><div class="mini"><div class="m1"></div><div class="m2"><i></i><i></i><i></i></div></div></div>
+        <div class="vbody"><b>Admin2 — تیره</b><span>چیدمان مدرن، حالت شب</span><span class="go">مشاهده دمو ←</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="features" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>هرچی یه پنل مدیریت <i>لازم داره</i></h2>
+      <p>از فرم و جدول تا میل‌باکس و فایل‌منیجر — همه‌چیز از قبل ساخته و راست‌چین شده.</p>
+    </div>
+    <div class="features">
+      <div class="feat"><div class="ic">🧩</div><b>کامپوننت‌های کامل UI</b><p>۱۵ گروه رابط کاربری: هشدار، دکمه، مودال، تولتیپ، صفحه‌بندی، اسپینر و… همه آماده استفاده.</p></div>
+      <div class="feat"><div class="ic">📊</div><b>نمودارهای زنده</b><p>نمودارهای ApexCharts و Chart.js با داده نمونه فارسی — خطی، ستونی، دونات و رادار.</p></div>
+      <div class="feat"><div class="ic">📝</div><b>فرم‌های حرفه‌ای</b><p>۹ صفحه فرم: اعتبارسنجی، Select2، تقویم شمسی، آپلود فایل، ماسک ورودی و ویرایشگر متن.</p></div>
+      <div class="feat"><div class="ic">🗂️</div><b>ابزارهای کاربردی</b><p>میل‌باکس، فایل‌منیجر، لیست کارها، صورتحساب، صفحه قیمت‌گذاری و تنظیمات پروفایل.</p></div>
+      <div class="feat"><div class="ic">🌗</div><b>حالت شب کامل</b><p>دو پوسته تیره اختصاصی با کنتراست دقیق — فقط یک پوشه جدا، بدون تنظیم اضافه.</p></div>
+      <div class="feat"><div class="ic">🔖</div><b>احراز هویت آماده</b><p>صفحه‌های ورود، ثبت‌نام، قفل صفحه و خطا — طراحی هماهنگ با کل قالب.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="pages" class="pages">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>تمام <i>صفحه‌ها</i>، یک‌جا</h2>
+      <p>روی هر صفحه کلیک کنید تا نسخه زنده رو ببینید (پوسته استاندارد Admin1).</p>
+    </div>
+    <div class="pgroups">
+      <div class="pgroup">
+        <h3>داشبورد و ابزارها</h3>
+        <div class="chips">
+          <a class="chip" href="view/templates/Admin1/index.html">داشبورد</a>
+          <a class="chip" href="view/templates/Admin1/calendar.html">تقویم</a>
+          <a class="chip" href="view/templates/Admin1/mailbox.html">میل‌باکس</a>
+          <a class="chip" href="view/templates/Admin1/file-manager.html">فایل‌منیجر</a>
+          <a class="chip" href="view/templates/Admin1/todo.html">لیست کارها</a>
+          <a class="chip" href="view/templates/Admin1/pricing.html">قیمت‌گذاری</a>
+          <a class="chip" href="view/templates/Admin1/invoice.html">صورتحساب</a>
+          <a class="chip" href="view/templates/Admin1/settings.html">تنظیمات</a>
+          <a class="chip" href="view/templates/Admin1/widgets.html">ویجت‌ها</a>
+        </div>
+      </div>
+      <div class="pgroup">
+        <h3>رابط کاربری</h3>
+        <div class="chips">
+          <a class="chip" href="view/templates/Admin1/ui-alerts.html">هشدارها</a>
+          <a class="chip" href="view/templates/Admin1/ui-avatars.html">آواتارها</a>
+          <a class="chip" href="view/templates/Admin1/ui-badge.html">نشان‌ها</a>
+          <a class="chip" href="view/templates/Admin1/ui-breadcrumbs.html">بردکرامب</a>
+          <a class="chip" href="view/templates/Admin1/ui-button-groups.html">گروه دکمه</a>
+          <a class="chip" href="view/templates/Admin1/ui-buttons.html">دکمه‌ها</a>
+          <a class="chip" href="view/templates/Admin1/ui-collapse.html">کولپس</a>
+          <a class="chip" href="view/templates/Admin1/ui-dropdown.html">دراپ‌داون</a>
+          <a class="chip" href="view/templates/Admin1/ui-images.html">تصاویر</a>
+          <a class="chip" href="view/templates/Admin1/ui-pagination.html">صفحه‌بندی</a>
+          <a class="chip" href="view/templates/Admin1/ui-popovers.html">پاپ‌اور</a>
+          <a class="chip" href="view/templates/Admin1/ui-progress.html">نوار پیشرفت</a>
+          <a class="chip" href="view/templates/Admin1/ui-spinners.html">اسپینر</a>
+          <a class="chip" href="view/templates/Admin1/ui-toast.html">توست</a>
+          <a class="chip" href="view/templates/Admin1/ui-tooltips.html">تولتیپ</a>
+        </div>
+      </div>
+      <div class="pgroup">
+        <h3>کامپوننت‌ها</h3>
+        <div class="chips">
+          <a class="chip" href="view/templates/Admin1/components-accordions.html">آکاردئون</a>
+          <a class="chip" href="view/templates/Admin1/components-block-ui.html">بلاک UI</a>
+          <a class="chip" href="view/templates/Admin1/components-cards.html">کارت‌ها</a>
+          <a class="chip" href="view/templates/Admin1/components-carousel.html">کاروسل</a>
+          <a class="chip" href="view/templates/Admin1/components-countdown.html">شمارش معکوس</a>
+          <a class="chip" href="view/templates/Admin1/components-lightbox.html">لایت‌باکس</a>
+          <a class="chip" href="view/templates/Admin1/components-lists.html">لیست‌ها</a>
+          <a class="chip" href="view/templates/Admin1/components-modals.html">مودال‌ها</a>
+          <a class="chip" href="view/templates/Admin1/components-session-timeout.html">انقضای نشست</a>
+          <a class="chip" href="view/templates/Admin1/components-tabs.html">تب‌ها</a>
+        </div>
+      </div>
+      <div class="pgroup">
+        <h3>فرم‌ها و جدول‌ها</h3>
+        <div class="chips">
+          <a class="chip" href="view/templates/Admin1/forms-basic.html">فرم پایه</a>
+          <a class="chip" href="view/templates/Admin1/forms-datepickers.html">تقویم تاریخ</a>
+          <a class="chip" href="view/templates/Admin1/forms-file-upload.html">آپلود فایل</a>
+          <a class="chip" href="view/templates/Admin1/forms-input-groups.html">گروه ورودی</a>
+          <a class="chip" href="view/templates/Admin1/forms-input-masks.html">ماسک ورودی</a>
+          <a class="chip" href="view/templates/Admin1/forms-layouts.html">چیدمان فرم</a>
+          <a class="chip" href="view/templates/Admin1/forms-select2.html">Select2</a>
+          <a class="chip" href="view/templates/Admin1/forms-text-editor.html">ویرایشگر متن</a>
+          <a class="chip" href="view/templates/Admin1/forms-validation.html">اعتبارسنجی</a>
+          <a class="chip" href="view/templates/Admin1/tables-basic.html">جدول پایه</a>
+          <a class="chip" href="view/templates/Admin1/tables-datatable.html">دیتاتیبل</a>
+        </div>
+      </div>
+      <div class="pgroup">
+        <h3>نمودار، محتوا و منو</h3>
+        <div class="chips">
+          <a class="chip" href="view/templates/Admin1/charts-apex.html">نمودار Apex</a>
+          <a class="chip" href="view/templates/Admin1/charts-chartjs.html">نمودار Chart.js</a>
+          <a class="chip" href="view/templates/Admin1/content-boxed-content.html">محتوای جعبه‌ای</a>
+          <a class="chip" href="view/templates/Admin1/content-left-menu.html">منوی چپ</a>
+          <a class="chip" href="view/templates/Admin1/content-right-menu.html">منوی راست</a>
+          <a class="chip" href="view/templates/Admin1/content-page-headings.html">تیتر صفحه</a>
+          <a class="chip" href="view/templates/Admin1/content-section-headings.html">تیتر بخش</a>
+          <a class="chip" href="view/templates/Admin1/header-basic.html">هدر پایه</a>
+          <a class="chip" href="view/templates/Admin1/header-colorful.html">هدر رنگی</a>
+          <a class="chip" href="view/templates/Admin1/header-full-width.html">هدر تمام‌عرض</a>
+          <a class="chip" href="view/templates/Admin1/header-large.html">هدر بزرگ</a>
+          <a class="chip" href="view/templates/Admin1/header-transparent.html">هدر شفاف</a>
+          <a class="chip" href="view/templates/Admin1/menu-standard.html">منوی استاندارد</a>
+          <a class="chip" href="view/templates/Admin1/menu-colored-sidebar.html">سایدبار رنگی</a>
+          <a class="chip" href="view/templates/Admin1/menu-dark-sidebar.html">سایدبار تیره</a>
+          <a class="chip" href="view/templates/Admin1/menu-hover-menu.html">منوی هاور</a>
+          <a class="chip" href="view/templates/Admin1/menu-off-canvas.html">منوی آف‌کانواس</a>
+        </div>
+      </div>
+      <div class="pgroup">
+        <h3>احراز هویت و سایر</h3>
+        <div class="chips">
+          <a class="chip" href="view/templates/Admin1/sign-in.html">ورود</a>
+          <a class="chip" href="view/templates/Admin1/sign-up.html">ثبت‌نام</a>
+          <a class="chip" href="view/templates/Admin1/lock-screen.html">قفل صفحه</a>
+          <a class="chip" href="view/templates/Admin1/error.html">صفحه خطا</a>
+          <a class="chip" href="view/templates/Admin1/styles-typography.html">تایپوگرافی</a>
+          <a class="chip" href="view/templates/Admin1/styles-code.html">کد</a>
+          <a class="chip" href="view/templates/Admin1/styles-icons.html">نمادها</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>سوالات <i>پرتکرار</i></h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>نپتون دقیقاً چی هست؟</summary>
+        <p>یه قالب HTML خالص برای ساخت پنل مدیریت و داشبورد — بدون نیاز به فریم‌ورک. صفحه‌ها آماده‌ان و کافیه به پروژه‌تون وصلشون کنید و داده‌ها رو جایگزین کنید.</p>
+      </details>
+      <details>
+        <summary>چند پوسته و چیدمان داره؟</summary>
+        <p>دو چیدمان منو (Admin1 استاندارد و Admin2 مدرن) که هرکدوم نسخه روشن و تیره دارن — یعنی ۴ پوسته با بیش از ۲۵۰ صفحه آماده.</p>
+      </details>
+      <details>
+        <summary>راست‌چین و فارسیه؟</summary>
+        <p>بله — کل قالب راست‌چین شده با فونت ایران‌سنس (نسخه فارسی‌اعداد) و لیبل‌های منو فارسی. نسخه اصلی انگلیسی هم داخل پکیج هست.</p>
+      </details>
+      <details>
+        <summary>چه تکنولوژی‌هایی استفاده شده؟</summary>
+        <p>بوت‌استرپ ۵، jQuery ۳.۵، ApexCharts و Chart.js برای نمودارها، Perfect Scrollbar و Pace. سورس SASS هم داخل پکیج موجوده.</p>
+      </details>
+      <details>
+        <summary>پشتیبانی و آپدیت چطوره؟</summary>
+        <p>خرید از راست‌چین شامل پشتیبانی و آپدیت‌های بعدیه — قالب از سال ۲۰۲۲ منتشره و مدام بروزرسانی میشه.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="cta-sec">
+  <div class="wrap">
+    <h2>پنل مدیریتت رو از عمق اقیانوس شروع کن 🌊</h2>
+    <p>نپتون رو یک بار بخر، برای همه پروژه‌هات استفاده کن — آپدیت مادام‌العمر و پشتیبانی راست‌چین.</p>
+    <div class="cta" style="justify-content:center">
+      <a class="btn btn-p" href="https://www.rtl-theme.com/neptune-html-template/" target="_blank" rel="noopener">خرید قالب نپتون</a>
+      <a class="btn btn-g" href="view/templates/Admin1/index.html" target="_blank" rel="noopener">دموی زنده</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>نپتون — قالب HTML پنل مدیریت · فروش در <a href="https://www.rtl-theme.com/neptune-html-template/" target="_blank" rel="noopener">راست‌چین</a></p>
+</footer>
+
+</body>
+</html>
