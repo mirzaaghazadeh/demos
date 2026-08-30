@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>رهجو — افزونه پیگیری سفارشات ووکامرس</title>
+<style>
+@font-face{font-family:'IRANSansX';font-weight:400;src:url('assets/font/IRANSansX-Regular.woff2') format('woff2')}
+@font-face{font-family:'IRANSansX';font-weight:700;src:url('assets/font/IRANSansX-Bold.woff2') format('woff2')}
+@font-face{font-family:'IRANSansXFaNum';font-weight:400;src:url('assets/font/IRANSansX-Regular.woff2') format('woff2')}
+@font-face{font-family:'IRANSansXFaNum';font-weight:700;src:url('assets/font/IRANSansX-Bold.woff2') format('woff2')}
+:root{--navy:#14213D;--navy2:#1B2C4F;--ink:#0D1526;--amber:#FCA311;--amber2:#FDBA3B;--bg:#F7F8FA;--card:#fff;--line:#E2E7F0;--mut:#5A6B8C;--txt:#1F2937}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'IRANSansX',Tahoma,sans-serif;background:var(--bg);color:var(--txt);line-height:1.9}
+.num{font-family:'IRANSansXFaNum'}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(247,248,250,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.hd{display:flex;align-items:center;gap:26px;height:66px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:19px;color:var(--navy)}
+.logo .mk{width:36px;height:36px;border-radius:11px;background:linear-gradient(135deg,var(--amber2),#E08700);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 14px rgba(252,163,17,.35)}
+.logo .mk svg{width:22px;height:22px}
+nav{display:flex;gap:20px;font-size:14px;color:var(--mut);margin-right:6px}
+nav a{text-decoration:none}
+nav a:hover{color:var(--navy)}
+.cta{margin-right:auto;display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--amber2),var(--amber));color:var(--navy);font-weight:700;font-size:14px;padding:9px 20px;border-radius:12px;text-decoration:none;box-shadow:0 8px 18px rgba(252,163,17,.35)}
+/* hero */
+.hero{position:relative;overflow:hidden;background:radial-gradient(700px 380px at 88% -10%,rgba(252,163,17,.16),transparent 60%),linear-gradient(135deg,var(--navy2),var(--navy) 55%,var(--ink));color:#fff;padding:64px 0 84px}
+.hero .dots{position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.08) 2px,transparent 2px);background-size:34px 34px;mask-image:linear-gradient(180deg,#000 30%,transparent 95%);-webkit-mask-image:linear-gradient(180deg,#000 30%,transparent 95%)}
+.hero .in{position:relative;display:grid;grid-template-columns:1fr 1.1fr;gap:46px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--amber2);border:1.5px solid rgba(252,163,17,.45);padding:6px 16px;border-radius:999px;font-size:13px;font-weight:700;letter-spacing:1px}
+.hero h1{font-size:40px;line-height:1.5;margin:18px 0 12px}
+.hero h1 em{font-style:normal;color:var(--amber2)}
+.hero p.sub{color:#AEBAD4;font-size:16.5px;max-width:480px}
+.hero .acts{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 26px;border-radius:13px;font-weight:700;font-size:15px;text-decoration:none}
+.btn-a{background:linear-gradient(135deg,var(--amber2),var(--amber));color:var(--navy);box-shadow:0 10px 24px rgba(252,163,17,.4)}
+.btn-g{border:1.5px solid rgba(255,255,255,.25);color:#fff}
+.hero .badges{display:flex;gap:18px;margin-top:28px;color:#8FA0C4;font-size:13px;flex-wrap:wrap}
+.hero .badges span{display:inline-flex;align-items:center;gap:7px}
+.hero .badges i{width:7px;height:7px;border-radius:50%;background:var(--amber)}
+/* browser mockup */
+.mock{position:relative}
+.browser{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 40px 90px rgba(0,0,0,.45),0 8px 24px rgba(0,0,0,.3);border:1px solid rgba(255,255,255,.14)}
+.bbar{height:44px;background:#1B2437;display:flex;align-items:center;gap:9px;padding:0 18px}
+.bbar .d{width:12px;height:12px;border-radius:50%}
+.d1{background:#FF5F57}.d2{background:#FEBC2E}.d3{background:#28C840}
+.bbar .url{margin-right:14px;flex:1;height:26px;background:rgba(255,255,255,.1);border-radius:7px;color:#B9C4DB;font-size:12.5px;display:flex;align-items:center;padding:0 14px;direction:ltr;text-align:left}
+.browser img{width:100%;display:block}
+.chip{position:absolute;display:inline-flex;align-items:center;gap:9px;padding:9px 18px;border-radius:999px;font-size:13.5px;font-weight:700;color:#fff;box-shadow:0 12px 26px rgba(0,0,0,.35)}
+.chip i{width:10px;height:10px;border-radius:50%}
+.c1{top:-16px;left:-14px;background:rgba(22,163,74,.95)}
+.c1 i{background:#BBF7D0}
+.c2{bottom:120px;right:-26px;background:rgba(37,99,235,.95)}
+.c2 i{background:#BFDBFE}
+.c3{bottom:-18px;left:-14px;background:rgba(124,58,237,.95)}
+.c3 i{background:#DDD6FE}
+/* stats */
+.stats{background:var(--ink);color:#fff;padding:30px 0}
+.st{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;text-align:center}
+.st .v{font-size:27px;font-weight:700;color:var(--amber2)}
+.st .l{color:#8FA0C4;font-size:13px;margin-top:2px}
+/* sections */
+.sec{padding:64px 0}
+.sec-head{text-align:center;max-width:640px;margin:0 auto 40px}
+.k{display:inline-block;background:linear-gradient(135deg,var(--amber2),var(--amber));color:var(--navy);font-size:12.5px;font-weight:700;padding:5px 18px;border-radius:999px;margin-bottom:14px}
+.sec-head h2{font-size:30px;color:var(--navy)}
+.sec-head p{color:var(--mut);margin-top:8px;font-size:15px}
+/* features */
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.f{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 20px}
+.f .ic{width:46px;height:46px;border-radius:13px;background:linear-gradient(135deg,#FFF3DF,#FFE6BD);display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+.f .ic svg{width:24px;height:24px;stroke:#E08700}
+.f h3{font-size:16px;color:var(--navy)}
+.f p{font-size:13.5px;color:var(--mut);margin-top:5px}
+/* showcase */
+.show{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.shot{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 14px 34px rgba(20,33,61,.10)}
+.shot .b{height:38px;background:#1B2437;display:flex;align-items:center;gap:7px;padding:0 14px}
+.shot .b i{width:10px;height:10px;border-radius:50%}
+.shot .u{margin-right:10px;flex:1;height:22px;background:rgba(255,255,255,.1);border-radius:6px;color:#B9C4DB;font-size:11.5px;display:flex;align-items:center;padding:0 12px;direction:ltr;text-align:left}
+.shot img{width:100%;display:block}
+.shot figcaption{padding:12px 16px;font-size:13.5px;color:var(--mut);border-top:1px solid var(--line)}
+.proto{text-align:center;margin-top:30px}
+.proto a{display:inline-flex;align-items:center;gap:9px;background:#fff;border:1.5px dashed rgba(252,163,17,.7);color:#B36D00;font-weight:700;font-size:14px;padding:11px 26px;border-radius:999px;text-decoration:none}
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:s}
+.step{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;position:relative}
+.step::before{counter-increment:s;content:counter(s,persian);position:absolute;top:-14px;right:22px;width:34px;height:34px;border-radius:11px;background:linear-gradient(135deg,var(--amber2),var(--amber));color:var(--navy);font-weight:700;display:flex;align-items:center;justify-content:center;font-size:16px;box-shadow:0 8px 16px rgba(252,163,17,.35)}
+.step h3{font-size:16px;color:var(--navy);margin-top:6px}
+.step p{font-size:13.5px;color:var(--mut);margin-top:6px}
+/* faq */
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin-bottom:12px}
+summary{font-weight:700;color:var(--navy);cursor:pointer;font-size:15px}
+details p{color:var(--mut);font-size:14px;margin-top:10px}
+/* cta */
+.final{background:radial-gradient(600px 300px at 85% -20%,rgba(252,163,17,.25),transparent 60%),linear-gradient(135deg,var(--navy2),var(--ink));border-radius:24px;color:#fff;padding:46px 40px;text-align:center;margin:20px 0 70px}
+.final h2{font-size:28px}
+.final p{color:#AEBAD4;margin-top:8px}
+.final .btn{margin-top:22px}
+footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--mut);font-size:12.5px;text-align:center}
+@media(max-width:900px){
+.hero .in{grid-template-columns:1fr}
+.grid{grid-template-columns:repeat(2,1fr)}
+.show{grid-template-columns:1fr}
+.steps{grid-template-columns:1fr}
+.st{grid-template-columns:repeat(2,1fr)}
+nav{display:none}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap hd">
+    <div class="logo">
+      <span class="mk"><svg viewBox="0 0 24 24" fill="none"><path d="M3 7h11v10H3z" stroke="#14213D" stroke-width="2" stroke-linejoin="round"/><path d="M14 10h4l3 3v4h-7z" stroke="#14213D" stroke-width="2" stroke-linejoin="round"/><circle cx="7" cy="19" r="1.8" fill="#14213D"/><circle cx="17.5" cy="19" r="1.8" fill="#14213D"/></svg></span>
+      رهجو
+    </div>
+    <nav>
+      <a href="#features">امکانات</a>
+      <a href="#shots">نمونه‌ها</a>
+      <a href="#how">نحوهٔ کار</a>
+      <a href="#faq">سوالات</a>
+    </nav>
+    <a class="cta" href="https://www.rtl-theme.com/?s=%D8%B1%D9%87%D8%AC%D9%88">خرید از راست‌چین</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="dots"></div>
+  <div class="wrap in">
+    <div>
+      <span class="eyebrow">WOOCOMMERCE ORDER TRACKING</span>
+      <h1>سفارش‌های فروشگاهت رو <em>حرفه‌ای</em> رهگیری کن</h1>
+      <p class="sub">«رهجو» افزونهٔ پیگیری سفارشات ووکامرس است: ثبت کد رهگیری برای شرکت‌های حمل نامحدود، همگام‌سازی خودکار وضعیت سفارش، تایم‌لاین شمسی برای مشتری و پیامک خودکار — بدون وابستگی به سرویس خارجی.</p>
+      <div class="acts">
+        <a class="btn btn-a" href="https://www.rtl-theme.com/?s=%D8%B1%D9%87%D8%AC%D9%88">خرید از راست‌چین</a>
+        <a class="btn btn-g" href="#shots">مشاهدهٔ تصاویر محصول</a>
+      </div>
+      <div class="badges">
+        <span><i></i>تایم‌لاین ۱۰۰٪ شمسی</span>
+        <span><i></i>سازگار با HPOS</span>
+        <span><i></i>سازگار با Dokan</span>
+        <span><i></i>بدون اشتراک سالانه</span>
+      </div>
+    </div>
+    <div class="mock">
+      <div class="browser">
+        <div class="bbar"><span class="d d1"></span><span class="d d2"></span><span class="d d3"></span><div class="url">site.ir/track</div></div>
+        <img src="shots/front-tracking.png" alt="صفحهٔ رهگیری مهمان رهجو">
+      </div>
+      <span class="chip c1"><i></i>تحویل‌شده</span>
+      <span class="chip c2"><i></i>در مسیر</span>
+      <span class="chip c3"><i></i>در شهر مقصد</span>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="wrap st">
+    <div><div class="v num">نامحدود</div><div class="l">شرکت حمل و پیک</div></div>
+    <div><div class="v num">۲۰٬۰۰۰</div><div class="l">ردیف CSV در هر بار ورود</div></div>
+    <div><div class="v num">۳</div><div class="l">پنل پیامک پشتیبانی‌شده</div></div>
+    <div><div class="v num">۶ رقمی</div><div class="l">کد تحویل ضد تقلب</div></div>
+  </div>
+</section>
+
+<section class="sec" id="features">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="k">امکانات</span>
+      <h2>هرچی برای پیگیری سفارش لازم داری</h2>
+      <p>از ثبت کد رهگیری تا پیامک تحویل — همهٔ چرخهٔ ارسال در یک افزونهٔ سبک</p>
+    </div>
+    <div class="grid">
+      <div class="f"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 7h11v10H3z"/><path d="M14 10h4l3 3v4h-7z"/><circle cx="7" cy="19" r="1.7"/><circle cx="17.5" cy="19" r="1.7"/></svg></div><h3>شرکت‌های حمل نامحدود</h3><p>تیپاکس، پست، چابک، پیک و اتوبار از پیش تعریف شده‌اند؛ شرکت دلخواه خودت را هم اضافه کن.</p></div>
+      <div class="f"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 2v4M16 2v4M8 12h8M8 16h5"/></svg></div><h3>چند کد رهگیری</h3><p>هر سفارش می‌تواند چند مرسوله داشته باشد — مرجوعی‌ها و ارسال‌های جزئی هم پوشش داده می‌شوند.</p></div>
+      <div class="f"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div><h3>تایم‌لاین شمسی</h3><p>مشتری وضعیت مرسوله را با تاریخ و ساعت جلالی و اعداد فارسی می‌بیند — حتی بدون حساب کاربری.</p></div>
+      <div class="f"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4z"/></svg></div><h3>پیامک خودکار</h3><p>صف ارسال با تلاش مجدد؛ کاوه‌نگار، SMS.ir و ملی‌پیامک به‌صورت رسمی پشتیبانی می‌شوند.</p></div>
+      <div class="f"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h10"/></svg></div><h3>همگام‌سازی وضعیت</h3><p>با تغییر وضعیت مرسوله، وضعیت سفارش طبق نگاشت دلخواه شما به‌روز می‌شود.</p></div>
+      <div class="f"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M7 9h6M7 13h10"/></svg></div><h3>ورود گروهی CSV</h3><p>تا ۲۰ هزار کد رهگیری در هر بار، با پیش‌نمایش، پردازش دسته‌ای و گزارش دقیق خطاها.</p></div>
+      <div class="f"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg></div><h3>پنل گزارش تحویل</h3><p>نرخ تحویل ۳۰ روز، توزیع وضعیت‌ها و مرسولات معوق بیش از ۷ روز یک‌جا در پیشخوان.</p></div>
+      <div class="f"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 21s-7-4.6-9.5-9A5.5 5.5 0 0112 6.2 5.5 5.5 0 0121.5 12C19 16.4 12 21 12 21z"/></svg></div><h3>کد تحویل ۶ رقمی</h3><p>هنگام تحویل، مأمور کد را از مشتری می‌گیرد؛ در پنل ماسک می‌شود تا دستکاری نشود.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="shots" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="k">نمونه‌های واقعی محصول</span>
+      <h2>از پنل مدیریت تا صفحهٔ مشتری</h2>
+    </div>
+    <div class="show">
+      <figure class="shot"><div class="b"><i class="d1"></i><i class="d2"></i><i class="d3"></i><div class="u">site.ir/wp-admin → مرسولات رهجو</div></div><img src="shots/admin-shipments.png" alt="مدیریت مرسولات"><figcaption>مدیریت مرسولات در پیشخوان — فیلتر وضعیت و شرکت حمل</figcaption></figure>
+      <figure class="shot"><div class="b"><i class="d1"></i><i class="d2"></i><i class="d3"></i><div class="u">site.ir/wp-admin → گزارش‌های رهجو</div></div><img src="shots/admin-reports.png" alt="گزارش‌های تحویل"><figcaption>گزارش نرخ تحویل و مرسولات معوق</figcaption></figure>
+      <figure class="shot"><div class="b"><i class="d1"></i><i class="d2"></i><i class="d3"></i><div class="u">site.ir/wp-admin → ورود گروهی</div></div><img src="shots/admin-import.png" alt="ورود گروهی CSV"><figcaption>ورود گروهی CSV با پیش‌نمایش و گزارش خطا</figcaption></figure>
+      <figure class="shot"><div class="b"><i class="d1"></i><i class="d2"></i><i class="d3"></i><div class="u">site.ir/my-account/tracking</div></div><img src="shots/front-account.png" alt="حساب کاربری مشتری"><figcaption>سربرگ «پیگیری سفارش‌ها» در حساب مشتری</figcaption></figure>
+    </div>
+    <div class="proto"><a href="prototype.jpg" target="_blank">⤢ مشاهدهٔ تصویر کامل پروتوتایپ محصول</a></div>
+  </div>
+</section>
+
+<section class="sec" id="how" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="k">نحوهٔ کار</span>
+      <h2>در سه قدم راه بیفتید</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><h3>نصب و فعال‌سازی</h3><p>افزونه را مثل هر افزونهٔ وردپرسی نصب کنید و لایسنس را از پیشخوان فعال کنید.</p></div>
+      <div class="step"><h3>پیکربندی شرکت‌ها و پیامک</h3><p>شرکت‌های حمل را انتخاب کنید، نگاشت وضعیت‌ها و پنل پیامک را تنظیم کنید.</p></div>
+      <div class="step"><h3>ثبت کد رهگیری‌ها</h3><p>از متای سفارش یا ورود گروهی CSV کدها را وارد کنید؛ بقیه‌اش با رهجو.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="k">سوالات متداول</span>
+      <h2>شاید سوال شما هم اینجا باشد</h2>
+    </div>
+    <details><summary>آیا رهجو به سرویس خارجی وصل می‌شود؟</summary><p>خیر. همهٔ داده‌ها در دیتابیس خود سایت شما ذخیره می‌شود و هیچ وابستگی خارجی وجود ندارد؛ فقط اتصال به پنل پیامک خودتان اختیاری است.</p></details>
+    <details><summary>با HPOS ووکامرس سازگار است؟</summary><p>بله. رهجو برای خواندن و تغییر سفارش‌ها فقط از CRUD استاندارد ووکامرس استفاده می‌کند و با جدول‌ساز سفارش‌های پرسرعت (HPOS) کاملاً سازگار است.</p></details>
+    <details><summary>مشتری بدون حساب کاربری می‌تواند پیگیری کند؟</summary><p>بله؛ با شورت‌کد <span class="num">[rahjoo_tracking]</span> صفحهٔ رهگیری مهمان بسازید. مشتری شمارهٔ سفارش + ایمیل/موبایل را وارد می‌کند و با محدودسازی نرخ هوشمند محافظت می‌شود.</p></details>
+    <details><summary>از افزونهٔ قبلی‌ام چطور مهاجرت کنم؟</summary><p>کافی است کدهای رهگیری را در فایل CSV بریزید و از بخش «ورود گروهی» وارد کنید؛ ردیف‌های تکراری خودکار شناسایی و رد می‌شوند.</p></details>
+    <details><summary>پیامک‌ها چه پنل‌هایی را پشتیبانی می‌کنند؟</summary><p>کاوه‌نگار، SMS.ir و ملی‌پیامک به‌صورت رسمی؛ صف ارسال با تلاش مجدد هوشمند دارد تا هیچ پیامکی گم نشود.</p></details>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="final">
+    <h2>پیگیری سفارش، به سبک حرفه‌ای‌ها</h2>
+    <p>همین امروز رهجو را نصب کنید و پشتیبانی فروشگاه‌تان را یک سطح بالا ببرید.</p>
+    <a class="btn btn-a" href="https://www.rtl-theme.com/?s=%D8%B1%D9%87%D8%AC%D9%88">خرید افزونه از راست‌چین</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">رهجو — افزونهٔ پیگیری سفارشات ووکامرس · ساخته‌شده برای فروشگاه‌های ایرانی</div>
+</footer>
+
+</body>
+</html>
