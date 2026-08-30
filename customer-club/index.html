@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>باشگاه مشتریان — افزونه امتیاز و وفادارسازی ووکامرس</title>
+<meta name="description" content="افزونه باشگاه مشتریان ووکامرس: امتیاز خرید، بازخرید در تسویه‌حساب، انقضای شمسی، پیامک کاوه‌نگار/SMS.ir/ملی‌پیامک — کاملاً فارسی و سازگار با HPOS.">
+<style>
+@font-face{font-family:'IRANSansX';font-weight:400;src:url('assets/font/IRANSansX-Regular.woff2') format('woff2')}
+@font-face{font-family:'IRANSansX';font-weight:700;src:url('assets/font/IRANSansX-Bold.woff2') format('woff2')}
+:root{--ink:#0B2E23;--emerald:#0E6E4E;--emerald-d:#0A4D37;--gold:#D9A441;--gold-d:#B5822A;--cream:#F7F3E8;--line:#E7E0CE;--mut:#6B7263}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'IRANSansX',sans-serif;background:var(--cream);color:var(--ink);line-height:1.9}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+a{color:inherit}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(247,243,232,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.hrow{display:flex;align-items:center;gap:14px;padding:14px 0}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:17px}
+.coin{width:34px;height:34px;border-radius:50%;background:radial-gradient(circle at 32% 30%,#F0C97A,var(--gold) 58%,var(--gold-d));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:15px;box-shadow:0 2px 6px rgba(181,130,42,.45)}
+nav{margin-right:auto;display:flex;gap:22px;font-size:13.5px;color:#4c5447}
+nav a{text-decoration:none}
+nav a:hover{color:var(--emerald)}
+.btn{display:inline-block;border:none;border-radius:12px;padding:11px 26px;font-family:inherit;font-size:14.5px;font-weight:700;cursor:pointer;text-decoration:none;text-align:center}
+.btn-gold{background:linear-gradient(180deg,#E9BC63,var(--gold) 55%,var(--gold-d));color:#3B2B07;box-shadow:0 6px 18px rgba(181,130,42,.35)}
+.btn-ghost{background:transparent;border:1.5px solid var(--emerald);color:var(--emerald)}
+.btn-emerald{background:linear-gradient(180deg,#14916A,var(--emerald) 55%,var(--emerald-d));color:#fff;box-shadow:0 6px 18px rgba(14,110,78,.35)}
+
+/* hero */
+.hero{display:flex;gap:40px;align-items:center;padding:64px 0 48px}
+.hero-t{flex:1.15}
+.kick{display:inline-block;background:#EDE4CC;border:1px solid var(--line);color:#7A6327;font-size:12.5px;font-weight:700;border-radius:20px;padding:4px 14px;margin-bottom:14px}
+h1{font-size:37px;line-height:1.5;font-weight:700}
+h1 em{font-style:normal;color:var(--emerald);position:relative}
+.hero p.sub{font-size:15.5px;color:#4c5447;margin:16px 0 22px;max-width:520px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
+.chip{background:#fff;border:1px solid var(--line);border-radius:20px;padding:5px 14px;font-size:12.5px;color:#4c5447}
+.chip b{color:var(--emerald)}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap}
+.hero-v{flex:1;display:flex;justify-content:center;position:relative}
+.mcard{width:390px;border-radius:22px;padding:26px;color:#fff;background:linear-gradient(145deg,#0E4A35,var(--ink) 70%);box-shadow:0 24px 60px rgba(11,46,35,.35);position:relative;overflow:hidden}
+.mcard::before{content:'';position:absolute;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(217,164,65,.25),transparent 65%);top:-120px;left:-100px}
+.mcard .mt{display:flex;justify-content:space-between;align-items:center;font-size:12.5px;color:#CBB075}
+.mcard .branddot{width:40px;height:40px;border-radius:50%;background:radial-gradient(circle at 32% 30%,#F0C97A,var(--gold) 58%,var(--gold-d));display:flex;align-items:center;justify-content:center;font-weight:700;color:#3B2B07}
+.mcard .balance{font-size:44px;font-weight:700;margin:26px 0 2px}
+.mcard .balance small{font-size:14px;font-weight:400;color:#9DB8AA}
+.mcard .num{font-size:15px;letter-spacing:2px;color:#CBB075;margin-top:18px}
+.mcard .foot{display:flex;justify-content:space-between;margin-top:16px;font-size:12.5px;color:#9DB8AA}
+.fcoin{position:absolute;border-radius:50%;background:radial-gradient(circle at 32% 30%,#F0C97A,var(--gold) 60%,var(--gold-d));box-shadow:0 8px 20px rgba(181,130,42,.4);display:flex;align-items:center;justify-content:center;color:#3B2B07;font-weight:700}
+.f1{width:54px;height:54px;font-size:18px;top:-14px;left:6%}
+.f2{width:34px;height:34px;font-size:12px;bottom:8px;left:-6px}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:26px 0 8px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;text-align:center}
+.stat b{display:block;font-size:21px;color:var(--emerald)}
+.stat span{font-size:12.5px;color:var(--mut)}
+
+/* sections */
+section{padding:56px 0}
+.sec-h{text-align:center;margin-bottom:34px}
+.sec-h h2{font-size:26px;font-weight:700}
+.sec-h p{color:var(--mut);font-size:14px;margin-top:6px}
+.shots{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.shot{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;text-decoration:none;display:block;box-shadow:0 10px 30px rgba(11,46,35,.07);transition:transform .2s}
+.shot:hover{transform:translateY(-4px)}
+.shot img{width:100%;display:block}
+.shot .cap{padding:12px 16px;font-size:13.5px;font-weight:700;color:#4c5447;border-top:1px solid var(--line)}
+.shot .cap small{display:block;font-weight:400;color:var(--mut);font-size:12px}
+
+.feats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.feat{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px}
+.feat .ic{width:40px;height:40px;border-radius:12px;background:#EAF4EF;display:flex;align-items:center;justify-content:center;margin-bottom:10px}
+.feat b{font-size:14.5px;display:block;margin-bottom:4px}
+.feat p{font-size:12.8px;color:var(--mut);line-height:1.9}
+svg{display:block}
+
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;counter-reset:st}
+.step{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;position:relative}
+.step::before{counter-increment:st;content:counter(st);position:absolute;top:-14px;right:20px;width:30px;height:30px;border-radius:50%;background:var(--gold);color:#3B2B07;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:14px;box-shadow:0 4px 10px rgba(181,130,42,.4)}
+.step b{display:block;margin-bottom:6px;font-size:15px}
+.step p{font-size:13px;color:var(--mut)}
+
+details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:0 20px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:700;font-size:14.5px;padding:16px 0;list-style:none}
+summary::-webkit-details-marker{display:none}
+details p{padding:0 0 16px;font-size:13.5px;color:#4c5447}
+
+.cta-band{background:linear-gradient(135deg,var(--ink),#0E4A35);border-radius:24px;color:#fff;padding:44px;text-align:center;position:relative;overflow:hidden}
+.cta-band::after{content:'';position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(217,164,65,.22),transparent 62%);bottom:-200px;left:-120px}
+.cta-band h2{font-size:24px;margin-bottom:10px}
+.cta-band p{color:#C8D6CE;font-size:14px;margin-bottom:22px}
+
+footer{padding:30px 0 40px;color:var(--mut);font-size:12.5px;text-align:center}
+footer a{color:var(--emerald);text-decoration:none;margin:0 8px}
+.fline{margin-top:10px}
+
+@media(max-width:900px){
+  .hero{flex-direction:column;text-align:center;padding-top:40px}
+  .hero p.sub{margin-inline:auto}
+  .chips,.cta-row{justify-content:center}
+  .shots,.feats,.steps,.stats{grid-template-columns:1fr 1fr}
+  nav{display:none}
+}
+@media(max-width:600px){.shots,.feats,.steps,.stats{grid-template-columns:1fr}h1{font-size:28px}.mcard{width:100%;max-width:360px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap hrow">
+    <div class="logo"><span class="coin">۹</span> باشگاه مشتریان</div>
+    <nav>
+      <a href="#shots">تصاویر پنل</a>
+      <a href="#feats">امکانات</a>
+      <a href="#how">چطور کار می‌کند؟</a>
+      <a href="#faq">سوالات</a>
+    </nav>
+    <a class="btn btn-gold" href="https://www.rtl-theme.com/?s=%D8%A8%D8%A7%D8%B4%DA%AF%D8%A7%D9%87+%D9%85%D8%B4%D8%AA%D8%B1%DB%8C%D8%A7%D9%86" style="margin-right:14px">خرید از راست‌چین</a>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="hero">
+    <div class="hero-t">
+      <span class="kick">افزونه ووکامرس — کاملاً فارسی</span>
+      <h1>مشتری‌هایت را <em>وفادار</em> کن؛<br>هر خرید، یک امتیاز.</h1>
+      <p class="sub">سیستم امتیاز و باشگاه مشتریان برای ووکامرس: مشتری از هر خرید امتیاز می‌گیرد و در خرید بعدی، همان‌جا در تسویه‌حساب، امتیازش را تخفیف می‌کند. با تاریخ شمسی کامل، پیامک داخلی و پنل مدیریت فارسی.</p>
+      <div class="chips">
+        <span class="chip"><b>شمسی</b> در تمام پنل و گزارش‌ها</span>
+        <span class="chip"><b>پیامک</b> کاوه‌نگار · SMS.ir · ملی‌پیامک</span>
+        <span class="chip">سازگار با <b>HPOS</b></span>
+        <span class="chip">بدون وابستگی خارجی</span>
+      </div>
+      <div class="cta-row">
+        <a class="btn btn-gold" href="https://www.rtl-theme.com/?s=%D8%A8%D8%A7%D8%B4%DA%AF%D8%A7%D9%87+%D9%85%D8%B4%D8%AA%D8%B1%DB%8C%D8%A7%D9%86">خرید از راست‌چین</a>
+        <a class="btn btn-ghost" href="#shots">تصاویر پنل را ببینید</a>
+      </div>
+    </div>
+    <div class="hero-v">
+      <div class="fcoin f1">۹</div>
+      <div class="mcard">
+        <div class="mt"><span>کارت عضویت باشگاه مشتریان</span><span class="branddot">۹</span></div>
+        <div class="balance">۸٬۴۵۰ <small>امتیاز</small></div>
+        <div class="num">≈ ۸۴۵٬۰۰۰ تومان تخفیف</div>
+        <div class="foot"><span>سارا محمدی</span><span>اعتبار تا ۱۴۰۶/۰۶/۰۸</span></div>
+      </div>
+      <div class="fcoin f2">+</div>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><b>۵ دقیقه</b><span>راه‌اندازی بعد از نصب</span></div>
+    <div class="stat"><b>۳ درگاه</b><span>پیامک ایرانی داخلی</span></div>
+    <div class="stat"><b>۱۰۰٪</b><span>تاریخ شمسی + اعداد فارسی</span></div>
+    <div class="stat"><b>صفر</b><span>وابستگی به سرویس خارجی</span></div>
+  </div>
+
+  <section id="shots">
+    <div class="sec-h"><h2>تصاویر واقعی پنل</h2><p>از محیط مدیریت و صفحه حساب کاربری — برای بزرگ‌نمایی کلیک کنید</p></div>
+    <div class="shots">
+      <a class="shot" href="shots/admin-customers.png" target="_blank"><img src="shots/admin-customers.png" alt="پنل مدیریت مشتریان باشگاه"><div class="cap">مدیریت مشتریان<small>موجودی، در انتظار، مجموع دریافتی و خرج‌شده هر عضو + تعدیل دستی امتیاز</small></div></a>
+      <a class="shot" href="shots/admin-log.png" target="_blank"><img src="shots/admin-log.png" alt="گردش امتیاز"><div class="cap">گردش امتیاز<small>گزارش کامل تراکنش‌ها با فیلتر تاریخ شمسی و خروجی CSV</small></div></a>
+      <a class="shot" href="shots/admin-settings.png" target="_blank"><img src="shots/admin-settings.png" alt="تنظیمات افزونه"><div class="cap">تنظیمات<small>نرخ امتیاز، دوره نگه‌داشت، بونوس‌ها و مستثنی‌ها — بدون یک خط کد</small></div></a>
+      <a class="shot" href="shots/front-account.png" target="_blank"><img src="shots/front-account.png" alt="حساب کاربری مشتری"><div class="cap">حساب کاربری مشتری<small>کارت موجودی، قوانین کسب امتیاز و تاریخچه در پنل کاربری ووکامرس</small></div></a>
+    </div>
+  </section>
+
+  <section id="feats">
+    <div class="sec-h"><h2>هر چیزی که یک باشگاه مشتریان لازم دارد</h2><p>ساده برای فروشنده، قدرتمند برای رشد</p></div>
+    <div class="feats">
+      <div class="feat"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0E6E4E" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9 9.5c0-1.4 1.3-2.5 3-2.5s3 1.1 3 2.5-1.3 2.5-3 2.5-3 1.1-3 2.5 1.3 2.5 3 2.5 3-1.1 3-2.5"/></svg></div><b>موتور امتیاز هوشمند</b><p>امتیاز خودکار روی خرید، ثبت‌نام و دیدگاه — با نرخ دلخواه، دوره نگه‌داشت و مستثنی‌کردن ارسال/مالیات/حراج.</p></div>
+      <div class="feat"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0E6E4E" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/><circle cx="9" cy="6" r="1.6" fill="#0E6E4E"/><circle cx="15" cy="12" r="1.6" fill="#0E6E4E"/></svg></div><b>بازخرید همان‌جا در تسویه</b><p>پنل «باشگاه مشتریان» در سبد و تسویه‌حساب با محاسبه زنده تخفیف — بدون کد تخفیف دستی.</p></div>
+      <div class="feat"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0E6E4E" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg></div><b>انقضای منصفانه FIFO</b><p>هر دسته امتیاز، تاریخ انقضای خودش؛ قدیمی‌ها اول خرج می‌شوند. هشدار خودکار قبل از انقضا با پیامک و ایمیل.</p></div>
+      <div class="feat"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0E6E4E" stroke-width="2"><path d="M4 5h16v11H8l-4 4z"/><path d="M8 9h8M8 12h5"/></svg></div><b>پیامک داخلی</b><p>کاوه‌نگار، SMS.ir و ملی‌پیامک — قالب‌های فارسی قابل ویرایش برای کسب، خرج و انقضای امتیاز.</p></div>
+      <div class="feat"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0E6E4E" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v16"/></svg></div><b>گزارش و خروجی CSV</b><p>لیست اعضا با موجودی و مجموع‌ها، لاگ کامل گردش امتیاز با فیلتر تاریخ شمسی و خروجی اکسل.</p></div>
+      <div class="feat"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0E6E4E" stroke-width="2"><path d="M12 3l7 4v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7z"/><path d="M9.5 12l2 2 3.5-4"/></svg></div><b>مهندسی‌شده و امن</b><p>سازگار با HPOS ووکامرس، تراکنش دیتابیسی، تست واحد و CI — بدون فایل خارجی و بدون کندی فروشگاه.</p></div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="sec-h"><h2>در سه قدم</h2><p>نصب کنید، قانون را بگذارید، تمام</p></div>
+    <div class="steps">
+      <div class="step"><b>مشتری خرید می‌کند</b><p>به ازای هر ۱۰٬۰۰۰ تومان (یا هر نری که شما تعیین می‌کنید) امتیاز می‌گیرد — بعد از تکمیل سفارش و به‌صورت خودکار.</p></div>
+      <div class="step"><b>امتیاز جمع می‌شود</b><p>موجودی در پنل کاربری او دیده می‌شود؛ با پیامک و ایمیل از وضعیت امتیاز باخبر می‌ماند.</p></div>
+      <div class="step"><b>در خرید بعدی خرج می‌کند</b><p>در تسویه‌حساب، امتیاز را به تخفیف تبدیل می‌کند — مشتری برمی‌گردد، شما می‌فروشید.</p></div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="sec-h"><h2>سوالات متداول</h2></div>
+    <details><summary>با قالب سایت من سازگار است؟</summary><p>بله؛ پنل کاربری و پنل مدیریت کاملاً استاندارد وردپرس/ووکامرس ساخته شده و با اکثر قالب‌های فارسی بدون تنظیم اضافه کار می‌کند.</p></details>
+    <details><summary>برای پیامک حتماً باید پنل داشته باشم؟</summary><p>نه؛ پیامک اختیاری است. اگر درگاه (کاوه‌نگار، SMS.ir یا ملی‌پیامک) را تنظیم نکنید، اطلاع‌رسانی فقط با ایمیل انجام می‌شود.</p></details>
+    <details><summary>تاریخ‌ها شمسی است؟</summary><p>بله — همه تاریخ‌های پنل مدیریت، گزارش‌ها و صفحه مشتری شمسی با اعداد فارسی نمایش داده می‌شوند؛ در دیتابیس هم استاندارد ذخیره می‌شود.</p></details>
+    <details><summary>اگر سفارش مرجوع شد چه می‌شود؟</summary><p>امتیاز همان سفارش به‌صورت خودکار و متناسب با مبلغ ریفاند جمع می‌شود و امتیاز خرج‌شده مشتری برمی‌گردد؛ همه‌چیز در لاگ ثبت است.</p></details>
+    <details><summary>به بهبود سرعت فروشگاه آسیب نمی‌زند؟</summary><p>خیر؛ اسکریپت‌ها فقط در صفحات سبد/تسویه/حساب کاربری لود می‌شوند، موجودی‌ها کش می‌شوند و کوئری‌ها ایندکس‌گذاری‌شده‌اند.</p></details>
+  </section>
+
+  <section>
+    <div class="cta-band">
+      <h2>از خرید بعدی مشتری، دوباره بفروش</h2>
+      <p>باشگاه مشتریان را همین امروز به فروشگاه اضافه کنید — راه‌اندازی کمتر از ۵ دقیقه.</p>
+      <a class="btn btn-gold" href="https://www.rtl-theme.com/?s=%D8%A8%D8%A7%D8%B4%DA%AF%D8%A7%D9%87+%D9%85%D8%B4%D8%AA%D8%B1%DB%8C%D8%A7%D9%86">خرید از راست‌چین</a>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a href="https://demos.navid.tr/bitter">بیتر</a>·
+      <a href="https://demos.navid.tr/finapp">فین‌آپ</a>·
+      <a href="https://demos.navid.tr/neptune">نپتون</a>·
+      <a href="https://demos.navid.tr/customer-club">باشگاه مشتریان</a>
+    </div>
+    <div class="fline">دموهای محصولات — میزبانی روی Cloudflare Pages</div>
+  </div>
+</footer>
+
+</body>
+</html>

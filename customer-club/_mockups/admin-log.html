@@ -1,0 +1,65 @@
+<!doctype html><html lang="fa" dir="rtl"><head><meta charset="utf-8">
+<style>
+@font-face{font-family:'IRANSansX';font-weight:400;src:url('../../bitter/view/assets/font/woff2/IRANSansX-Regular.woff2') format('woff2')}
+@font-face{font-family:'IRANSansX';font-weight:700;src:url('../../bitter/view/assets/font/woff2/IRANSansX-Bold.woff2') format('woff2')}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'IRANSansX',sans-serif;background:#f0f0f1;width:1280px;overflow:hidden}
+.layout{display:flex;min-height:780px}
+.side{width:170px;background:#1d2327;color:#c3c4c7;flex:none;padding-top:12px;font-size:12.5px}
+.side .brand{color:#72aee6;padding:8px 16px 14px;font-size:13px}
+.side a{display:block;padding:8px 16px;color:#c3c4c7;text-decoration:none}
+.side a.on{background:#2271b1;color:#fff}
+.main{flex:1;padding:16px 22px}
+.topbar{display:flex;justify-content:space-between;background:#1d2327;color:#c3c4c7;font-size:12px;padding:6px 18px;position:fixed;left:0;right:0;top:0;z-index:5;padding-right:186px}
+h1{font-size:19px;font-weight:700;color:#1d232e;margin:26px 0 4px}
+.sub{color:#646970;font-size:12.5px;margin-bottom:12px}
+.card{background:#fff;border:1px solid #c3c4c7;border-radius:4px;box-shadow:0 1px 1px rgba(0,0,0,.04)}
+.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0;padding:12px}
+.filters input,.filters select{border:1px solid #8c8f94;border-radius:3px;padding:5px 10px;font-family:inherit;font-size:12.5px}
+.filters input{width:170px}
+.btn{background:#2271b1;color:#fff;border:none;border-radius:3px;padding:6px 14px;font-family:inherit;font-size:13px;cursor:default}
+.btn.ghost{background:#f6f7f7;color:#2271b1;border:1px solid #2271b1}
+table{width:100%;border-collapse:collapse;font-size:13px}
+thead th{text-align:right;padding:10px 14px;border-bottom:1px solid #c3c4c7;color:#2c3338;font-weight:700}
+tbody td{padding:10px 14px;border-bottom:1px solid #f0f0f1;color:#2c3338}
+tr:nth-child(even) td{background:#f6f7f7}
+.badge{display:inline-block;padding:3px 10px;border-radius:4px;font-size:11.5px;font-weight:700}
+.b-earn{background:#e7f2ee;color:#0e6e4e}.b-redeem{background:#fbeaea;color:#b32d2e}
+.b-expire{background:#f0f0f1;color:#646970}.b-restore{background:#fdf3e3;color:#b26a00}
+.plus{color:#0e6e4e;font-weight:700}.minus{color:#b32d2e;font-weight:700}
+.mut{color:#646970}
+.row-bottom{display:flex;justify-content:space-between;padding:10px 14px;color:#646970;font-size:12px}
+</style></head><body>
+<div class="topbar"><span>🪄 شخصی‌سازی سایت</span><span>سلام، ناوید | ویرایش پروفایل | خروج</span></div>
+<div class="layout">
+  <div class="side">
+    <div class="brand">Ⓦ وردپرس فارسی</div>
+    <a>پیشخوان</a><a>نوشته‌ها</a><a>رسانه</a><a>برگه‌ها</a><a>نظرات</a><a>ووکامرس</a><a class="on">باشگاه مشتریان</a><a>نمایش</a><a>افزونه‌ها</a><a>کاربران</a><a>ابزارها</a><a>تنظیمات</a>
+  </div>
+  <div class="main">
+    <h1>گردش امتیاز</h1>
+    <div class="sub">گزارش کامل تراکنش‌های امتیاز — قابل فیلتر و خروجی CSV</div>
+    <div class="card">
+      <div class="filters">
+        <input placeholder="جستجوی کاربر…">
+        <select><option>همه انواع</option><option>امتیاز خرید</option><option>بازخرید</option><option>انقضا</option></select>
+        <input placeholder="از تاریخ ۱۴۰۵/۰۵/۰۱"><input placeholder="تا تاریخ ۱۴۰۵/۰۶/۰۸">
+        <button class="btn">اعمال فیلتر</button>
+        <button class="btn ghost">⬇ خروجی CSV</button>
+      </div>
+      <table>
+        <thead><tr><th>کاربر</th><th>نوع</th><th>امتیاز</th><th>موجودی پس از</th><th>شرح</th><th>تاریخ</th></tr></thead>
+        <tbody>
+          <tr><td><b>سارا محمدی</b></td><td><span class="badge b-earn">امتیاز خرید</span></td><td class="plus">+۱٬۴۵۰</td><td>۸٬۴۵۰</td><td>سفارش #۴۵۸۲ — تکمیل شد</td><td class="mut">۱۴۰۵/۰۶/۰۸</td></tr>
+          <tr><td><b>علی رضایی</b></td><td><span class="badge b-redeem">بازخرید</span></td><td class="minus">−۱٬۲۰۰</td><td>۱۲٬۳۰۰</td><td>تخفیف باشگاه مشتریان — سفارش #۴۵۸۰</td><td class="mut">۱۴۰۵/۰۶/۰۷</td></tr>
+          <tr><td><b>محمد حسینی</b></td><td><span class="badge b-earn">بونوس ثبت‌نام</span></td><td class="plus">+۶۵۰</td><td>۶۵۰</td><td>هدیه خوش‌آمدگویی</td><td class="mut">۱۴۰۵/۰۶/۰۷</td></tr>
+          <tr><td><b>فاطمه احمدی</b></td><td><span class="badge b-restore">بازگشت امتیاز</span></td><td class="plus">+۳۰۰</td><td>۵٬۱۲۰</td><td>بازگشت امتیاز سفارش #۴۵۵۱ (اعتبار ۳۰ روز)</td><td class="mut">۱۴۰۵/۰۶/۰۶</td></tr>
+          <tr><td><b>نگار کریمی</b></td><td><span class="badge b-expire">انقضا</span></td><td class="minus">−۸۵۰</td><td>۳٬۲۰۰</td><td>انقضای دسته امتیاز (۱۲ ماهه)</td><td class="mut">۱۴۰۵/۰۶/۰۵</td></tr>
+          <tr><td><b>رضا قاسمی</b></td><td><span class="badge b-redeem">بازخرید</span></td><td class="minus">−۴۷۰</td><td>۴٬۷۰۰</td><td>تخفیف باشگاه مشتریان — سفارش #۴۵۴۶</td><td class="mut">۱۴۰۵/۰۶/۰۴</td></tr>
+          <tr><td><b>سارا محمدی</b></td><td><span class="badge b-earn">تعدیل مدیر</span></td><td class="plus">+۵۰۰</td><td>۷٬۰۰۰</td><td>جبران تأخیر ارسال — توسط مدیر</td><td class="mut">۱۴۰۵/۰۶/۰۳</td></tr>
+        </tbody>
+      </table>
+      <div class="row-bottom"><span>۷ از ۱۸٬۴۵۲ ردیف</span><span>‹ ۱ ۲ ۳ … ۲۶۳۷ ›</span></div>
+    </div>
+  </div>
+</div></body></html>

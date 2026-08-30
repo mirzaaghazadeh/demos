@@ -1,0 +1,66 @@
+<!doctype html><html lang="fa" dir="rtl"><head><meta charset="utf-8">
+<style>
+@font-face{font-family:'IRANSansX';font-weight:400;src:url('../../bitter/view/assets/font/woff2/IRANSansX-Regular.woff2') format('woff2')}
+@font-face{font-family:'IRANSansX';font-weight:700;src:url('../../bitter/view/assets/font/woff2/IRANSansX-Bold.woff2') format('woff2')}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'IRANSansX',sans-serif;background:#f0f0f1;width:1280px;overflow:hidden}
+.layout{display:flex;min-height:780px}
+.side{width:170px;background:#1d2327;color:#c3c4c7;flex:none;padding-top:12px;font-size:12.5px}
+.side .brand{color:#72aee6;padding:8px 16px 14px;font-size:13px}
+.side a{display:block;padding:8px 16px;color:#c3c4c7;text-decoration:none}
+.side a.on{background:#2271b1;color:#fff}
+.main{flex:1;padding:16px 22px}
+.topbar{display:flex;justify-content:space-between;background:#1d2327;color:#c3c4c7;font-size:12px;padding:6px 18px;position:fixed;left:0;right:0;top:0;z-index:5;padding-right:186px}
+h1{font-size:19px;font-weight:700;color:#1d232e;margin:26px 0 12px}
+.tabs{display:flex;gap:2px;margin-bottom:-1px;position:relative;z-index:2}
+.tabs span{padding:8px 16px;font-size:13px;color:#2271b1;background:#f0f0f1;border:1px solid #c3c4c7;border-radius:6px 6px 0 0}
+.tabs span.on{background:#fff;border-bottom-color:#fff;font-weight:700}
+.card{background:#fff;border:1px solid #c3c4c7;border-radius:4px;box-shadow:0 1px 1px rgba(0,0,0,.04)}
+table.form{width:100%;border-collapse:collapse;font-size:13px}
+table.form th{text-align:right;width:290px;padding:16px;font-weight:700;color:#2c3338;vertical-align:top}
+table.form td{padding:16px;color:#2c3338}
+table.form tr{border-bottom:1px solid #f0f0f1}
+.hint{color:#646970;font-size:11.5px;margin-top:5px;max-width:520px;line-height:1.9}
+input[type=text],select{border:1px solid #8c8f94;border-radius:3px;padding:6px 10px;font-family:inherit;font-size:13px;min-width:180px}
+.toggle{display:inline-flex;align-items:center;gap:8px;font-weight:700}
+.sw{width:34px;height:18px;background:#0e6e4e;border-radius:20px;position:relative;display:inline-block}
+.sw::after{content:'';position:absolute;left:2px;top:2px;width:14px;height:14px;background:#fff;border-radius:50%}
+.sw.off{background:#8c8f94}.sw.off::after{left:auto;right:2px}
+input[type=checkbox]{width:16px;height:16px;accent-color:#2271b1}
+.save{margin:16px;padding:8px 26px}
+.note{background:#f6f7f7;border-right:4px solid #0e6e4e;padding:10px 14px;margin:14px 18px;border-radius:4px;font-size:12.5px;color:#2c3338}
+</style></head><body>
+<div class="topbar"><span>🪄 شخصی‌سازی سایت</span><span>سلام، ناوید | ویرایش پروفایل | خروج</span></div>
+<div class="layout">
+  <div class="side">
+    <div class="brand">Ⓦ وردپرس فارسی</div>
+    <a>پیشخوان</a><a>نوشته‌ها</a><a>رسانه</a><a>برگه‌ها</a><a>نظرات</a><a>ووکامرس</a><a class="on">باشگاه مشتریان</a><a>نمایش</a><a>افزونه‌ها</a><a>کاربران</a><a>ابزارها</a><a>تنظیمات</a>
+  </div>
+  <div class="main">
+    <h1>تنظیمات باشگاه مشتریان</h1>
+    <div class="tabs"><span class="on">عمومی</span><span>بازخرید</span><span>انقضا و اطلاع‌رسانی</span><span>پیامک</span><span>پیشرفته</span></div>
+    <div class="card">
+      <table class="form">
+        <tr><th>فعال بودن افزونه</th><td><span class="toggle"><span class="sw"></span> فعال</span></td></tr>
+        <tr><th>امتیاز به ازای خرید</th><td>
+          <b>هر <input type="text" value="۱۰٬۰۰۰" style="min-width:110px"> تومان خرید = ۱ امتیاز</b>
+          <div class="hint">مبنای محاسبه، جمع اقلام سبد (بدون ارسال و مالیات) است و به سمت پایین گرد می‌شود.</div>
+        </td></tr>
+        <tr><th>وضعیت اعطای امتیاز</th><td><select><option>پس از تکمیل سفارش (completed)</option><option>پس از پرداخت (processing)</option></select></td></tr>
+        <tr><th>دوره نگه‌داشت امتیاز</th><td><input type="text" value="۰" style="min-width:80px"> روز <div class="hint">امتیاز در این مدت «در انتظار» می‌ماند و قابل بازخرید نیست — برای مدیریت مرجوعی‌ها.</div></td></tr>
+        <tr><th>بونوس ثبت‌نام</th><td><input type="text" value="۰" style="min-width:80px"> امتیاز برای هر عضو جدید</td></tr>
+        <tr><th>بونوس دیدگاه محصول</th><td><input type="text" value="۵۰" style="min-width:80px"> امتیاز
+          <label style="display:flex;gap:6px;margin-top:8px;font-size:12.5px"><input type="checkbox" checked> فقط خریداران تأییدشده</label></td></tr>
+        <tr><th>مستثنی‌کردن از محاسبه</th><td>
+          <label style="display:flex;gap:6px;margin-bottom:8px;font-size:12.5px"><input type="checkbox" checked> هزینه ارسال</label>
+          <label style="display:flex;gap:6px;margin-bottom:8px;font-size:12.5px"><input type="checkbox" checked> مالیات</label>
+          <label style="display:flex;gap:6px;font-size:12.5px"><input type="checkbox"> محصولات حراجی</label>
+        </td></tr>
+        <tr><th>حداقل مبلغ سفارش برای کسب امتیاز</th><td><input type="text" value="۰" style="min-width:110px"> تومان</td></tr>
+      </table>
+      <div class="note">💡 امتیازهای خرید پس از گذشت دوره نگه‌داشت، خودکار «قابل استفاده» می‌شوند — نیازی به کاری از سمت شما نیست.</div>
+      <button class="btn save">ذخیره تغییرات</button>
+      <div style="height:16px"></div>
+    </div>
+  </div>
+</div></body></html>
