@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>پاسخ‌یار — دستیار هوشمند دیدگاه‌های ووکامرس</title>
+<style>
+  @font-face { font-family:'IRANSansX'; src:url('assets/fonts/IRANSansXFaNum-Regular.woff2') format('woff2'); font-weight:400; }
+  @font-face { font-family:'IRANSansX'; src:url('assets/fonts/IRANSansXFaNum-Bold.woff2') format('woff2'); font-weight:700; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'IRANSansX', sans-serif; background:#FAFAFF; color:#1E1B4B; }
+  a { text-decoration:none; }
+  .wrap { max-width:1180px; margin:0 auto; padding:0 24px; }
+
+  nav { position:sticky; top:0; z-index:50; background:rgba(30,27,75,.92); backdrop-filter:blur(8px); }
+  nav .in { max-width:1180px; margin:0 auto; padding:14px 24px; display:flex; align-items:center; justify-content:space-between; }
+  nav .brand { color:#fff; font-weight:700; font-size:20px; }
+  nav .brand span { color:#22D3EE; }
+  nav .lnk { color:#C7D2FE; font-size:14px; margin-right:22px; }
+  nav .lnk:hover { color:#fff; }
+
+  header { position:relative; overflow:hidden; color:#fff;
+    background:linear-gradient(150deg, #4338CA 0%, #312E81 55%, #1E1B4B 100%); }
+  header .dots { position:absolute; inset:0;
+    background-image:radial-gradient(rgba(255,255,255,.10) 2px, transparent 2px); background-size:38px 38px;
+    mask-image:linear-gradient(120deg, transparent 25%, #000); -webkit-mask-image:linear-gradient(120deg, transparent 25%, #000); }
+  header .in { position:relative; z-index:2; max-width:1180px; margin:0 auto; padding:84px 24px 96px;
+    display:grid; grid-template-columns:1.1fr .9fr; gap:48px; align-items:center; }
+  .eyebrow { display:inline-block; color:#67E8F9; border:1px solid rgba(103,232,249,.4); border-radius:30px;
+    padding:7px 18px; font-size:13.5px; margin-bottom:20px; }
+  h1 { font-size:52px; line-height:1.25; font-weight:700; }
+  h1 em { font-style:normal; color:#67E8F9; }
+  .lead { color:#C7D2FE; font-size:18.5px; line-height:2; margin-top:18px; }
+  .cta-row { display:flex; gap:14px; margin-top:30px; flex-wrap:wrap; }
+  .btn { border-radius:14px; padding:14px 30px; font-weight:700; font-size:15.5px; display:inline-block; }
+  .btn-gold { background:linear-gradient(135deg,#67E8F9,#22D3EE 55%,#0891B2); color:#1E1B4B; box-shadow:0 12px 30px rgba(0,0,0,.35); }
+  .btn-ghost { color:#E0E7FF; border:1.5px solid rgba(199,210,254,.5); }
+  .chips { display:flex; gap:10px; flex-wrap:wrap; margin-top:26px; }
+  .chip { background:rgba(255,255,255,.08); border:1px solid rgba(199,210,254,.25); color:#E0E7FF;
+    border-radius:30px; padding:8px 16px; font-size:13.5px; }
+  .chip b { color:#67E8F9; }
+
+  .hero-card { position:relative; background:#fff; border-radius:24px; padding:26px 28px;
+    box-shadow:0 30px 70px rgba(0,0,0,.4); transform:rotate(-1.5deg); }
+  .hero-card .stars { color:#F59E0B; letter-spacing:5px; font-size:19px; }
+  .hero-card .rv { color:#312E81; font-size:15.5px; line-height:1.95; margin-top:12px; }
+  .hero-card .who { display:flex; align-items:center; gap:12px; margin-top:14px; }
+  .hero-card .av { width:42px; height:42px; border-radius:50%; background:linear-gradient(135deg,#818CF8,#4338CA);
+    color:#fff; font-weight:700; display:flex; align-items:center; justify-content:center; }
+  .hero-card .nm { font-weight:700; font-size:14.5px; }
+  .hero-card .bad { font-size:12px; color:#E11D48; background:#FFE4E6; border-radius:20px; padding:3px 12px; }
+  .hero-bubble { position:relative; z-index:3; margin:-34px 18px 0; background:linear-gradient(150deg,#22D3EE,#0891B2);
+    color:#fff; border-radius:20px 20px 20px 6px; padding:20px 24px; box-shadow:0 24px 50px rgba(0,0,0,.35);
+    transform:rotate(1.2deg); font-size:14.5px; line-height:1.95; }
+  .hero-bubble b { color:#CFFAFE; }
+  .hero-bubble .hd { font-size:12.5px; font-weight:700; opacity:.92; margin-bottom:6px; }
+
+  .stats { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; max-width:1180px; margin:-52px auto 0;
+    padding:0 24px; position:relative; z-index:5; }
+  .stat { background:#fff; border:1px solid #DDD6FE; border-radius:18px; padding:20px 16px; text-align:center;
+    box-shadow:0 14px 34px rgba(30,27,75,.10); }
+  .stat b { display:block; font-size:25px; color:#4338CA; }
+  .stat span { font-size:13px; color:#6B7280; }
+
+  section { padding:74px 0 26px; }
+  .sec-h { text-align:center; margin-bottom:36px; }
+  .sec-h h2 { font-size:33px; font-weight:700; color:#1E1B4B; }
+  .sec-h h2 i { font-style:normal; color:#4338CA; }
+  .sec-h p { color:#6B7280; margin-top:10px; font-size:15.5px; }
+
+  .shots { display:grid; grid-template-columns:repeat(2,1fr); gap:22px; }
+  .shots .wide { grid-column:1 / -1; }
+  .shot { border-radius:18px; overflow:hidden; border:1px solid #DDD6FE; background:#fff;
+    box-shadow:0 14px 34px rgba(30,27,75,.12); display:block; }
+  .shot img { width:100%; display:block; aspect-ratio:16/10; object-fit:cover; object-position:top center; }
+  .shot.wide img { aspect-ratio:2.1/1; }
+  .shot .cap { padding:14px 18px 16px; }
+  .shot .cap b { font-size:15.5px; color:#1E1B4B; }
+  .shot .cap small { display:block; color:#6B7280; font-size:13px; margin-top:5px; line-height:1.8; }
+
+  .feats { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+  .feat { background:#fff; border:1px solid #DDD6FE; border-radius:18px; padding:24px 22px;
+    box-shadow:0 10px 26px rgba(30,27,75,.08); }
+  .feat .ic { width:46px; height:46px; border-radius:14px; background:linear-gradient(135deg,#4338CA,#22D3EE);
+    display:flex; align-items:center; justify-content:center; margin-bottom:14px; }
+  .feat b { font-size:16px; color:#1E1B4B; }
+  .feat p { color:#6B7280; font-size:13.5px; line-height:1.95; margin-top:8px; }
+
+  .how { background:#F5F3FF; border-radius:26px; padding:38px 34px; margin-top:10px;
+    display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+  .how .st { background:#fff; border-radius:16px; padding:20px; border:1px solid #DDD6FE; }
+  .how .n { width:34px; height:34px; border-radius:50%; background:#4338CA; color:#fff; font-weight:700;
+    display:flex; align-items:center; justify-content:center; margin-bottom:10px; }
+  .how b { font-size:14.5px; color:#1E1B4B; }
+  .how p { color:#6B7280; font-size:13px; line-height:1.9; margin-top:6px; }
+
+  footer { margin-top:70px; background:#1E1B4B; color:#A5B4FC; padding:30px 0; text-align:center; font-size:13.5px; }
+  footer a { color:#67E8F9; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="in">
+    <div class="brand">پاسخ<span>‌یار</span></div>
+    <div><a class="lnk" href="#shots">تصاویر</a><a class="lnk" href="#feats">امکانات</a><a class="lnk" href="#how">راه‌اندازی</a></div>
+  </div>
+</nav>
+
+<header>
+  <div class="dots"></div>
+  <div class="in">
+    <div>
+      <div class="eyebrow">افزونهٔ ووکامرس — هوش مصنوعی</div>
+      <h1>به هر دیدگاه،<br>در چند ثانیه <em>جواب حرفه‌ای</em> بده</h1>
+      <div class="lead">پاسخ‌یار برای هر دیدگاه فروشگاه یک پیش‌نویس پاسخ آماده می‌نویسد؛ تو ویرایش می‌کنی و با یک کلیک منتشر می‌شود. خلاصه‌ساز دیدگاه محصول، داشبورد احساسات و فیلتر تبلیغ هم داخل همین یک افزونه است.</div>
+      <div class="cta-row">
+        <a class="btn btn-gold" href="https://www.rtl-theme.com/?s=%D9%BE%D8%A7%D8%B3%D8%AE%DB%8C%D8%A7%D8%B1">خرید از راست‌چین</a>
+        <a class="btn btn-ghost" href="#shots">تصاویر واقعی پنل</a>
+      </div>
+      <div class="chips">
+        <span class="chip"><b>AI</b> پیش‌نویس پاسخ</span>
+        <span class="chip"><b>خلاصه‌ساز</b> دیدگاه محصول</span>
+        <span class="chip"><b>داشبورد</b> احساسات</span>
+        <span class="chip"><b>فیلتر</b> تبلیغ و اسپم</span>
+      </div>
+    </div>
+    <div>
+      <div class="hero-card">
+        <div class="stars">★★<span style="color:#D4D4D8">★★★</span></div>
+        <div class="rv">رنگی که فرستادید با عکس سایت فرق داشت و جورابش هم کیفیت مطلوب رو نداشت. انتظار بیشتری داشتم...</div>
+        <div class="who"><div class="av">ف</div><div class="nm">فاطمه احمدی</div><div class="bad">دیدگاه منفی ۲ ستاره</div></div>
+      </div>
+      <div class="hero-bubble">
+        <div class="hd">✦ پیش‌نویس پاسخ‌یار — آمادهٔ انتشار</div>
+        سلام فاطمه عزیز، بابت این تجربه صمیمانه <b>عذرخواهی می‌کنیم</b>. تعویض رنگ یا مرجوعی کامل بدون قید و شرط برات فعال شد — فقط کافیه به پشتیبانی پیام بدی.
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="stats">
+  <div class="stat"><b>۵ ثانیه</b><span>میانگین تولید هر پیش‌نویس</span></div>
+  <div class="stat"><b>۳ سرویس</b><span>OpenRouter · OpenAI · درگاه ایرانی</span></div>
+  <div class="stat"><b>۴ حالت</b><span>پیشنهاد / خودکار / دستی / خاموش</span></div>
+  <div class="stat"><b>۱۰۰٪</b><span>پنل و گزارش فارسی</span></div>
+</div>
+
+<section id="shots">
+  <div class="wrap">
+    <div class="sec-h"><h2>تصاویر <i>واقعی</i> پنل</h2><p>از محیط پیشخوان وردپرس و صفحهٔ محصول — برای بزرگ‌نمایی کلیک کنید</p></div>
+    <div class="shots">
+      <a class="shot wide" href="shots/suggested.png" target="_blank"><img src="shots/suggested.png" alt="صف پاسخ‌های پیشنهادی"><div class="cap"><b>صف پاسخ‌های پیشنهادی</b><small>هر دیدگاه یک کارت با پیش‌نویس آماده؛ ویرایش، ارسال یا رد با یک کلیک — تعداد پیشنهادهای آماده روی منو هم نشان داده می‌شود.</small></div></a>
+      <a class="shot" href="shots/reviews-screen.png" target="_blank"><img src="shots/reviews-screen.png" alt="دکمه پاسخ با AI"><div class="cap"><b>دکمهٔ «پاسخ با AI»</b><small>روی هر دیدگاه ووکامرس، بدون ترک صفحه — به‌همراه ستون و فیلتر اختصاصی پاسخ‌یار.</small></div></a>
+      <a class="shot" href="shots/report.png" target="_blank"><img src="shots/report.png" alt="داشبورد گزارش"><div class="cap"><b>داشبورد گزارش و احساسات</b><small>توزیع ستاره‌ها، روند دیدگاه‌ها، گلایه‌های پرتکرار و آخرین پاسخ‌های ارسال‌شده.</small></div></a>
+      <a class="shot" href="shots/product-reply.png" target="_blank"><img src="shots/product-reply.png" alt="پاسخ منتشرشده"><div class="cap"><b>پاسخ منتشرشده زیر دیدگاه</b><small>نمای واقعی صفحهٔ محصول برای مشتری — اعتمادسازی جلوی چشم بقیهٔ خریدارها.</small></div></a>
+      <a class="shot" href="shots/settings.png" target="_blank"><img src="shots/settings.png" alt="تنظیمات"><div class="cap"><b>تنظیمات کامل</b><small>انتخاب سرویس هوش مصنوعی، حالت پاسخ (پیشنهادی/خودکار)، لحن برند و فیلتر تبلیغ.</small></div></a>
+    </div>
+  </div>
+</section>
+
+<section id="feats">
+  <div class="wrap">
+    <div class="sec-h"><h2>هرچی یک فروشگاه برای <i>مدیریت دیدگاه</i> لازم دارد</h2><p>همه در یک افزونه — بدون وابستگی به سرویس خارجی اجباری</p></div>
+    <div class="feats">
+      <div class="feat"><div class="ic">✦</div><b>پیش‌نویس هوشمند</b><p>پاسخ متناسب با متن و امتیاز هر دیدگاه؛ لحن برند قابل تنظیم، محدودیت طول و ممنوع‌کردن درخواست‌های حساس.</p></div>
+      <div class="feat"><div class="ic">⚡</div><b>حالت خودکار اختیاری</b><p>دیدگاه‌های ۴ و ۵ ستاره خودکار جواب می‌گیرند؛ منفی‌ها پیشنهاد می‌مانند تا خودت تایید کنی — هیچ‌وقت کورکورانه جواب منفی نمی‌رود.</p></div>
+      <div class="feat"><div class="ic">◈</div><b>خلاصه‌ساز دیدگاه محصول</b><p>جمع‌بندی دیجی‌کالایی نقاط قوت و ضعف روی تب دیدگاه‌های محصول — با شورت‌کد یا خودکار.</p></div>
+      <div class="feat"><div class="ic">◉</div><b>داشبورد احساسات</b><p>نمرهٔ رضایت، توزیع ستاره‌ها، روند ماهانه و «۵ گلایهٔ پرتکرار» برای مدیر محصول.</p></div>
+      <div class="feat"><div class="ic">✕</div><b>فیلتر تبلیغ و اسپم</b><p>دیدگاه‌های تبلیغاتی قبل از ورود به صف شناسایی و رد می‌شوند؛ صف فقط برای دیدگاه‌های واقعی.</p></div>
+      <div class="feat"><div class="ic">⬡</div><b>کلید خودت، داده‌ی خودت</b><p>OpenRouter، OpenAI یا هر درگاه سازگار با OpenAI-API ایرانی — کلید رمزنگاری‌شده ذخیره می‌شود و پاسخ‌ها روی سایت خودت می‌مانند.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <div class="sec-h"><h2>راه‌اندازی در <i>۳ قدم</i></h2></div>
+    <div class="how">
+      <div class="st"><div class="n">۱</div><b>کلید سرویس هوش مصنوعی</b><p>در تنظیمات، سرویس را انتخاب و کلید API را وارد کن (OpenRouter ارزان‌ترین شروع است). کلید به‌صورت رمزنگاری‌شده ذخیره می‌شود.</p></div>
+      <div class="st"><div class="n">۲</div><b>حالت پاسخ را انتخاب کن</b><p>«پیشنهادی» برای شروعِ محتاطانه؛ بعداً می‌توانی «خودکار» را فقط برای ستاره‌های مثبت روشن کنی.</p></div>
+      <div class="st"><div class="n">۳</div><b>دیدگاه‌ها را باز کن</b><p>دکمهٔ «پاسخ با AI» کنار هر دیدگاه — پیش‌نویس را ویرایش کن و منتشر کن. گزارش‌ها هم از همین لحظه پر می‌شوند.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">پاسخ‌یار — دستیار هوشمند دیدگاه‌های ووکامرس · توسعه <a href="https://demos.navid.tr/">Navid Mirzaaghazadeh</a></div>
+</footer>
+
+</body>
+</html>
