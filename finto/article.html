@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <title>فینتو</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon-16x16.png"
+    />
+    <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- Description no longer than 155 characters -->
+    <meta name="description" content="Finto - Finance Website Coded Template" />
+    <!-- Product Name -->
+    <meta
+      name="product-name"
+      content="Finto - Finance Website Coded Template"
+    />
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ui8" />
+    <meta
+      name="twitter:title"
+      content="Finto - Finance Website Coded Template"
+    />
+    <meta
+      name="twitter:description"
+      content="Premium Finance Website Template"
+    />
+    <meta name="twitter:creator" content="@ui8" />
+    <!-- Twitter Summary card images must be at least 120x120px -->
+    <meta
+      name="twitter:image"
+      content="https://ui8-finto-html-698394efb3c9.herokuapp.com/img/twitter-card.png"
+    />
+    <!-- Open Graph data for Facebook -->
+    <meta
+      property="og:title"
+      content="Finto - Finance Website Coded Template"
+    />
+    <meta property="og:type" content="Article" />
+    <meta
+      property="og:url"
+      content="https://ui8.net/unpixel/products/finto---finance-website-coded-template"
+    />
+    <meta
+      property="og:image"
+      content="https://ui8-finto-html-698394efb3c9.herokuapp.com/img/fb-og-image.png"
+    />
+    <meta
+      property="og:description"
+      content="Premium Finance Website Template"
+    />
+    <meta
+      property="og:site_name"
+      content="Finto - Finance Website Coded Template"
+    />
+    <meta property="fb:admins" content="132951670226590" />
+    <!-- Open Graph data for LinkedIn -->
+    <meta
+      property="og:title"
+      content="Finto - Finance Website Coded Template"
+    />
+    <meta
+      property="og:url"
+      content="https://ui8.net/unpixel/products/finto---finance-website-coded-template"
+    />
+    <meta
+      property="og:image"
+      content="https://ui8-finto-html-698394efb3c9.herokuapp.com/img/linkedin-og-image.png"
+    />
+    <meta
+      property="og:description"
+      content="Premium Finance Website Template"
+    />
+    <!-- Open Graph data for Pinterest -->
+    <meta
+      property="og:title"
+      content="Finto - Finance Website Coded Template"
+    />
+    <meta
+      property="og:url"
+      content="https://ui8.net/unpixel/products/finto---finance-website-coded-template"
+    />
+    <meta
+      property="og:image"
+      content="https://ui8-finto-html-698394efb3c9.herokuapp.com/img/pinterest-og-image.png"
+    />
+    <meta
+      property="og:description"
+      content="Premium Finance Website Template"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/style.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+      rel="stylesheet"
+    />
+    <script>
+      let viewportmeta = document.querySelector('meta[name="viewport"]');
+      if (viewportmeta) {
+        if (screen.width < 375) {
+          let newScale = screen.width / 375;
+          viewportmeta.content =
+            "width=375, minimum-scale=" +
+            newScale +
+            ", maximum-scale=1.0, user-scalable=no, initial-scale=" +
+            newScale +
+            "";
+        } else {
+          viewportmeta.content =
+            "width=device-width, maximum-scale=1.0, initial-scale=1.0";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <!-- header-->
+    <header
+      class="fixed top-0 left-0 right-0 z-20 border-b bg-white border-greyscale-200/60"
+    >
+      <div class="container-md flex items-center h-22 md:h-18">
+        <a class="shrink-0 w-26 ml-12 lg:mr-auto" href="index.html"><img class="w-full" src="img/logo-dark.svg" alt=""></a>
+
+        <div
+          class="header-wrap flex items-center grow lg:fixed lg:top-0 lg:right-0 lg:bottom-0 lg:z-10 lg:w-80 lg:flex-col lg:items-stretch lg:py-20 lg:px-8 lg:pb-8 lg:transition-transform lg:translate-x-full lg:bg-greyscale-0"
+        >
+          <nav
+            class="flex items-center space-x-4 lg:flex-col lg:items-stretch lg:space-x-0 lg:space-y-8"
+          >
+            <a
+              class="px-2.5 py-1 text-base font-medium transition-colors lg:text-xl text-greyscale-900 hover:text-primary-100"
+              href="features.html"
+              >امکانات</a
+            ><a
+              class="px-2.5 py-1 text-base font-medium transition-colors lg:text-xl text-greyscale-900 hover:text-primary-100"
+              href="solutions.html"
+              >راه حل ها</a
+            ><a
+              class="px-2.5 py-1 text-base font-medium transition-colors lg:text-xl text-greyscale-900 hover:text-primary-100"
+              href="customers.html"
+              >مشتریان</a
+            ><a
+              class="px-2.5 py-1 text-base font-medium transition-colors lg:text-xl text-greyscale-900 hover:text-primary-100"
+              href="integrations.html"
+              >منابع</a
+            ><a
+              class="px-2.5 py-1 text-base font-medium transition-colors lg:text-xl text-greyscale-900 hover:text-primary-100"
+              href="pricing.html"
+              >قیمت گذاری</a
+            >
+          </nav>
+          <div class="flex items-center mr-auto space-x-3 lg:mt-auto lg:ml-0">
+            <a
+              class="btn-secondary bg-transparent btn-sm gap"
+              href="sign-in.html"
+              >ورود</a
+            ><a class="btn-primary btn-sm" href="sign-up.html"
+              >ایجاد حساب کاربری</a
+            >
+          </div>
+        </div>
+        <button
+          class="header-burger hidden relative z-20 flex-col justify-center items-start w-6 h-6 tap-highlight-color before:w-5 before:h-0.5 before:rounded-full before:transition-all after:w-5 after:h-0.5 after:rounded-full after:transition-all lg:flex before:bg-greyscale-900 after:bg-greyscale-900"
+        >
+          <span
+            class="w-5 h-0.5 my-1 rounded-full transition-all bg-greyscale-900"
+          ></span>
+        </button>
+      </div>
+      <div
+        class="header-overlay hidden fixed inset-0 z-5 bg-greyscale-900/90 lg:block lg:invisible lg:opacity-0 lg:transition-all"
+      ></div>
+    </header>
+    <div
+      class="relative flex flex-col min-h-screen pt-22 overflow-hidden md:pt-18"
+    >
+      <div class="relative z-2 flex flex-col grow">
+        <!-- hero-->
+        <div class="section-md">
+          <div class="container max-w-[61.5rem]">
+            <div class="max-w-[43.13rem] mx-auto mb-12 text-center md:mb-8">
+              <div class="flex justify-center items-center mb-4 space-x-2.5">
+                <div class="label label-sm gaps">مهندسی</div>
+                <div class="text-base font-medium text-greyscale-400">
+                 24 فروردین 1403
+                </div>
+              </div>
+              <div class="mb-4 text-h2 xl:text-h3 md:text-h4">
+                معرفی پورتال مشتریان سلف سرویس
+              </div>
+              <div class="text-lg text-greyscale-400">
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+                در ستون و سطرآنچنان که.
+              </div>
+            </div>
+            <div class="aspect-[1.76] md:aspect-[1.3]">
+              <img
+                class="w-full h-full object-cover"
+                src="img/blog-pic-1.jpg"
+                alt=""
+              />
+            </div>
+            <div
+              class="content mt-12 pt-12 border-t border-greyscale-200 md:mt-8 md:pt-8"
+            >
+              <p>
+                مدیر مالی در حال صعود است. اوایل سال جاری، Fortune
+                <span class="text-secondary-300">گزارش داد</span> که در نیمه اول
+                سال 2022، 8.1 درصد از مدیران مالی در Fortune 500 و S&P 500
+                شرکت‌ها نسبت به 5.6 درصد یک دهه قبل به سمت مدیرعامل ارتقا
+                یافتند. این جهش نشان دهنده چگونگی موفقیت تجاری و چابکی مالی است
+              </p>
+              <p>
+                این همچنین با گزارش بینش مالی ما
+                <span class="text-secondary-300"> گزارش بینش مالی ما</span>که
+                اخیراً منتشر شده است، مطابقت دار , که نشان می دهد 68٪ از رهبران
+                مالی معتقدند که ساده کردن عملیات مالی بخش اساسی رشد استراتژیک
+                شرکت آنها است. آنها آن را پیش نیازی برای ورود به بازارهای جدید و
+                راه اندازی مدل های تجاری جدید می دانند.
+              </p>
+              <p>
+                این نوع فرصت‌ها دلیلی است که ما مجموعه اتوماسیون درآمد و مالی
+                خود را ساخته‌ایم، مجموعه‌ای از محصولات مدولار که به تیم‌های مالی
+                کمک می‌کند تا کار خود را خودکار، تطبیق و مقیاس کنند. محصولات
+                اصلی صورتحساب. شناسایی درآمد؛ خط لوله داده؛ صورتحساب؛ مالیات؛ و
+                Sigma، محصول تجزیه و تحلیل داده ما، بدون زحمت با Stripe Payments
+                ادغام می شوند و به کسب و کارها این امکان را می دهد که هزینه های
+                عملیاتی خود را کاهش دهند و در عین حال درآمد را افزایش دهند.
+              </p>
+              <p>
+                این هفته ما هیجان‌زده هستیم که ویژگی‌های جدیدی را معرفی کنیم که
+                به کسب‌وکارها کمک می‌کند درآمدشان را افزایش دهند، دفتر پشتیبان
+                را ساده‌سازی کنند و بینش و تصمیم‌گیری را بهبود بخشند.
+              </p>
+              <h5>ابزارهای افزایش درآمد</h5>
+              <p>
+                بازدهی حاصل از بهبود سیستم‌های پشتیبان می‌تواند بسیار زیاد باشد.
+                هشتاد و هفت درصد از فاکتورهای Stripe در عرض 24 پرداخت می شود
+                ساعت‌ها، و ابزارهای بازیابی درآمد Billing به تنهایی به کاربران
+                کمک کرد 2.5 میلیارد دلار درآمدی را که می‌توانست از دست داده است،
+                بازیابی کند ریزش در نیمه اول سال 2023.
+              </p>
+              <p>
+                ما ویژگی‌های جدیدی را به اتوماسیون درآمد و مالی اضافه کرده‌ایم
+                مجموعه ای که مستقیماً عملکرد پشتیبان را به آن ترجمه می کند رشد
+                درآمد.
+              </p>
+              <h6>1. ویژگی های جدید بازیابی درآمد</h6>
+              <p>
+                بازیابی درآمد بخش مهمی از نحوه به حداکثر رساندن صورت‌حساب Stripe
+                است درآمد: ما از یادگیری ماشینی برای تکرار ناموفق استفاده می
+                کنیم پرداخت در زمان بهینه، بر اساس صدها پویا سیگنال ها الگوریتم
+                تلاش مجدد هوشمند ما به طور مداوم بهتر می شود، و نرخ بازیابی را
+                15.5 درصد در سال 2023 بهبود بخشیده ایم.
+              </p>
+              <p>
+                <span class="text-secondary-300">Deliveroo</span>بهبود یافته است
+                بیش از 100 میلیون پوند درآمد با درآمد Billing ویژگی های بازیابی
+                «کاری که Stripe برای بهبود پرداخت انجام داده است نرخ موفقیت، از
+                استفاده از Stripe Billing تا سریع فعال کردن Deliveroo Plus، دلیل
+                تعبیه شدن Stripe را روشن می کند ویل شو، یکی از بنیانگذاران، گفت:
+                در برخی از بزرگترین ابتکارات ما و مدیرعامل Deliveroo.
+              </p>
+              <h6>2. مالیات در بازارهای بیشتر برای گسترش سریعتر بازار</h6>
+              <p>
+                یکی از بهترین راه های کسب و کار برای افزایش درآمد، ورود است
+                بازارهای جدید، اما اغلب به دلیل پیچیدگی مالیاتی مانع می شوند که
+                همراه آن است. ما Stripe Tax را برای حل این مشکل ساختیم.
+                کسب‌وکارها می‌توانند به فروش برون مرزی بپردازند و مالیات از
+                مالیات مراقبت می‌کند جمع آوری برای آنها، به طور خودکار. اکنون،
+                مالیات بهتر شده است، با پشتیبانی از 10 کشور جدید (با آوردن تعداد
+                کل کشورهای مورد حمایت از 50 کشور، از جمله تمام اتحادیه اروپا).
+              </p>
+              <h6>3. مالیات برای سیستم عامل</h6>
+              <p>
+                برای مدت طولانی، پلتفرم‌ها درآمد و ارزشی برای آن ایجاد کرده‌اند
+                مشتریان خود را با ارائه و کسب درآمد از پرداخت های خطی. ما به طور
+                فزاینده‌ای، ارائه سایر پلتفرم‌ها را آسان می‌کنیم محصولات راه راه
+                به همان شیوه، به آنها اجازه می دهد تا متمایز شوند پیشنهادات خود
+                را، باز کردن جریان درآمد جدید، و ارائه اضافه شده است برای
+                کاربران خود ارزش قائل هستند.
+              </p>
+              <p>
+                که اکنون شامل مالیات می شود.
+                <span class="text-secondary-300"
+                  >پلتفرم‌هایی که از Benefiq Connect استفاده می‌کنند می‌توانند
+                  مالیات را ارائه دهند</span
+                >
+                به عنوان یک سرویس برای حساب های متصل آنها، به آنها یک راه حل
+                یکپارچه تر، و آسان تر کردن آن برای کاربران پلت فرم مالیات بر
+                فروش، مالیات بر ارزش افزوده، و تعهدات GST خود را به طور خودکار
+                انجام دهند.
+              </p>
+              <p>
+                Benefiq به ما اجازه می دهد تا بازارهای جدید را فوراً روشن کنیم و
+                به سمت آن حرکت کنیم سرعتی که نیازهای در حال رشد و تغییر مشتریان
+                ما را برآورده می کند. من تخمین می زنم که ما دو برابر سریعتر از
+                سایرین حرکت می کنیم پیتر فیتزپاتریک، معاون بازرگانی شرکت
+                <span class="text-secondary-300">Thinkific</span>
+                گفت.
+              </p>
+              <h5>ابزارهایی برای ساده سازی بک آفیس</h5>
+              <p>
+                اگر نرم افزار به دقت پیاده سازی نشود، می تواند به راحتی ایجاد
+                کند بارهای جدید خودش در گزارش بینش CFO، 63 درصد از تیم های مالی
+                گفتند که اکنون از بیش از 10 سیستم مختلف استفاده می کنند برای به
+                دست آوردن یک دیدگاه واحد از امور مالی شرکت خود و 55٪ گفت که می
+                خواهند تعداد برنامه های نرم افزاری را ادغام کنند آنها ظرف دو سال
+                آینده استفاده می کنند. برای کمک، جدید را اضافه می کنیم ویژگی های
+                مجموعه اتوماسیون درآمد و مالی که اجازه می دهد کسب و کارها به
+                راحتی در چندین سیستم عمل کنند، در حالی که دسترسی سریعتر به
+                اطلاعات بینش داده در زمان واقعی
+              </p>
+              <h6>1. دید بیشتر در ایمیل های منشأ Benefiq</h6>
+              <p>
+                بازیابی درآمد بخش مهمی از نحوه به حداکثر رساندن صورت‌حساب Stripe
+                است درآمد: ما از یادگیری ماشینی برای تکرار ناموفق استفاده می
+                کنیم پرداخت در زمان بهینه، بر اساس صدها پویا سیگنال ها الگوریتم
+                تلاش مجدد هوشمند ما به طور مداوم بهتر می شود، و نرخ بازیابی را
+                15.5 درصد در سال 2023 بهبود بخشیده ایم.
+              </p>
+              <p>
+                <span class="text-secondary-300">Deliveroo</span> بهبود یافته
+                است بیش از 100 میلیون پوند درآمد با درآمد Billing ویژگی های
+                بازیابی «کاری که Stripe برای بهبود پرداخت انجام داده است نرخ
+                موفقیت، از استفاده از Stripe Billing تا سریع فعال کردن Deliveroo
+                Plus، دلیل تعبیه شدن Stripe را روشن می کند ویل شو، یکی از
+                بنیانگذاران، گفت: در برخی از بزرگترین ابتکارات ما r and CEO of
+                Deliveroo.
+              </p>
+              <h6>2. ویژگی‌های جدید تشخیص درآمد</h6>
+              <p>
+                یکی از بهترین راه های کسب و کار برای افزایش درآمد، ورود است
+                بازارهای جدید، اما اغلب به دلیل پیچیدگی مالیاتی مانع می شوند که
+                همراه آن است. ما Stripe Tax را برای حل این مشکل ساختیم.
+                کسب‌وکارها می‌توانند به فروش برون مرزی بپردازند و مالیات از
+                مالیات مراقبت می‌کند جمع آوری برای آنها، به طور خودکار. اکنون،
+                مالیات بهتر شده است، با پشتیبانی از 10 کشور جدید (با آوردن تعداد
+                کل کشورهای مورد حمایت از 50 کشور، از جمله تمام اتحادیه اروپا).
+              </p>
+              <p>
+                یکی از وقت گیرترین کارهای پشت آفیس، دقت است شناسایی درآمد در طول
+                دوره های حسابداری
+                <span class="text-secondary-300">Benefiq تشخیص درآمد</span>
+                این فرآیند را ساده می کند و اکنون ویژگی های بتا جدیدی دارد که
+                کمک می کند برای خودکارسازی حسابداری با دقت و سفارشی سازی بیشتر.
+                شما می توانید تصویر کامل تری از درآمد خود به دست آورید
+                <span class="text-secondary-300"
+                  >واردات و مدیریت قراردادهای درآمدی</span
+                >
+                (تصویر زیر را ببینید) از طریق Stripe Billing Connector برای CPQ
+                نیروی فروش. شما همچنین می توانید
+                <span class="text-secondary-300"
+                  >نمودار حساب های خود را سفارشی کنید
+                </span>
+                برای ساده کردن حسابداری در سراسر سیستم ها. در نهایت، اضافی کسب و
+                کارهای مبتنی بر پلت فرم در Stripe Connect اکنون می توانند از
+                <span class="text-secondary-300">تشخیص درآمد.</span>
+                استفاده کند
+              </p>
+              <figure>
+                <img class="w-full" src="img/content-pic-1.jpg" alt="" />
+              </figure>
+              <h6>3. ادغام نیروهای فروش عمیق تر</h6>
+              <p>
+                بازیابی درآمد بخش مهمی از نحوه به حداکثر رساندن صورت‌حساب Stripe
+                است درآمد: ما از یادگیری ماشینی برای تکرار ناموفق استفاده می
+                کنیم پرداخت در زمان بهینه، بر اساس صدها پویا سیگنال ها الگوریتم
+                تلاش مجدد هوشمند ما به طور مداوم بهتر می شود، و نرخ بازیابی را
+                15.5 درصد در سال 2023 بهبود بخشیده ایم.
+              </p>
+              <p>
+                <span class="text-secondary-300">Deliveroo</span>بهبود یافته است
+                بیش از 100 میلیون پوند درآمد با درآمد Billing ویژگی های بازیابی
+                «کاری که Stripe برای بهبود پرداخت انجام داده است نرخ موفقیت، از
+                استفاده از Stripe Billing تا سریع فعال کردن Deliveroo Plus، دلیل
+                تعبیه شدن Stripe را روشن می کند ویل شو، یکی از بنیانگذاران، گفت:
+                در برخی از بزرگترین ابتکارات ما و مدیرعامل Deliveroo.
+              </p>
+              <h6>4. بهبود مهاجرت صورت حساب</h6>
+              <p>
+                یکی از بهترین راه های کسب و کار برای افزایش درآمد، ورود است
+                بازارهای جدید، اما اغلب به دلیل پیچیدگی مالیاتی مانع می شوند که
+                همراه آن است. ما Stripe Tax را برای حل این مشکل ساختیم.
+                کسب‌وکارها می‌توانند به فروش برون مرزی بپردازند و مالیات از
+                مالیات مراقبت می‌کند جمع آوری برای آنها، به طور خودکار. اکنون،
+                مالیات بهتر شده است، با پشتیبانی از 10 کشور جدید (با آوردن تعداد
+                کل کشورهای مورد حمایت از 50 کشور، از جمله تمام اتحادیه اروپا).
+              </p>
+              <p>
+                یکی از بهترین راه های کسب و کار برای افزایش درآمد، ورود است
+                بازارهای جدید، اما اغلب به دلیل پیچیدگی مالیاتی مانع می شوند که
+                همراه آن است. ما Stripe Tax را برای حل این مشکل ساختیم.
+                کسب‌وکارها می‌توانند به فروش برون مرزی بپردازند و مالیات از
+                مالیات مراقبت می‌کند جمع آوری برای آنها، به طور خودکار. اکنون،
+                مالیات بهتر شده است، با پشتیبانی از 10 کشور جدید (با آوردن تعداد
+                کل کشورهای مورد حمایت از 50 کشور، از جمله تمام اتحادیه اروپا).
+              </p>
+              <figure>
+                <img class="w-full" src="img/content-pic-2.jpg" alt="" />
+              </figure>
+              <p>
+                یکی از بهترین راه های کسب و کار برای افزایش درآمد، ورود است
+                بازارهای جدید، اما اغلب به دلیل پیچیدگی مالیاتی مانع می شوند که
+                همراه آن است. ما Stripe Tax را برای حل این مشکل ساختیم.
+                کسب‌وکارها می‌توانند به فروش برون مرزی بپردازند و مالیات از
+                مالیات مراقبت می‌کند جمع آوری برای آنها، به طور خودکار. اکنون،
+                مالیات بهتر شده است، با پشتیبانی از 10 کشور جدید (با آوردن تعداد
+                کل کشورهای مورد حمایت از 50 کشور، از جمله تمام اتحادیه اروپا).
+              </p>
+              <p>
+                یکی از بهترین راه های کسب و کار برای افزایش درآمد، ورود است
+                بازارهای جدید، اما اغلب به دلیل پیچیدگی مالیاتی مانع می شوند که
+                همراه آن است. ما Stripe Tax را برای حل این مشکل ساختیم.
+                کسب‌وکارها می‌توانند به فروش برون مرزی بپردازند و مالیات از
+                مالیات مراقبت می‌کند جمع آوری برای آنها، به طور خودکار. اکنون،
+                مالیات بهتر شده است، با پشتیبانی از 10 کشور جدید (با آوردن تعداد
+                کل کشورهای مورد حمایت از 50 کشور، از جمله تمام اتحادیه اروپا).
+              </p>
+              <h5>ابزارهایی برای بهبود بینش و تصمیم گیری</h5>
+              <p>
+                اگر نرم افزار به دقت پیاده سازی نشود، می تواند به راحتی ایجاد
+                کند بارهای جدید خودش در گزارش بینش CFO، 63 درصد از تیم های مالی
+                گفتند که اکنون از بیش از 10 سیستم مختلف استفاده می کنند برای به
+                دست آوردن یک دیدگاه واحد از امور مالی شرکت خود و 55٪ گفت که می
+                خواهند تعداد برنامه های نرم افزاری را ادغام کنند آنها ظرف دو سال
+                آینده استفاده می کنند. برای کمک، جدید را اضافه می کنیم ویژگی های
+                مجموعه اتوماسیون درآمد و مالی که اجازه می دهد کسب و کارها به
+                راحتی در چندین سیستم عمل کنند، در حالی که دسترسی سریعتر به
+                اطلاعات بینش داده در زمان واقعی
+              </p>
+              <p>
+                اگر نرم افزار به دقت پیاده سازی نشود، می تواند به راحتی ایجاد
+                کند بارهای جدید خودش در گزارش بینش CFO، 63 درصد از تیم های مالی
+                گفتند که اکنون از بیش از 10 سیستم مختلف استفاده می کنند برای به
+                دست آوردن یک دیدگاه واحد از امور مالی شرکت خود و 55٪ گفت که می
+                خواهند تعداد برنامه های نرم افزاری را ادغام کنند آنها ظرف دو سال
+                آینده استفاده می کنند. برای کمک، جدید را اضافه می کنیم ویژگی های
+                مجموعه اتوماسیون درآمد و مالی که اجازه می دهد کسب و کارها به
+                راحتی در چندین سیستم عمل کنند، در حالی که دسترسی سریعتر به
+                اطلاعات بینش داده در زمان واقعی
+              </p>
+              <h5>پایه ای برای آینده</h5>
+              <p>
+                اگر نرم افزار به دقت پیاده سازی نشود، می تواند به راحتی ایجاد
+                کند بارهای جدید خودش در گزارش بینش CFO، 63 درصد از تیم های مالی
+                گفتند که اکنون از بیش از 10 سیستم مختلف استفاده می کنند برای به
+                دست آوردن یک دیدگاه واحد از امور مالی شرکت خود و 55٪ گفت که می
+                خواهند تعداد برنامه های نرم افزاری را ادغام کنند آنها ظرف دو سال
+                آینده استفاده می کنند. برای کمک، جدید را اضافه می کنیم ویژگی های
+                مجموعه اتوماسیون درآمد و مالی که اجازه می دهد کسب و کارها به
+                راحتی در چندین سیستم عمل کنند، در حالی که دسترسی سریعتر به
+                اطلاعات بینش داده در زمان واقعی
+              </p>
+              <p>
+                بازیابی درآمد بخش مهمی از نحوه به حداکثر رساندن صورت‌حساب Stripe
+                است درآمد: ما از یادگیری ماشینی برای تکرار ناموفق استفاده می
+                کنیم پرداخت در زمان بهینه، بر اساس صدها پویا سیگنال ها الگوریتم
+                تلاش مجدد هوشمند ما به طور مداوم بهتر می شود، و نرخ بازیابی را
+                15.5 درصد در سال 2023 بهبود بخشیده ایم.
+              </p>
+              <p>
+                <span class="text-secondary-300">Deliveroo</span> بهبود یافته
+                است بیش از 100 میلیون پوند درآمد با درآمد Billing ویژگی های
+                بازیابی «کاری که Stripe برای بهبود پرداخت انجام داده است نرخ
+                موفقیت، از استفاده از Stripe Billing تا سریع فعال کردن Deliveroo
+                Plus، دلیل تعبیه شدن Stripe را روشن می کند ویل شو، یکی از
+                بنیانگذاران، گفت: در برخی از بزرگترین ابتکارات ما و مدیرعامل
+                Deliveroo.
+              </p>
+            </div>
+            <div
+              class="flex justify-between items-center mt-12 pt-12 border-t border-greyscale-200 md:block md:mt-8 md:pt-8"
+            >
+              <div class="flex items-center md:justify-center md:mb-4">
+                <div class="w-10 h-10 ml-4">
+                  <img
+                    class="w-full h-full object-cover rounded-full"
+                    src="img/avatar-1.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="">
+                  <div class="mb-1 text-lg font-semibold">الکس برجینگ</div>
+                  <div class="text-base text-greyscale-400">
+                    حسابداری در میل چیمپ
+                  </div>
+                </div>
+              </div>
+              <div class="flex space-x-3 md:justify-center">
+                <a
+                  class="group flex justify-center items-center w-10 h-10 rounded-full border border-greyscale-100 bg-greyscale-25 transition-colors hover:border-primary-100 md:w-8 md:h-8 gap"
+                  href="https://www.linkedin.com/company/ui8"
+                  target="_blank"
+                >
+                  <svg
+                    class="w-5 h-5 fill-greyscale-400 transition-colors group-hover:fill-primary-100 md:w-4 md:h-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M9.429 8.969h3.714v1.85c.535-1.064 1.907-2.02 3.968-2.02 3.951 0 4.889 2.118 4.889 6.004V22h-4v-6.312c0-2.213-.535-3.461-1.897-3.461-1.889 0-2.674 1.345-2.674 3.46V22h-4V8.969zM2.57 21.83h4V8.799h-4V21.83zM7.143 4.55a2.53 2.53 0 0 1-.753 1.802c-.484.481-1.138.75-1.82.748a2.59 2.59 0 0 1-1.818-.747A2.55 2.55 0 0 1 2 4.55c0-.677.27-1.325.753-1.803S3.89 2 4.571 2s1.336.269 1.819.747a2.54 2.54 0 0 1 .753 1.803z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  class="group flex justify-center items-center w-10 h-10 rounded-full border border-greyscale-100 bg-greyscale-25 transition-colors hover:border-primary-100 md:w-8 md:h-8"
+                  href="https://twitter.com/ui8"
+                  target="_blank"
+                >
+                  <svg
+                    class="w-5 h-5 fill-greyscale-400 transition-colors group-hover:fill-primary-100 md:w-4 md:h-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M23.356 4.96a9.33 9.33 0 0 1-2.675.733 4.67 4.67 0 0 0 2.048-2.578 9.3 9.3 0 0 1-2.958 1.13 4.66 4.66 0 0 0-5.601-.923 4.66 4.66 0 0 0-2.337 5.173 13.23 13.23 0 0 1-9.602-4.868c-.4.69-.63 1.49-.63 2.342a4.66 4.66 0 0 0 2.072 3.878c-.74-.024-1.463-.223-2.11-.583v.06A4.66 4.66 0 0 0 5.3 13.892c-.686.186-1.406.213-2.104.08a4.66 4.66 0 0 0 4.352 3.234 9.35 9.35 0 0 1-5.786 1.995 9.5 9.5 0 0 1-1.112-.065c2.129 1.369 4.608 2.096 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602a9.47 9.47 0 0 0 2.323-2.41l.002-.003z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  class="group flex justify-center items-center w-10 h-10 rounded-full border border-greyscale-100 bg-greyscale-25 transition-colors hover:border-primary-100 md:w-8 md:h-8"
+                  href="https://www.facebook.com/ui8.net/"
+                  target="_blank"
+                >
+                  <svg
+                    class="w-5 h-5 fill-greyscale-400 transition-colors group-hover:fill-primary-100 md:w-4 md:h-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M2 12.056c0 4.972 3.611 9.106 8.333 9.944v-7.222h-2.5V12h2.5V9.778c0-2.5 1.611-3.888 3.889-3.888.722 0 1.5.111 2.222.222v2.556h-1.277c-1.223 0-1.5.611-1.5 1.389V12h2.667l-.444 2.778h-2.222V22C18.389 21.162 22 17.028 22 12.056 22 6.525 17.5 2 12 2S2 6.525 2 12.056z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- articles-->
+        <div class="relative section-md bg-greyscale-25">
+          <div class="relative z-2">
+            <div class="container">
+              <div class="mb-12 text-h3 xl:text-h4 md:mb-6 md:text-h5">
+                مقاله مرتبط
+              </div>
+              <div
+                class="flex space-x-8 lg:block lg:space-x-0 lg:space-y-8 md:space-y-6"
+              >
+                <div
+                  dir="ltr"
+                  class="flex flex-col flex-1 p-4 border border-greyscale-100 bg-greyscale-0 shadow-2 gapx"
+                >
+                  <div class="relative aspect-[1.77] mb-4 md:aspect-[1.47]">
+                    <img
+                      class="absolute top-0 left-0 w-full h-full object-cover"
+                      src="img/blog-pic-2.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="flex flex-col items-start grow p-2">
+                    <div class="flex w-full justify-right">
+                      <div dir="rtl" class="flex items-center mb-3 space-x-2.5">
+                        <div class="label label-sm gaps">مهندسی</div>
+                        <div class="text-base font-medium text-greyscale-400">
+                          24 فروردین 1403
+                        </div>
+                      </div>
+                    </div>
+                    <div dir="rtl" class="mb-3 text-h5 xl:text-h6 md:text-h6">
+                      تمرکز بر آینده پرداخت ها و مالی اتوماسیون
+                    </div>
+                    <div
+                      dir="rtl"
+                      class="mb-6 line-clamp-2 text-lg text-greyscale-400"
+                    >
+                      ارائه یک تجربه کاربری خوب بدون به خطر انداختن تجربه
+                      نویسندگی ما را ملزم به توسعه یک نویسندگی کرد قالبی که
+                      نویسندگان را قادر می سازد تا تعامل و منطق صفحه ساده بدون
+                      ترکیب کد و محتوا.
+                    </div>
+                    <a
+                      dir="rtl"
+                      class="btn-secondary btn-sm mt-auto pr-3 md:w-full"
+                      href="article.html"
+                    >
+                      <span>بیشتر بخوانید</span>
+                      <svg
+                        class="w-5 h-5 rot"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M12.795 4.905l6.3 6.3.017.017.052.058-.069-.075c.036.036.069.074.1.114l.04.055.03.047.032.057.026.052.023.053a1.13 1.13 0 0 1 0 .835l-.023.052-.026.052-.033.058-.029.046-.04.056-.03.038-.052.058-.017.017-6.3 6.3c-.439.439-1.152.439-1.591 0s-.439-1.152 0-1.591l4.377-4.38H5.7c-.621 0-1.125-.504-1.125-1.125s.504-1.125 1.125-1.125h9.884l-4.379-4.38c-.399-.399-.436-1.024-.109-1.465l.109-.126c.439-.439 1.152-.439 1.591 0z"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div
+                  dir="ltr"
+                  class="flex flex-col flex-1 p-4 border border-greyscale-100 bg-greyscale-0 shadow-2"
+                >
+                  <div class="relative aspect-[1.77] mb-4 md:aspect-[1.47]">
+                    <img
+                      class="absolute top-0 left-0 w-full h-full object-cover"
+                      src="img/blog-pic-3.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="flex flex-col items-start grow p-2">
+                    <div class="flex w-full justify-right">
+                      <div dir="rtl" class="flex items-center mb-3 space-x-2.5">
+                        <div class="label label-sm gaps">مهندسی</div>
+                        <div class="text-base font-medium text-greyscale-400">
+                          24 فروردین 1403
+                        </div>
+                      </div>
+                    </div>
+                    <div dir="rtl" class="mb-3 text-h5 xl:text-h6 md:text-h6">
+                      تمرکز بر آینده پرداخت ها و مالی اتوماسیون
+                    </div>
+                    <div
+                      dir="rtl"
+                      class="mb-6 line-clamp-2 text-lg text-greyscale-400"
+                    >
+                      ارائه یک تجربه کاربری خوب بدون به خطر انداختن تجربه
+                      نویسندگی ما را ملزم به توسعه یک نویسندگی کرد قالبی که
+                      نویسندگان را قادر می سازد تا تعامل و منطق صفحه ساده بدون
+                      ترکیب کد و محتوا.
+                    </div>
+                    <a
+                      dir="rtl"
+                      class="btn-secondary btn-sm mt-auto pr-3 md:w-full"
+                      href="article.html"
+                    >
+                      <span>بیشتر بخوانید</span>
+                      <svg
+                        class="w-5 h-5 rot"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M12.795 4.905l6.3 6.3.017.017.052.058-.069-.075c.036.036.069.074.1.114l.04.055.03.047.032.057.026.052.023.053a1.13 1.13 0 0 1 0 .835l-.023.052-.026.052-.033.058-.029.046-.04.056-.03.038-.052.058-.017.017-6.3 6.3c-.439.439-1.152.439-1.591 0s-.439-1.152 0-1.591l4.377-4.38H5.7c-.621 0-1.125-.504-1.125-1.125s.504-1.125 1.125-1.125h9.884l-4.379-4.38c-.399-.399-.436-1.024-.109-1.465l.109-.126c.439-.439 1.152-.439 1.591 0z"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="absolute top-0 left-1/2 bottom-0 flex justify-between w-[81rem] -translate-x-1/2 pointer-events-none 3xl:w-[75rem] lxl:left-6 lxl:right-6 lxl:w-auto lxl:translate-x-0 md:left-4.5 md:right-4.5"
+          >
+            <div
+              class="w-0.25 bg-repeat bg-[length:100%_.5rem] opacity-60 bg-gradient-divider"
+            ></div>
+            <div
+              class="w-0.25 bg-repeat bg-[length:100%_.5rem] opacity-60 bg-gradient-divider"
+            ></div>
+            <div
+              class="w-0.25 bg-repeat bg-[length:100%_.5rem] opacity-60 bg-gradient-divider"
+            ></div>
+            <div
+              class="w-0.25 bg-repeat bg-[length:100%_.5rem] opacity-60 bg-gradient-divider"
+            ></div>
+            <div
+              class="w-0.25 bg-repeat bg-[length:100%_.5rem] opacity-60 bg-gradient-divider"
+            ></div>
+          </div>
+        </div>
+        <!-- join-->
+        <div class="py-10">
+          <div class="container-md">
+            <div class="p-20 bg-secondary-300 lg:px-12 md:px-4 md:py-12">
+              <div class="max-w-[50rem] mx-auto text-center xl:max-w-[46rem]">
+                <div class="mb-4 text-h1 text-white xl:text-h2 md:text-h4">
+                  ساده سازی پرداخت ها برای رشد کسب و کار
+                </div>
+                <div class="mb-10 text-white/70 md:mb-8 md:px-1">
+                  به بیش از 300 شریک و مشتری در حال رشد با فینتو بپیوندید
+                </div>
+                <div
+                  class="flex justify-center space-x-4 md:block md:space-x-0 md:space-y-4"
+                >
+                  <a
+                    class="btn-primary min-w-[10.6rem] px-5 md:min-w-full gap"
+                    href="sign-up.html"
+                    >ایجاد حساب کاربری</a
+                  >
+                  <a
+                    class="btn-secondary min-w-[10.6rem] px-5 md:min-w-full"
+                    href="contact-us.html"
+                    >تماس با قسمت فروش</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- footer-->
+        <div class="mt-auto py-16 md:pt-12 md:pb-6">
+          <div class="container">
+            <div class="flex mb-18 lg:block lg:mb-14 md:mb-8">
+              <a class="block w-23 ml-auto lg:mb-12 md:mb-8" href="index.html"><img class="w-full" src="img/logo-dark.svg" alt=""></a>
+
+              <div
+                class="flex w-full max-w-[50rem] 3xl:max-w-[45.625rem] lg:max-w-full md:flex-wrap md:-mt-5"
+              >
+                <div
+                  class="grow pr-8 text-lg font-medium last:pr-0 md:w-1/2 md:mt-5 md:pr-5"
+                >
+                  <a
+                    class="inline-block mb-4 text-[#666D80] transition-colors hover:text-primary-100 md:mb-2 md:text-base"
+                    href="features.html"
+                    >امکانات</a
+                  >
+                  <div class="flex flex-col items-start space-y-3">
+                    <a
+                      class="transition-colors hover:text-primary-100 md:text-base"
+                      href="#"
+                      >لینک پرداخت</a
+                    >
+                    <a
+                      class="transition-colors hover:text-primary-100 md:text-base"
+                      href="#"
+                      >صورتحساب دوره ای</a
+                    >
+                    <a
+                      class="transition-colors hover:text-primary-100 md:text-base"
+                      href="#"
+                      >صورتحساب</a
+                    >
+                    <a
+                      class="transition-colors hover:text-primary-100 md:text-base"
+                      href="#"
+                      >تسویه‌حساب</a
+                    >
+                    <a
+                      class="transition-colors hover:text-primary-100 md:text-base"
+                      href="integrations.html"
+                      >یکپارچه سازی
+                    </a>
+                    <a
+                      class="transition-colors hover:text-primary-100 md:text-base"
+                      href="pricing.html"
+                      >قیمت گذاری</a
+                    >
+                  </div>
+                </div>
+                <div
+                  class="grow pr-8 text-lg font-medium last:pr-0 md:w-1/2 md:mt-5 md:pr-5"
+                >
+                  <a
+                    class="inline-block mb-4 text-[#666D80] transition-colors hover:text-primary-100 md:mb-2 md:text-base"
+                    href="solutions.html"
+                    >راه حل ها</a
+                  >
+                  <div class="flex flex-col items-start space-y-3">
+                    <a
+                      class="transition-colors hover:text-primary-100 md:text-base"
+                      href="#"
+                      >تجارت الکترونیک</a
+                    >
+                    <a
+                      class="transition-colors hover:text-primary-100 md:text-base"
+                      href="#"
+                      >اتوماسیون مالی</a
+                    >
+                    <a
+                      class="transition-colors hover:text-primary-100 md:text-base"
+                      href="#"
+                      >رمزنگاری</a
+                    >
+                    <a
+                      class="transition-colors hover:text-primary-100 md:text-base"
+                      href="#"
+                      >تجارت جهانی</a
+                    >
+                    <a
+                      class="transition-colors hover:text-primary-100 md:text-base"
+                      href="#"
+                      >بازارها</a
+                    >
+                  </div>
+                </div>
+                <div
+                  class="grow pr-8 text-lg font-medium last:pr-0 md:w-1/2 md:mt-5 md:pr-5"
+                >
+                  <a
+                    class="inline-block mb-4 text-[#666D80] transition-colors hover:text-primary-100 md:mb-2 md:text-base"
+                    href="integrations.html"
+                    >منابع</a
+                  >
+                  <div class="flex flex-col items-start space-y-3">
+                    <a
+                      class="transition-colors hover:text-primary-100 md:text-base"
+                      href="documentation.html"
+                      >آموزش ها</a
+                    >
+                    <a
+                      class="transition-colors hover:text-primary-100 md:text-base"
+                      href="blog.html"
+                      >وبلاگ</a
+                    >
+                    <a
+                      class="transition-colors hover:text-primary-100 md:text-base"
+                      href="#"
+                      >انجمن</a
+                    >
+                    <a
+                      class="transition-colors hover:text-primary-100 md:text-base"
+                      href="privacy.html"
+                    >
+                      حفظ حریم شخصی</a
+                    >
+                  </div>
+                </div>
+                <div
+                  class="grow pr-8 text-lg font-medium last:pr-0 md:w-1/2 md:mt-5 md:pr-5"
+                >
+                  <a
+                    class="inline-block mb-4 text-[#666D80] transition-colors hover:text-primary-100 md:mb-2 md:text-base"
+                    href="about-us.html"
+                    >درباره</a
+                  >
+                  <div class="flex flex-col items-start space-y-3">
+                    <a
+                      class="transition-colors hover:text-primary-100 md:text-base"
+                      href="#"
+                      >شرکت</a
+                    >
+                    <a
+                      class="transition-colors hover:text-primary-100 md:text-base"
+                      href="career.html"
+                      >مشاغل</a
+                    >
+                    <a
+                      class="transition-colors hover:text-primary-100 md:text-base"
+                      href="faq.html"
+                      >سوالات متداول</a
+                    >
+                    <a
+                      class="transition-colors hover:text-primary-100 md:text-base"
+                      href="contact-us.html"
+                      >تماس با ما</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex justify-between items-center md:block md:pt-8 md:border-t md:border-greyscale-200"
+            >
+              <div
+                class="flex items-center text-lg text-[#666D80] md:justify-center md:mb-4"
+              >
+                <svg
+                  class="w-5 h-5 mr-1 fill-[#666D80]"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M11.992 1.992c5.52 0 10 4.48 10 10s-4.48 10-10 10-10-4.48-10-10 4.48-10 10-10zm0 2c-4.41 0-8 3.59-8 8s3.59 8 8 8 8-3.59 8-8-3.59-8-8-8zm-.15 3.61c1.96 0 3.37 1.21 3.45 3.19h-1.79c-.02-.51-.35-1.6-1.63-1.66-.6.02-1.88.11-1.88 3 0 1.67.55 2.69 1.86 2.73 1.18-.06 1.6-.85 1.63-1.44h1.79c-.03 1.3-1.22 2.95-3.44 2.95-2.91 0-3.84-2.3-3.84-4.24 0-3.14 1.64-4.53 3.85-4.53z"
+                  />
+                </svg>
+                <span>1403 فینتو. تمامی حقوق محفوظ است</span>
+              </div>
+              <div class="flex space-x-4 md:justify-center">
+                <a
+                  class="group gap"
+                  href="https://www.linkedin.com/company/ui8"
+                  target="_blank"
+                >
+                  <svg
+                    class="fill-[#666D80] transition-colors group-hover:fill-primary-100 md:w-5 md:h-5"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M9.429 8.969h3.714v1.85c.535-1.064 1.907-2.02 3.968-2.02 3.951 0 4.889 2.118 4.889 6.004V22h-4v-6.312c0-2.213-.535-3.461-1.897-3.461-1.889 0-2.674 1.345-2.674 3.46V22h-4V8.969zM2.57 21.83h4V8.799h-4V21.83zM7.143 4.55a2.53 2.53 0 0 1-.753 1.802c-.484.481-1.138.75-1.82.748a2.59 2.59 0 0 1-1.818-.747A2.55 2.55 0 0 1 2 4.55c0-.677.27-1.325.753-1.803S3.89 2 4.571 2s1.336.269 1.819.747a2.54 2.54 0 0 1 .753 1.803z"
+                    />
+                  </svg>
+                </a>
+                <a class="group" href="https://twitter.com/ui8" target="_blank">
+                  <svg
+                    class="fill-[#666D80] transition-colors group-hover:fill-primary-100 md:w-5 md:h-5"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M23.356 4.96a9.33 9.33 0 0 1-2.675.733 4.67 4.67 0 0 0 2.048-2.578 9.3 9.3 0 0 1-2.958 1.13 4.66 4.66 0 0 0-5.601-.923 4.66 4.66 0 0 0-2.337 5.173 13.23 13.23 0 0 1-9.602-4.868c-.4.69-.63 1.49-.63 2.342a4.66 4.66 0 0 0 2.072 3.878c-.74-.024-1.463-.223-2.11-.583v.06A4.66 4.66 0 0 0 5.3 13.892c-.686.186-1.406.213-2.104.08a4.66 4.66 0 0 0 4.352 3.234 9.35 9.35 0 0 1-5.786 1.995 9.5 9.5 0 0 1-1.112-.065c2.129 1.369 4.608 2.096 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602a9.47 9.47 0 0 0 2.323-2.41l.002-.003z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  class="group"
+                  href="https://www.facebook.com/ui8.net/"
+                  target="_blank"
+                >
+                  <svg
+                    class="fill-[#666D80] transition-colors group-hover:fill-primary-100 md:w-5 md:h-5"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M2 12.056c0 4.972 3.611 9.106 8.333 9.944v-7.222h-2.5V12h2.5V9.778c0-2.5 1.611-3.888 3.889-3.888.722 0 1.5.111 2.222.222v2.556h-1.277c-1.223 0-1.5.611-1.5 1.389V12h2.667l-.444 2.778h-2.222V22C18.389 21.162 22 17.028 22 12.056 22 6.525 17.5 2 12 2S2 6.525 2 12.056z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="absolute top-0 left-1/2 bottom-0 flex justify-between w-[81rem] -translate-x-1/2 pointer-events-none 3xl:w-[75rem] lxl:left-6 lxl:right-6 lxl:w-auto lxl:translate-x-0 md:left-4.5 md:right-4.5"
+      >
+        <div
+          class="w-0.25 bg-repeat bg-[length:100%_.5rem] opacity-60 bg-gradient-divider"
+        ></div>
+        <div
+          class="w-0.25 bg-repeat bg-[length:100%_.5rem] opacity-60 bg-gradient-divider"
+        ></div>
+        <div
+          class="w-0.25 bg-repeat bg-[length:100%_.5rem] opacity-60 bg-gradient-divider"
+        ></div>
+        <div
+          class="w-0.25 bg-repeat bg-[length:100%_.5rem] opacity-60 bg-gradient-divider"
+        ></div>
+        <div
+          class="w-0.25 bg-repeat bg-[length:100%_.5rem] opacity-60 bg-gradient-divider"
+        ></div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/scroll-lock/2.1.2/scroll-lock.min.js"
+      integrity="sha512-MBbICakhGbnckq5iFnAvaoTQwTyZqIEdhXGbzpNvGhkr+ZhjRdaVmJuNCVyZkObp5O/Mlows81qbzLAalgnoIg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

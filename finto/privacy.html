@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <title>فینتو</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon-16x16.png"
+    />
+    <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- Description no longer than 155 characters -->
+    <meta name="description" content="Finto - Finance Website Coded Template" />
+    <!-- Product Name -->
+    <meta
+      name="product-name"
+      content="Finto - Finance Website Coded Template"
+    />
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ui8" />
+    <meta
+      name="twitter:title"
+      content="Finto - Finance Website Coded Template"
+    />
+    <meta
+      name="twitter:description"
+      content="Premium Finance Website Template"
+    />
+    <meta name="twitter:creator" content="@ui8" />
+    <!-- Twitter Summary card images must be at least 120x120px -->
+    <meta
+      name="twitter:image"
+      content="https://ui8-finto-html-698394efb3c9.herokuapp.com/img/twitter-card.png"
+    />
+    <!-- Open Graph data for Facebook -->
+    <meta
+      property="og:title"
+      content="Finto - Finance Website Coded Template"
+    />
+    <meta property="og:type" content="Article" />
+    <meta
+      property="og:url"
+      content="https://ui8.net/unpixel/products/finto---finance-website-coded-template"
+    />
+    <meta
+      property="og:image"
+      content="https://ui8-finto-html-698394efb3c9.herokuapp.com/img/fb-og-image.png"
+    />
+    <meta
+      property="og:description"
+      content="Premium Finance Website Template"
+    />
+    <meta
+      property="og:site_name"
+      content="Finto - Finance Website Coded Template"
+    />
+    <meta property="fb:admins" content="132951670226590" />
+    <!-- Open Graph data for LinkedIn -->
+    <meta
+      property="og:title"
+      content="Finto - Finance Website Coded Template"
+    />
+    <meta
+      property="og:url"
+      content="https://ui8.net/unpixel/products/finto---finance-website-coded-template"
+    />
+    <meta
+      property="og:image"
+      content="https://ui8-finto-html-698394efb3c9.herokuapp.com/img/linkedin-og-image.png"
+    />
+    <meta
+      property="og:description"
+      content="Premium Finance Website Template"
+    />
+    <!-- Open Graph data for Pinterest -->
+    <meta
+      property="og:title"
+      content="Finto - Finance Website Coded Template"
+    />
+    <meta
+      property="og:url"
+      content="https://ui8.net/unpixel/products/finto---finance-website-coded-template"
+    />
+    <meta
+      property="og:image"
+      content="https://ui8-finto-html-698394efb3c9.herokuapp.com/img/pinterest-og-image.png"
+    />
+    <meta
+      property="og:description"
+      content="Premium Finance Website Template"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/style.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+      rel="stylesheet"
+    />
+    <script>
+      let viewportmeta = document.querySelector('meta[name="viewport"]');
+      if (viewportmeta) {
+        if (screen.width < 375) {
+          let newScale = screen.width / 375;
+          viewportmeta.content =
+            "width=375, minimum-scale=" +
+            newScale +
+            ", maximum-scale=1.0, user-scalable=no, initial-scale=" +
+            newScale +
+            "";
+        } else {
+          viewportmeta.content =
+            "width=device-width, maximum-scale=1.0, initial-scale=1.0";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <!-- header-->
+    <header
+      class="fixed top-0 left-0 right-0 z-20 border-b bg-greyscale-25 border-greyscale-200/60"
+    >
+      <div class="container-md flex items-center h-22 md:h-18">
+        <a class="shrink-0 w-26 ml-12 lg:mr-auto" href="index.html"><img class="w-full" src="img/logo-dark.svg" alt=""></a>
+
+        <div
+          class="header-wrap flex items-center grow lg:fixed lg:top-0 lg:right-0 lg:bottom-0 lg:z-10 lg:w-80 lg:flex-col lg:items-stretch lg:py-20 lg:px-8 lg:pb-8 lg:transition-transform lg:translate-x-full lg:bg-greyscale-0"
+        >
+          <nav
+            class="flex items-center space-x-4 lg:flex-col lg:items-stretch lg:space-x-0 lg:space-y-8"
+          >
+            <a
+              class="px-2.5 py-1 text-base font-medium transition-colors lg:text-xl text-greyscale-900 hover:text-primary-100"
+              href="features.html"
+              >امکانات</a
+            ><a
+              class="px-2.5 py-1 text-base font-medium transition-colors lg:text-xl text-greyscale-900 hover:text-primary-100"
+              href="solutions.html"
+              >راه حل ها</a
+            ><a
+              class="px-2.5 py-1 text-base font-medium transition-colors lg:text-xl text-greyscale-900 hover:text-primary-100"
+              href="customers.html"
+              >مشتریان</a
+            ><a
+              class="px-2.5 py-1 text-base font-medium transition-colors lg:text-xl text-greyscale-900 hover:text-primary-100"
+              href="integrations.html"
+              >منابع</a
+            ><a
+              class="px-2.5 py-1 text-base font-medium transition-colors lg:text-xl text-greyscale-900 hover:text-primary-100"
+              href="pricing.html"
+              >قیمت گذاری</a
+            >
+          </nav>
+          <div class="flex items-center mr-auto space-x-3 lg:mt-auto lg:ml-0">
+            <a
+              class="btn-secondary bg-transparent btn-sm gap"
+              href="sign-in.html"
+              >ورود</a
+            ><a class="btn-primary btn-sm" href="sign-up.html"
+              >ایجاد حساب کاربری</a
+            >
+          </div>
+        </div>
+        <button
+          class="header-burger hidden relative z-20 flex-col justify-center items-start w-6 h-6 tap-highlight-color before:w-5 before:h-0.5 before:rounded-full before:transition-all after:w-5 after:h-0.5 after:rounded-full after:transition-all lg:flex before:bg-greyscale-900 after:bg-greyscale-900"
+        >
+          <span
+            class="w-5 h-0.5 my-1 rounded-full transition-all bg-greyscale-900"
+          ></span>
+        </button>
+      </div>
+      <div
+        class="header-overlay hidden fixed inset-0 z-5 bg-greyscale-900/90 lg:block lg:invisible lg:opacity-0 lg:transition-all"
+      ></div>
+    </header>
+    <div class="relative flex flex-col min-h-screen overflow-hidden">
+      <div class="relative z-2 flex flex-col grow">
+        <!-- hero-->
+        <div class="relative pt-22 bg-greyscale-25 md:pt-18">
+          <div class="relative z-2">
+            <div class="pt-16 pb-24 md:py-12">
+              <div class="container max-w-[61.5rem]">
+                <div class="text-center">
+                  <div class="mb-4 label label-sm">مجوز و یادداشت ها</div>
+                  <div class="mb-4 text-h2 md:text-h4">
+                    سیاست حفظ حریم خصوصی
+                  </div>
+                  <div class="text-lg text-greyscale-400">
+                    آخرین به روزرسانی
+                    <span class="font-semibold text-greyscale-900"
+                      >24 فروردین 1403</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="content mt-16 pt-16 border-t border-greyscale-200 lg:mt-12 lg:pt-12 md:mt-8 md:pt-8"
+                >
+                  <p>
+                    حریم خصوصی شما برای ما مهم است. این سیاست فینتو است به حریم
+                    خصوصی خود احترام بگذارید و از هر قانون قابل اجرا پیروی کنید
+                    مقررات مربوط به هرگونه اطلاعات شخصی که ممکن است جمع آوری
+                    کنیم درباره شما، از جمله در سراسر وب سایت ما، www.finto.com،
+                    و سایت های دیگری که ما مالک و کار می کنیم.
+                  </p>
+                  <p>
+                    اطلاعات شخصی هر اطلاعاتی در مورد شما است که می تواند برای
+                    شناسایی شما استفاده شود این شامل اطلاعاتی در مورد شما می شود
+                    به عنوان یک شخص (مانند نام، آدرس و تاریخ تولد)، شما دستگاه
+                    ها، جزئیات پرداخت، و حتی اطلاعاتی در مورد نحوه شما از یک وب
+                    سایت یا خدمات آنلاین استفاده کنید.
+                  </p>
+                  <p>
+                    در صورتی که سایت ما دارای پیوندهایی به سایت های شخص ثالث
+                    باشد و خدمات، لطفا توجه داشته باشید که آن سایت ها و خدمات
+                    سیاست های حفظ حریم خصوصی خود را دارند. پس از دنبال کردن یک
+                    پیوند به هر محتوای شخص ثالث، شما باید پست آنها را بخوانید
+                    اطلاعات سیاست حفظ حریم خصوصی در مورد نحوه جمع آوری و استفاده
+                    آنها اطلاعات شخصی. این سیاست حفظ حریم خصوصی شامل نمی شود هر
+                    یک از فعالیت های شما پس از خروج از سایت ما.
+                  </p>
+                  <p>این سیاست از 31 اکتبر 2023 قابل اجرا است.</p>
+                  <h5>اطلاعاتی که ما جمع آوری می کنیم</h5>
+                  <p>
+                    اطلاعاتی که جمع آوری می کنیم به یکی از دو دسته تقسیم می
+                    شوند: اطلاعات "به صورت داوطلبانه ارائه شده" و "به طور خودکار
+                    اطلاعات جمع آوری شده است. اطلاعات "به صورت داوطلبانه ارائه
+                    شده". به هر اطلاعاتی که آگاهانه و فعالانه ارائه می کنید
+                    اشاره دارد ما هنگام استفاده یا مشارکت در هر یک از خدمات ما و
+                    تبلیغات
+                  </p>
+                  <p>
+                    اطلاعات "به طور خودکار جمع آوری شده" به هر یک اشاره دارد
+                    اطلاعات به طور خودکار توسط دستگاه های شما در دوره ارسال می
+                    شود دسترسی به محصولات و خدمات ما
+                  </p>
+                  <h5>ثبت داده ها</h5>
+                  <p>
+                    هنگامی که از وب سایت ما بازدید می کنید، سرورهای ما ممکن است
+                    به طور خودکار داده های استاندارد ارائه شده توسط مرورگر وب
+                    خود را وارد کنید. ممکن است آدرس پروتکل اینترنت (IP) دستگاه
+                    خود را شامل شود نوع و نسخه مرورگر، صفحاتی که بازدید می کنید،
+                    زمان و تاریخ بازدید شما، زمان صرف شده در هر صفحه و موارد
+                    دیگر جزئیات در مورد بازدید شما
+                  </p>
+                  <p>
+                    علاوه بر این، اگر هنگام استفاده با خطاهای خاصی مواجه شدید
+                    سایت، ممکن است به طور خودکار اطلاعات مربوط به خطا را جمع
+                    آوری کنیم و شرایط پیرامون وقوع آن. این داده ها ممکن است شامل
+                    جزئیات فنی در مورد دستگاه شما باشد زمانی که خطا رخ داد سعی
+                    در انجام آن داشتند و موارد دیگر اطلاعات فنی مربوط به مشکل
+                    شما ممکن است یا ممکن است حتی در لحظه متوجه چنین خطاهایی
+                    نشوند آنها رخ می دهند، که آنها رخ داده اند، و یا آنچه که
+                    ماهیت خطا است.
+                  </p>
+                  <p>
+                    لطفا توجه داشته باشید که در حالی که این اطلاعات ممکن است
+                    نباشد شناسایی شخصی به خودی خود، ممکن است امکان پذیر باشد آن
+                    را با داده های دیگر ترکیب کنید تا شخصاً فرد را شناسایی کنید
+                    افراد
+                  </p>
+                  <h5>داده های دستگاه</h5>
+                  <p>
+                    هنگامی که از وب سایت ما بازدید می کنید یا با خدمات ما در
+                    تعامل هستید، ما ممکن است به طور خودکار داده های مربوط به
+                    دستگاه شما را جمع آوری کند، مانند:
+                  </p>
+                  <li>نوع دستگاه</li>
+                  <li>سیستم عامل</li>
+                  <li class="mb-4">شناسه های منحصر به فرد دستگاه</li>
+                  <p>
+                    داده‌هایی که جمع‌آوری می‌کنیم می‌تواند به تنظیمات فردی بستگی
+                    داشته باشد دستگاه و نرم افزار شما توصیه می کنیم سیاست ها را
+                    بررسی کنید از سازنده دستگاه یا ارائه دهنده نرم افزار خود
+                    برای یادگیری چه اطلاعاتی را در اختیار ما قرار می دهند.
+                  </p>
+                  <h5>اطلاعات شخصی</h5>
+                  <p>
+                    ما ممکن است اطلاعات شخصی را بخواهیم - برای مثال، زمانی که
+                    شما محتوا را برای ما ارسال کنید یا زمانی که با ما تماس می
+                    گیرید - که ممکن است شامل یک یا چند مورد از موارد زیر باشد:
+                  </p>
+                  <li>نام</li>
+                  <li class="mb-4">ایمیل</li>
+                  <h5>محتوای ایجاد شده توسط کاربر</h5>
+                  <p>
+                    ما "محتوای تولید شده توسط کاربر" را به عنوان مواد (متن،
+                    تصویر و/یا محتوای ویدیویی) که به طور داوطلبانه توسط ما ارائه
+                    می شود کاربران ما به منظور انتشار در وب سایت ما یا انتشار
+                    مجدد در کانال های رسانه های اجتماعی ما همه محتوای تولید شده
+                    توسط کاربر با حساب یا آدرس ایمیل مورد استفاده برای ارسال
+                    مطالب
+                  </p>
+                  <p>
+                    لطفاً توجه داشته باشید که هر محتوایی که برای این منظور ارسال
+                    می کنید انتشار پس از ارسال (و پس از آن) عمومی خواهد شد
+                    فرآیند بررسی یا بررسی). پس از انتشار، ممکن است برای اشخاص
+                    ثالثی که تحت این حریم خصوصی نیستند قابل دسترسی است خط مشی.
+                  </p>
+                  <h5>محتوای ایجاد شده توسط کاربر</h5>
+                  <p>
+                    ما "محتوای تولید شده توسط کاربر" را به عنوان مواد (متن،
+                    تصویر و/یا محتوای ویدیویی) که به طور داوطلبانه توسط ما ارائه
+                    می شود کاربران ما به منظور انتشار در وب سایت ما یا انتشار
+                    مجدد در کانال های رسانه های اجتماعی ما همه محتوای تولید شده
+                    توسط کاربر با حساب یا آدرس ایمیل مورد استفاده برای ارسال
+                    مطالب
+                  </p>
+                  <p>
+                    لطفاً توجه داشته باشید که هر محتوایی که برای این منظور ارسال
+                    می کنید انتشار پس از ارسال (و پس از آن) عمومی خواهد شد
+                    فرآیند بررسی یا بررسی). پس از انتشار، ممکن است برای اشخاص
+                    ثالثی که تحت این حریم خصوصی نیستند قابل دسترسی است خط مشی.
+                  </p>
+                  <h5>دلایل قانونی برای پردازش اطلاعات شخصی شما</h5>
+                  <p>
+                    ما فقط زمانی اطلاعات شخصی شما را جمع آوری و استفاده می کنیم
+                    دلیل موجهی برای این کار داشته باشید. در این مورد، ما فقط
+                    اطلاعات شخصی را جمع آوری کنید که منطقی باشد برای ارائه خدمات
+                    ما به شما ضروری است.
+                  </p>
+                  <h5>جمع آوری و استفاده از اطلاعات</h5>
+                  <p>
+                    در صورت انجام هر کاری ممکن است اطلاعات شخصی از شما جمع آوری
+                    کنیم از موارد زیر در وب سایت ما:
+                  </p>
+                  <li>برای یک حساب کاربری ثبت نام کنید</li>
+                  <li>
+                    برای دریافت به روز رسانی ها از طریق ایمیل یا رسانه های
+                    اجتماعی ثبت نام کنید کانال ها
+                  </li>
+                  <li>
+                    برای دسترسی به محتوای ما از یک دستگاه تلفن همراه یا مرورگر
+                    وب استفاده کنید
+                  </li>
+                  <li>
+                    از طریق ایمیل، رسانه های اجتماعی یا هر مورد مشابه با ما تماس
+                    بگیرید فن آوری ها
+                  </li>
+                  <li class="mb-4">
+                    وقتی در شبکه های اجتماعی از ما نام می برید
+                  </li>
+                  <p>
+                    ما ممکن است اطلاعات را جمع آوری، نگهداری، استفاده و افشا
+                    کنیم اهداف زیر، و اطلاعات شخصی نخواهد بود پردازش بیشتر به
+                    روشی که با آن ناسازگار است این اهداف:
+                  </p>
+                  <li>
+                    تا ویژگی های اصلی پلتفرم خود را در اختیار شما قرار دهیم و
+                    خدمات
+                  </li>
+                  <li>
+                    تا شما را قادر سازد تا تجربه خود را شخصی سازی یا شخصی سازی
+                    کنید وب سایت ما
+                  </li>
+                  <li>برای ارائه محصولات و/ یا خدمات به شماu</li>
+                  <li>برای تماس و ارتباط با شما</li>
+                  <li>
+                    تا شما را قادر به دسترسی و استفاده از وب سایت ما مرتبط کند
+                    برنامه ها و پلتفرم های رسانه های اجتماعی مرتبط
+                  </li>
+                  <li>
+                    برای پیروی از تعهدات قانونی ما و حل و فصل هر اختلافاتی که
+                    ممکن است داشته باشیم
+                  </li>
+                  <li class="mb-4">
+                    برای امنیت و جلوگیری از تقلب و اطمینان از اینکه ما سایت ها و
+                    برنامه ها ایمن، ایمن هستند و مطابق با ما استفاده می شوند
+                    شرایط استفاده
+                  </li>
+                  <p>
+                    ما ممکن است به طور داوطلبانه و به طور خودکار ترکیب کنیم جمع
+                    آوری اطلاعات شخصی با اطلاعات عمومی یا داده های تحقیقاتی که
+                    از منابع معتبر دیگر دریافت می کنیم. برای به عنوان مثال،
+                    فعالیت های بازاریابی و تحقیقات بازار ما ممکن است داده ها و
+                    بینش هایی را که ممکن است با آنها ترکیب کنیم را کشف کنید
+                    اطلاعاتی در مورد نحوه استفاده بازدیدکنندگان از سایت ما برای
+                    بهبود ما سایت و تجربه شما در آن
+                  </p>
+                </div>
+                <div
+                  class="mt-16 pt-16 border-t border-greyscale-200 lg:mt-12 lg:pt-12 md:mt-8 md:pt-8"
+                >
+                  <div class="mb-2 text-h6">با ما تماس بگیرید:</div>
+                  <div class="mb-2 text-greyscale-400">
+                    ایمیل: support(at)finto.co
+                  </div>
+                  <div class="mb-8 text-greyscale-400">
+                    آدرس: Flowbase PTY LTD, 4170, Brisbane, Australia
+                  </div>
+                  <div class="mb-8 text-greyscale-400">
+                    از حمایت مداوم شما متشکریم و امیدواریم که وب سایت یک منبع
+                    ارزشمند برای شما باقی می ماند.
+                  </div>
+                  <div class="text-greyscale-400">خالصانه, <br />تیم فینتو</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="absolute top-0 left-1/2 bottom-0 flex justify-between w-[81rem] -translate-x-1/2 pointer-events-none 3xl:w-[75rem] lxl:left-6 lxl:right-6 lxl:w-auto lxl:translate-x-0 md:left-4.5 md:right-4.5"
+          >
+            <div
+              class="w-0.25 bg-repeat bg-[length:100%_.5rem] opacity-60 bg-gradient-divider"
+            ></div>
+            <div
+              class="w-0.25 bg-repeat bg-[length:100%_.5rem] opacity-60 bg-gradient-divider"
+            ></div>
+            <div
+              class="w-0.25 bg-repeat bg-[length:100%_.5rem] opacity-60 bg-gradient-divider"
+            ></div>
+            <div
+              class="w-0.25 bg-repeat bg-[length:100%_.5rem] opacity-60 bg-gradient-divider"
+            ></div>
+            <div
+              class="w-0.25 bg-repeat bg-[length:100%_.5rem] opacity-60 bg-gradient-divider"
+            ></div>
+          </div>
+        </div>
+        <!-- join-->
+        <div class="py-10">
+          <div class="container-md">
+            <div class="p-20 bg-secondary-300 lg:px-12 md:px-4 md:py-12">
+              <div class="max-w-[50rem] mx-auto text-center xl:max-w-[46rem]">
+                <div class="mb-4 text-h1 text-white xl:text-h2 md:text-h4">
+                  ساده سازی پرداخت ها برای رشد کسب و کار
+                </div>
+                <div class="mb-10 text-white/70 md:mb-8 md:px-1">
+                  به بیش از 300 شریک و مشتری در حال رشد با فینتو بپیوندید
+                </div>
+                <div
+                  class="flex justify-center space-x-4 md:block md:space-x-0 md:space-y-4"
+                >
+                  <a
+                    class="btn-primary min-w-[10.6rem] px-5 md:min-w-full gap"
+                    href="sign-up.html"
+                    >ایجاد حساب کاربری</a
+                  >
+                  <a
+                    class="btn-secondary min-w-[10.6rem] px-5 md:min-w-full"
+                    href="contact-us.html"
+                    >تماس با قسمت فروش</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- footer-->
+        <div class="mt-auto py-16 md:pt-12 md:pb-6">
+          <div class="container">
+            <div class="flex mb-18 lg:block lg:mb-14 md:mb-8">
+              <a class="block w-23 ml-auto lg:mb-12 md:mb-8" href="index.html"><img class="w-full" src="img/logo-dark.svg" alt=""></a>
+
+              <div
+                class="flex w-full max-w-[50rem] 3xl:max-w-[45.625rem] lg:max-w-full md:flex-wrap md:-mt-5"
+              >
+                <div
+                  class="grow pr-8 text-lg font-medium last:pr-0 md:w-1/2 md:mt-5 md:pr-5"
+                >
+                  <a
+                    class="inline-block mb-4 text-[#666D80] transition-colors hover:text-primary-100 md:mb-2 md:text-base"
+                    href="features.html"
+                    >امکانات</a
+                  >
+                  <div class="flex flex-col items-start space-y-3">
+                    <a
+                      class="transition-colors hover:text-primary-100 md:text-base"
+                      href="#"
+                      >لینک پرداخت</a
+                    >
+                    <a
+                      class="transition-colors hover:text-primary-100 md:text-base"
+                      href="#"
+                      >صورتحساب دوره ای</a
+                    >
+                    <a
+                      class="transition-colors hover:text-primary-100 md:text-base"
+                      href="#"
+                      >صورتحساب</a
+                    >
+                    <a
+                      class="transition-colors hover:text-primary-100 md:text-base"
+                      href="#"
+                      >تسویه‌حساب</a
+                    >
+                    <a
+                      class="transition-colors hover:text-primary-100 md:text-base"
+                      href="integrations.html"
+                      >یکپارچه سازی
+                    </a>
+                    <a
+                      class="transition-colors hover:text-primary-100 md:text-base"
+                      href="pricing.html"
+                      >قیمت گذاری</a
+                    >
+                  </div>
+                </div>
+                <div
+                  class="grow pr-8 text-lg font-medium last:pr-0 md:w-1/2 md:mt-5 md:pr-5"
+                >
+                  <a
+                    class="inline-block mb-4 text-[#666D80] transition-colors hover:text-primary-100 md:mb-2 md:text-base"
+                    href="solutions.html"
+                    >راه حل ها</a
+                  >
+                  <div class="flex flex-col items-start space-y-3">
+                    <a
+                      class="transition-colors hover:text-primary-100 md:text-base"
+                      href="#"
+                      >تجارت الکترونیک</a
+                    >
+                    <a
+                      class="transition-colors hover:text-primary-100 md:text-base"
+                      href="#"
+                      >اتوماسیون مالی</a
+                    >
+                    <a
+                      class="transition-colors hover:text-primary-100 md:text-base"
+                      href="#"
+                      >رمزنگاری</a
+                    >
+                    <a
+                      class="transition-colors hover:text-primary-100 md:text-base"
+                      href="#"
+                      >تجارت جهانی</a
+                    >
+                    <a
+                      class="transition-colors hover:text-primary-100 md:text-base"
+                      href="#"
+                      >بازارها</a
+                    >
+                  </div>
+                </div>
+                <div
+                  class="grow pr-8 text-lg font-medium last:pr-0 md:w-1/2 md:mt-5 md:pr-5"
+                >
+                  <a
+                    class="inline-block mb-4 text-[#666D80] transition-colors hover:text-primary-100 md:mb-2 md:text-base"
+                    href="integrations.html"
+                    >منابع</a
+                  >
+                  <div class="flex flex-col items-start space-y-3">
+                    <a
+                      class="transition-colors hover:text-primary-100 md:text-base"
+                      href="documentation.html"
+                      >آموزش ها</a
+                    >
+                    <a
+                      class="transition-colors hover:text-primary-100 md:text-base"
+                      href="blog.html"
+                      >وبلاگ</a
+                    >
+                    <a
+                      class="transition-colors hover:text-primary-100 md:text-base"
+                      href="#"
+                      >انجمن</a
+                    >
+                    <a
+                      class="transition-colors hover:text-primary-100 md:text-base"
+                      href="privacy.html"
+                    >
+                      حفظ حریم شخصی</a
+                    >
+                  </div>
+                </div>
+                <div
+                  class="grow pr-8 text-lg font-medium last:pr-0 md:w-1/2 md:mt-5 md:pr-5"
+                >
+                  <a
+                    class="inline-block mb-4 text-[#666D80] transition-colors hover:text-primary-100 md:mb-2 md:text-base"
+                    href="about-us.html"
+                    >درباره</a
+                  >
+                  <div class="flex flex-col items-start space-y-3">
+                    <a
+                      class="transition-colors hover:text-primary-100 md:text-base"
+                      href="#"
+                      >شرکت</a
+                    >
+                    <a
+                      class="transition-colors hover:text-primary-100 md:text-base"
+                      href="career.html"
+                      >مشاغل</a
+                    >
+                    <a
+                      class="transition-colors hover:text-primary-100 md:text-base"
+                      href="faq.html"
+                      >سوالات متداول</a
+                    >
+                    <a
+                      class="transition-colors hover:text-primary-100 md:text-base"
+                      href="contact-us.html"
+                      >تماس با ما</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex justify-between items-center md:block md:pt-8 md:border-t md:border-greyscale-200"
+            >
+              <div
+                class="flex items-center text-lg text-[#666D80] md:justify-center md:mb-4"
+              >
+                <svg
+                  class="w-5 h-5 mr-1 fill-[#666D80]"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M11.992 1.992c5.52 0 10 4.48 10 10s-4.48 10-10 10-10-4.48-10-10 4.48-10 10-10zm0 2c-4.41 0-8 3.59-8 8s3.59 8 8 8 8-3.59 8-8-3.59-8-8-8zm-.15 3.61c1.96 0 3.37 1.21 3.45 3.19h-1.79c-.02-.51-.35-1.6-1.63-1.66-.6.02-1.88.11-1.88 3 0 1.67.55 2.69 1.86 2.73 1.18-.06 1.6-.85 1.63-1.44h1.79c-.03 1.3-1.22 2.95-3.44 2.95-2.91 0-3.84-2.3-3.84-4.24 0-3.14 1.64-4.53 3.85-4.53z"
+                  />
+                </svg>
+                <span>1403 فینتو. تمامی حقوق محفوظ است</span>
+              </div>
+              <div class="flex space-x-4 md:justify-center">
+                <a
+                  class="group gap"
+                  href="https://www.linkedin.com/company/ui8"
+                  target="_blank"
+                >
+                  <svg
+                    class="fill-[#666D80] transition-colors group-hover:fill-primary-100 md:w-5 md:h-5"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M9.429 8.969h3.714v1.85c.535-1.064 1.907-2.02 3.968-2.02 3.951 0 4.889 2.118 4.889 6.004V22h-4v-6.312c0-2.213-.535-3.461-1.897-3.461-1.889 0-2.674 1.345-2.674 3.46V22h-4V8.969zM2.57 21.83h4V8.799h-4V21.83zM7.143 4.55a2.53 2.53 0 0 1-.753 1.802c-.484.481-1.138.75-1.82.748a2.59 2.59 0 0 1-1.818-.747A2.55 2.55 0 0 1 2 4.55c0-.677.27-1.325.753-1.803S3.89 2 4.571 2s1.336.269 1.819.747a2.54 2.54 0 0 1 .753 1.803z"
+                    />
+                  </svg>
+                </a>
+                <a class="group" href="https://twitter.com/ui8" target="_blank">
+                  <svg
+                    class="fill-[#666D80] transition-colors group-hover:fill-primary-100 md:w-5 md:h-5"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M23.356 4.96a9.33 9.33 0 0 1-2.675.733 4.67 4.67 0 0 0 2.048-2.578 9.3 9.3 0 0 1-2.958 1.13 4.66 4.66 0 0 0-5.601-.923 4.66 4.66 0 0 0-2.337 5.173 13.23 13.23 0 0 1-9.602-4.868c-.4.69-.63 1.49-.63 2.342a4.66 4.66 0 0 0 2.072 3.878c-.74-.024-1.463-.223-2.11-.583v.06A4.66 4.66 0 0 0 5.3 13.892c-.686.186-1.406.213-2.104.08a4.66 4.66 0 0 0 4.352 3.234 9.35 9.35 0 0 1-5.786 1.995 9.5 9.5 0 0 1-1.112-.065c2.129 1.369 4.608 2.096 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602a9.47 9.47 0 0 0 2.323-2.41l.002-.003z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  class="group"
+                  href="https://www.facebook.com/ui8.net/"
+                  target="_blank"
+                >
+                  <svg
+                    class="fill-[#666D80] transition-colors group-hover:fill-primary-100 md:w-5 md:h-5"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M2 12.056c0 4.972 3.611 9.106 8.333 9.944v-7.222h-2.5V12h2.5V9.778c0-2.5 1.611-3.888 3.889-3.888.722 0 1.5.111 2.222.222v2.556h-1.277c-1.223 0-1.5.611-1.5 1.389V12h2.667l-.444 2.778h-2.222V22C18.389 21.162 22 17.028 22 12.056 22 6.525 17.5 2 12 2S2 6.525 2 12.056z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="absolute top-0 left-1/2 bottom-0 flex justify-between w-[81rem] -translate-x-1/2 pointer-events-none 3xl:w-[75rem] lxl:left-6 lxl:right-6 lxl:w-auto lxl:translate-x-0 md:left-4.5 md:right-4.5"
+      >
+        <div
+          class="w-0.25 bg-repeat bg-[length:100%_.5rem] opacity-60 bg-gradient-divider"
+        ></div>
+        <div
+          class="w-0.25 bg-repeat bg-[length:100%_.5rem] opacity-60 bg-gradient-divider"
+        ></div>
+        <div
+          class="w-0.25 bg-repeat bg-[length:100%_.5rem] opacity-60 bg-gradient-divider"
+        ></div>
+        <div
+          class="w-0.25 bg-repeat bg-[length:100%_.5rem] opacity-60 bg-gradient-divider"
+        ></div>
+        <div
+          class="w-0.25 bg-repeat bg-[length:100%_.5rem] opacity-60 bg-gradient-divider"
+        ></div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/scroll-lock/2.1.2/scroll-lock.min.js"
+      integrity="sha512-MBbICakhGbnckq5iFnAvaoTQwTyZqIEdhXGbzpNvGhkr+ZhjRdaVmJuNCVyZkObp5O/Mlows81qbzLAalgnoIg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
