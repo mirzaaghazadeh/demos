@@ -1,0 +1,27 @@
+# Coolify build pack: Docker Compose.
+#
+# Replaces the nixpacks build so the nginx config is ours rather than generated:
+# directory-without-index returns 404 instead of 403, assets get real cache
+# headers, HTML and the PWA service worker are never cached, and the
+# underscore-prefixed PWA files are served.
+#
+# SERVICE_FQDN_DEMOS_80 is how Coolify attaches the domain and issues the
+# certificate; it maps the app's FQDN to port 80 in this container. Set the
+# domain in Coolify (it already holds https://demos.navid.tr) and REDEPLOY —
+# Traefik labels are generated at deploy time, so a domain added after the last
+# deploy does not take effect until the next one.
+services:
+  demos:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - SERVICE_FQDN_DEMOS_80
+    expose:
+      - "80"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1/healthz"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
