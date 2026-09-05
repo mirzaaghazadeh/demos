@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>باشگاه مشتریان — افزونه امتیاز و وفادارسازی ووکامرس</title>
-<meta name="description" content="افزونه باشگاه مشتریان ووکامرس: امتیاز خرید، بازخرید در تسویه‌حساب، انقضای شمسی، پیامک کاوه‌نگار/SMS.ir/ملی‌پیامک — کاملاً فارسی و سازگار با HPOS.">
+<title>امتیازیار — باشگاه مشتریان و امتیاز وفاداری ووکامرس</title>
+<meta name="description" content="امتیازیار، افزونه باشگاه مشتریان ووکامرس: امتیاز خرید، بازخرید در تسویه‌حساب، انقضای شمسی، پیامک کاوه‌نگار/SMS.ir/ملی‌پیامک — کاملاً فارسی و سازگار با HPOS.">
 <style>
 @font-face{font-family:'IRANSansX';font-weight:400;src:url('assets/font/IRANSansX-Regular.woff2') format('woff2')}
 @font-face{font-family:'IRANSansX';font-weight:700;src:url('assets/font/IRANSansX-Bold.woff2') format('woff2')}
@@ -66,7 +66,7 @@ section{padding:56px 0}
 .shots{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .shot{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;text-decoration:none;display:block;box-shadow:0 10px 30px rgba(11,46,35,.07);transition:transform .2s}
 .shot:hover{transform:translateY(-4px)}
-.shot img{width:100%;display:block}
+.shot img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:top;display:block}
 .shot .cap{padding:12px 16px;font-size:13.5px;font-weight:700;color:#4c5447;border-top:1px solid var(--line)}
 .shot .cap small{display:block;font-weight:400;color:var(--mut);font-size:12px}
 
@@ -111,7 +111,7 @@ footer a{color:var(--emerald);text-decoration:none;margin:0 8px}
 
 <header>
   <div class="wrap hrow">
-    <div class="logo"><span class="coin">۹</span> باشگاه مشتریان</div>
+    <div class="logo"><span class="coin">۹</span> امتیازیار</div>
     <nav>
       <a href="#shots">تصاویر پنل</a>
       <a href="#feats">امکانات</a>
@@ -165,7 +165,7 @@ footer a{color:var(--emerald);text-decoration:none;margin:0 8px}
       <a class="shot" href="shots/admin-log.png" target="_blank"><img src="shots/admin-log.png" alt="گردش امتیاز"><div class="cap">گردش امتیاز<small>گزارش کامل تراکنش‌ها با فیلتر تاریخ شمسی و خروجی CSV</small></div></a>
       <a class="shot" href="shots/admin-settings.png" target="_blank"><img src="shots/admin-settings.png" alt="تنظیمات افزونه"><div class="cap">تنظیمات<small>نرخ امتیاز، دوره نگه‌داشت، بونوس‌ها و مستثنی‌ها — بدون یک خط کد</small></div></a>
       <a class="shot" href="shots/front-account.png" target="_blank"><img src="shots/front-account.png" alt="حساب کاربری مشتری"><div class="cap">حساب کاربری مشتری<small>کارت موجودی، قوانین کسب امتیاز و تاریخچه در پنل کاربری ووکامرس</small></div></a>
-      <a class="shot" href="shots/front-checkout.png" target="_blank"><img src="shots/front-checkout.png" alt="بازخرید امتیاز در تسویه"><div class="cap">بازخرید در تسویه<small>مشتری امتیازش را در صفحه پرداخت خرج می‌کند — کسر آنی از مبلغ سفارش</small></div></a>
+      <a class="shot" href="shots/front-checkout.png" target="_blank"><img src="shots/front-checkout.png" alt="بازخرید امتیاز در تسویه" style="object-position:center 71%"><div class="cap">بازخرید در تسویه<small>مشتری امتیازش را همان‌جا در صفحه پرداخت خرج می‌کند و تخفیف واقعی از مبلغ سفارش کم می‌شود</small></div></a>
     </div>
   </section>
 
@@ -214,7 +214,7 @@ footer a{color:var(--emerald);text-decoration:none;margin:0 8px}
       <a href="https://demos.navid.tr/bitter">بیتر</a>·
       <a href="https://demos.navid.tr/finapp">فین‌آپ</a>·
       <a href="https://demos.navid.tr/neptune">نپتون</a>·
-      <a href="https://demos.navid.tr/customer-club">باشگاه مشتریان</a>
+      <a href="https://demos.navid.tr/customer-club">امتیازیار</a>
     </div>
     <div class="fline">دموهای محصولات</div>
   </div>
