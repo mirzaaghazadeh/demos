@@ -82,7 +82,12 @@ details p{color:var(--mut);font-size:14px;margin-top:10px}
 .final p{color:#AEBAD4;margin-top:8px}
 .final .btn{margin-top:22px}
 footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--mut);font-size:12.5px;text-align:center}
-@media(max-width:900px){.hero .in{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.show{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.st{grid-template-columns:repeat(2,1fr)}nav{display:none}}
+.vids{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.vid{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 14px 34px rgba(31,41,55,.10)}
+.vid video{display:block;width:100%;aspect-ratio:16/9;background:#0a0f22}
+.vid figcaption{padding:12px 16px;font-size:13.5px;color:var(--mut);border-top:1px solid var(--line)}
+.vid figcaption b{color:var(--g1)}
+@media(max-width:900px){.hero .in{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.show{grid-template-columns:1fr}.vids{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.st{grid-template-columns:repeat(2,1fr)}nav{display:none}}
 </style>
 </head>
 <body>
@@ -94,12 +99,13 @@ footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--mut);fon
       مالیات‌یار
     </div>
     <nav>
+      <a href="#video">ویدیو</a>
       <a href="#features">امکانات</a>
       <a href="#shots">نمونه‌ها</a>
       <a href="#how">نحوهٔ کار</a>
       <a href="#faq">سوالات</a>
     </nav>
-    <a class="cta" href="#shots">تصاویر افزونه</a>
+    <a class="cta" href="#video">تماشای ویدیو</a>
   </div>
 </header>
 
@@ -109,23 +115,23 @@ footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--mut);fon
     <div>
       <span class="eyebrow">WOOCOMMERCE E-INVOICE</span>
       <h1>صورتحساب الکترونیکی، <em>بدون دردسرِ</em> سامانه مودیان</h1>
-      <p class="sub">افزونه «مالیات‌یار» سفارش‌های ووکامرس را خودکار به صورتحساب الکترونیکی تبدیل و مستقیم به سامانه مودیان سازمان امور مالیاتی ارسال می‌کند — کلیدسازی، آموزش و اتصال، همه داخل افزونه.</p>
+      <p class="sub">افزونه «مالیات‌یار» سفارش‌های ووکامرس را خودکار به صورتحساب الکترونیکی تبدیل و مستقیم به سامانه مودیان سازمان امور مالیاتی ارسال می‌کند — فقط با کلید، بدون گواهی امضا و بدون شرکت معتمد؛ کلیدسازی، آموزش و اتصال، همه داخل افزونه.</p>
       <div class="acts">
-        <a class="btn btn-a" href="#features">امکانات افزونه</a>
-        <a class="btn btn-g" href="#shots">مشاهدهٔ تصاویر محصول</a>
+        <a class="btn btn-a" href="#video">تماشای ویدیوی معرفی</a>
+        <a class="btn btn-g" href="#features">امکانات افزونه</a>
       </div>
       <div class="badges">
+        <span><i></i>اتصال با کلید، بدون گواهی</span>
         <span><i></i>کلیدسازی داخل افزونه</span>
         <span><i></i>ویزارد مصور کارپوشه</span>
         <span><i></i>سازگار با HPOS</span>
-        <span><i></i>تسویه‌حساب بلوکی</span>
-        <span><i></i>حالت پروکسی</span>
+        <span><i></i>فایل پروکسی آماده</span>
       </div>
     </div>
     <div class="mock">
       <div class="browser">
         <div class="bbar"><span class="d d1"></span><span class="d d2"></span><span class="d d3"></span></div>
-        <img src="shots/hero-reports.jpg" alt="گزارش صورتحساب‌های مالیات‌یار">
+        <img src="shots/hero-reports-110.jpg" alt="گزارش صورتحساب‌های مالیات‌یار">
       </div>
       <span class="chip c1"><i></i>ارسال موفق</span>
       <span class="chip c2"><i></i>ثبت در سامانه</span>
@@ -138,7 +144,21 @@ footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--mut);fon
     <div><div class="v">۳ گام</div><div class="l">تا اتصال کامل به سامانه</div></div>
     <div><div class="v">خودکار</div><div class="l">ارسال با تغییر وضعیت سفارش</div></div>
     <div><div class="v">ساعتی</div><div class="l">استعلام خودکار وضعیت صورتحساب‌ها</div></div>
-    <div><div class="v">JWE</div><div class="l">رمزنگاری استاندارد مستندات v2</div></div>
+    <div><div class="v">بدون گواهی</div><div class="l">اتصال مستقیم فقط با کلید</div></div>
+  </div>
+</section>
+
+<section class="sec" id="video">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="k">ویدیو</span>
+      <h2>مالیات‌یار را در عمل ببینید</h2>
+      <p>تصاویر واقعی افزونه؛ آموزش کامل از نصب و ساخت کلید تا ارسال و پیگیری صورتحساب</p>
+    </div>
+    <div class="vids">
+      <figure class="vid"><video controls preload="none" playsinline poster="video/promo-cover-110.jpg" src="video/promo-110.mp4"></video><figcaption><b>معرفی</b> — مالیات‌یار در کمتر از ۲ دقیقه</figcaption></figure>
+      <figure class="vid"><video controls preload="none" playsinline poster="video/training-cover-110.jpg" src="video/training-110.mp4"></video><figcaption><b>آموزش کامل</b> — راه‌اندازی، تنظیمات، ارسال، گزارش و اصلاحیه (۱۲ دقیقه)</figcaption></figure>
+    </div>
   </div>
 </section>
 
@@ -150,14 +170,14 @@ footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--mut);fon
       <p>از فعال‌سازی تا ابطال و اصلاحیه — همه‌چیز داخل ووکامرس</p>
     </div>
     <div class="grid">
-      <div class="f"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/></svg></div><h3>کلیدسازی داخل افزونه</h3><p>کلید RSA با یک کلیک ساخته و به‌صورت رمزنگاری‌شده ذخیره می‌شود؛ بدون فایل و بدون سرویس بیرونی.</p></div>
+      <div class="f"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/></svg></div><h3>کلیدسازی داخل افزونه</h3><p>کلید RSA با یک کلیک ساخته و به‌صورت رمزنگاری‌شده ذخیره می‌شود؛ یا کلیدی را که پیش‌تر در کارپوشه ثبت کرده‌اید وارد کنید.</p></div>
       <div class="f"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 19V5a2 2 0 012-2h12a2 2 0 012 2v14"/><path d="M9 8h6M9 12h6M9 16h4"/></svg></div><h3>ویزارد مصور کارپوشه</h3><p>راهنمای قدم‌به‌قدم با تصویر برای آپلود کلید عمومی و دریافت شناسه یکتای حافظه مالیاتی.</p></div>
       <div class="f"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4z"/></svg></div><h3>ارسال خودکار</h3><p>با تغییر وضعیت سفارش، صورتحساب ساخته و در صف ارسال قرار می‌گیرد؛ با تلاش مجدد هوشمند.</p></div>
-      <div class="f"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 6l9 6 9-6"/><rect x="3" y="4" width="18" height="16" rx="2"/></svg></div><h3>پاکت رمزنگاری استاندارد</h3><p>پیاده‌سازی دقیق JWS و JWE مطابق مستندات رسمی نسخه ۲ (RSA-OAEP-256 + AES-256-GCM).</p></div>
+      <div class="f"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 6l9 6 9-6"/><rect x="3" y="4" width="18" height="16" rx="2"/></svg></div><h3>اتصال فقط با کلید</h3><p>کلید عمومی را در کارپوشه ثبت می‌کنید و صورتحساب‌ها روی سایت خودتان امضا می‌شوند؛ گواهی امضا و شرکت معتمد لازم نیست. آزموده با صورتحساب واقعی روی سامانه.</p></div>
       <div class="f"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><h3>کد کالا و خدمت</h3><p>فیلد اختصاصی روی صفحهٔ ویرایش هر محصول و هر واریانت، با کد عمومی پیش‌فرض برای محصولات فاقد کد.</p></div>
-      <div class="f"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 6l9 6 9-6"/><rect x="3" y="4" width="18" height="16" rx="2"/></svg></div><h3>استعلام و گزارش</h3><p>ستون وضعیت مودیان در سفارش‌ها، استعلام خودکار هر ساعت و گزارش صف، رویدادها و خطاهای دقیق.</p></div>
+      <div class="f"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 6l9 6 9-6"/><rect x="3" y="4" width="18" height="16" rx="2"/></svg></div><h3>استعلام و گزارش</h3><p>ستون وضعیت مودیان در سفارش‌ها، استعلام خودکار هر ساعت، عملیات گروهی، جست‌وجو و خروجی اکسل.</p></div>
       <div class="f"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 12a9 9 0 109-9"/><path d="M3 12v5h5"/></svg></div><h3>ابطال، اصلاحیه و برگشت</h3><p>ابطال، اصلاحیه و برگشت از فروش از داخل سفارش؛ پس از ابطال، صدور دوبارهٔ صورتحساب درست.</p></div>
-      <div class="f"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M2 12h20M12 3a15 15 0 010 18 15 15 0 010-18z"/></svg></div><h3>حالت پروکسی</h3><p>برای هاست‌های خارج از ایران؛ همهٔ درخواست‌ها از مسیر امن شما رد می‌شود.</p></div>
+      <div class="f"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M2 12h20M12 3a15 15 0 010 18 15 15 0 010-18z"/></svg></div><h3>سرور خارج از ایران؟</h3><p>فایل پروکسی آماده را از تنظیمات دانلود و روی یک هاست ساده داخل ایران بارگذاری کنید؛ فقط با کلید مخصوص فروشگاه شما کار می‌کند.</p></div>
       <div class="f"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg></div><h3>HPOS، جلالی و تسویهٔ بلوکی</h3><p>سازگار با جدول سفارش‌های HPOS و تسویه‌حساب بلوکی ووکامرس؛ همهٔ تاریخ‌ها شمسی با اعداد فارسی.</p></div>
     </div>
   </div>
@@ -170,14 +190,14 @@ footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--mut);fon
       <h2>از ویزارد تا گزارش‌ها</h2>
     </div>
     <div class="show">
-      <figure class="shot"><div class="b"><i class="d1"></i><i class="d2"></i><i class="d3"></i></div><img src="shots/s-wizard.jpg" alt="ویزارد راه‌اندازی"><figcaption>ویزارد راه‌اندازی — آموزش مصور شش‌مرحله‌ای کارپوشه داخل افزونه</figcaption></figure>
-      <figure class="shot"><div class="b"><i class="d1"></i><i class="d2"></i><i class="d3"></i></div><img src="shots/s-orders.jpg" alt="فهرست سفارش‌ها"><figcaption>ستون «وضعیت مودیان» و شناسهٔ مالیاتی روی فهرست سفارش‌ها</figcaption></figure>
-      <figure class="shot"><div class="b"><i class="d1"></i><i class="d2"></i><i class="d3"></i></div><img src="shots/s-reports.jpg" alt="گزارش صورتحساب‌ها"><figcaption>گزارش وضعیت‌ها، صف ارسال و استعلام با یک کلیک</figcaption></figure>
-      <figure class="shot"><div class="b"><i class="d1"></i><i class="d2"></i><i class="d3"></i></div><img src="shots/s-cancel.jpg" alt="صورتحساب در صفحهٔ سفارش"><figcaption>ارسال، ابطال، اصلاحیه و برگشت از فروش از صفحهٔ سفارش</figcaption></figure>
-      <figure class="shot"><div class="b"><i class="d1"></i><i class="d2"></i><i class="d3"></i></div><img src="shots/s-variation.jpg" alt="کد کالای واریانت"><figcaption>کد کالا/خدمت جداگانه برای هر واریانت محصول</figcaption></figure>
-      <figure class="shot"><div class="b"><i class="d1"></i><i class="d2"></i><i class="d3"></i></div><img src="shots/s-checkout.jpg" alt="فرم صورت‌حساب رسمی در تسویه"><figcaption>نوع شخص و کد ملی / شناسهٔ ملی خریدار در تسویه‌حساب بلوکی</figcaption></figure>
+      <figure class="shot"><div class="b"><i class="d1"></i><i class="d2"></i><i class="d3"></i></div><img src="shots/s-wizard-110.jpg" alt="ویزارد راه‌اندازی"><figcaption>ویزارد راه‌اندازی — ساخت کلید داخل افزونه و آموزش مصور کارپوشه</figcaption></figure>
+      <figure class="shot"><div class="b"><i class="d1"></i><i class="d2"></i><i class="d3"></i></div><img src="shots/s-orders-110.jpg" alt="فهرست سفارش‌ها"><figcaption>ستون «وضعیت مودیان» و شناسهٔ مالیاتی روی فهرست سفارش‌ها</figcaption></figure>
+      <figure class="shot"><div class="b"><i class="d1"></i><i class="d2"></i><i class="d3"></i></div><img src="shots/s-reports-110.jpg" alt="گزارش صورتحساب‌ها"><figcaption>گزارش با عملیات گروهی، جست‌وجو و خروجی اکسل</figcaption></figure>
+      <figure class="shot"><div class="b"><i class="d1"></i><i class="d2"></i><i class="d3"></i></div><img src="shots/s-cancel-110.jpg" alt="صورتحساب در صفحهٔ سفارش"><figcaption>ارسال، ابطال، اصلاحیه و برگشت از فروش از صفحهٔ سفارش</figcaption></figure>
+      <figure class="shot"><div class="b"><i class="d1"></i><i class="d2"></i><i class="d3"></i></div><img src="shots/s-variation-110.jpg" alt="کد کالای واریانت"><figcaption>کد کالا/خدمت جداگانه برای هر واریانت محصول</figcaption></figure>
+      <figure class="shot"><div class="b"><i class="d1"></i><i class="d2"></i><i class="d3"></i></div><img src="shots/s-checkout-110.jpg" alt="فرم صورت‌حساب رسمی در تسویه"><figcaption>نوع شخص و کد ملی / شناسهٔ ملی خریدار در تسویه‌حساب بلوکی</figcaption></figure>
     </div>
-    <div class="proto"><a href="prototype.jpg" target="_blank">⤢ مشاهدهٔ تصویر کامل پروتوتایپ محصول</a></div>
+    <div class="proto"><a href="prototype-110.jpg" target="_blank">⤢ مشاهدهٔ تصویر کامل پروتوتایپ محصول</a></div>
   </div>
 </section>
 
@@ -188,9 +208,9 @@ footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--mut);fon
       <h2>در سه گام به سامانه مودیان وصل شوید</h2>
     </div>
     <div class="steps">
-      <div class="step"><h3>کلید خودکار</h3><p>افزونه کلید RSA را می‌سازد و کلید عمومی را برای کارپوشه آماده می‌کند.</p></div>
+      <div class="step"><h3>کلید خودکار</h3><p>افزونه کلید RSA را می‌سازد (یا کلید فعلی‌تان را وارد می‌کنید) و کلید عمومی را برای کارپوشه آماده می‌کند.</p></div>
       <div class="step"><h3>کارپوشه با آموزش مصور</h3><p>طبق راهنمای قدم‌به‌قدم داخل افزونه، کلید عمومی را در my.tax.gov.ir آپلود و شناسه یکتا را دریافت کنید.</p></div>
-      <div class="step"><h3>اتصال و ارسال خودکار</h3><p>شناسه یکتا و کد اقتصادی را وارد کنید؛ از این پس صورتحساب‌ها خودکار ارسال می‌شوند.</p></div>
+      <div class="step"><h3>اتصال و ارسال خودکار</h3><p>شناسه یکتا و کد اقتصادی را وارد کنید و «آزمون اتصال» را بزنید؛ از این پس صورتحساب‌ها خودکار ارسال می‌شوند.</p></div>
     </div>
   </div>
 </section>
@@ -202,10 +222,11 @@ footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--mut);fon
       <h2>پیش از خرید بخوانید</h2>
     </div>
     <details><summary>آیا برای اتصال به سرویس واسط یا پرداخت هزینه ماهانه لازم است؟</summary><p>خیر. افزونه مستقیم با سامانه مودیان صحبت می‌کند و کلیدها داخل خود سایت شما ساخته و ذخیره می‌شوند. هزینه توکن یا اشتراک خارجی وجود ندارد.</p></details>
-    <details><summary>گواهی الکترونیکی چیست و از کجا می‌گیرم؟</summary><p>برای امضای پایدار صورتحساب‌ها، گواهی معتبر (از مرجع رسمی مانند گیکا) لازم است. تا دریافت آن، افزونه با کلید کارپوشه کار می‌کند و ویزارد مسیر دریافت گواهی را هم قدم‌به‌قدم نشان می‌دهد.</p></details>
+    <details><summary>گواهی امضای الکترونیکی لازم است؟</summary><p>خیر. اتصال فقط با کلید کار می‌کند: کلید عمومی‌ای که در کارپوشه ثبت کرده‌اید کافی است و صورتحساب‌ها روی سایت خودتان امضا می‌شوند. اگر گواهی امضا دارید، بارگذاری آن اختیاری است.</p></details>
     <details><summary>سفارش‌ها چطور و چه زمانی ارسال می‌شوند؟</summary><p>روی وضعیتی که انتخاب می‌کنید (پیش‌فرض: تکمیل‌شده) صورتحساب ساخته و در صف قرار می‌گیرد؛ صف با تلاش مجدد هوشمند و ضدتکرار کار می‌کند تا هیچ سفارشی دوبار ارسال نشود.</p></details>
     <details><summary>محصولات بدون کد مالیاتی چه می‌شوند؟</summary><p>با کد عمومی پیش‌فرض ارسال می‌شوند و هر وقت خواستید، از صفحهٔ ویرایش همان محصول کد اختصاصی‌اش را وارد می‌کنید.</p></details>
-    <details><summary>هاست من خارج از ایران است، کار می‌کند؟</summary><p>بله؛ حالت پروکسی را فعال کنید تا درخواست‌های سامانه مودیان از مسیر مشخص شما عبور کند.</p></details>
+    <details><summary>هاست من خارج از ایران است، کار می‌کند؟</summary><p>بله. سامانه مودیان فقط به سرورهای داخل ایران پاسخ می‌دهد؛ فایل پروکسی آماده را از تنظیمات افزونه دانلود و روی یک هاست ساده داخل ایران بارگذاری کنید.</p></details>
+    <details><summary>هاست چه چیزی لازم دارد؟</summary><p>وردپرس ۶ و ووکامرس ۸ به بالا، PHP 7.4 یا 8.1 به بالا با OpenSSL، و ionCube Loader که بیشتر هاست‌ها در تنظیمات PHP دارند. لایسنس ژاکت روی دامنهٔ فروشگاه فعال می‌شود.</p></details>
   </div>
 </section>
 
@@ -213,12 +234,12 @@ footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--mut);fon
   <div class="final">
     <h2>فصل جدید صورتحساب‌های فروشگاه‌تان</h2>
     <p>الان مالیات‌یار را نصب کنید و از جریمهٔ نبودن در سامانه مودیان دور بمانید.</p>
-    <a class="btn btn-a" href="#shots">مشاهدهٔ تصاویر افزونه</a>
+    <a class="btn btn-a" href="#video">تماشای ویدیو</a>
   </div>
 </div>
 
 <footer>
-  <div class="wrap">مالیات‌یار — افزونه صورتحساب الکترونیکی سامانه مودیان · مطابق مستندات رسمی نسخه ۲ سازمان امور مالیاتی</div>
+  <div class="wrap">مالیات‌یار نسخهٔ ۱.۱.۰ — افزونه صورتحساب الکترونیکی سامانه مودیان برای ووکامرس · آزموده با صورتحساب واقعی روی سامانهٔ مودیان</div>
 </footer>
 
 </body>
