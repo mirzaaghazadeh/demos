@@ -5,35 +5,43 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>مالیات‌یار — افزونه صورتحساب الکترونیکی سامانه مودیان ووکامرس</title>
 <style>
-@font-face{font-family:'Vazirmatn';font-weight:400;src:url('assets/font/Vazirmatn-Regular.woff2') format('woff2')}
-@font-face{font-family:'Vazirmatn';font-weight:700;src:url('assets/font/Vazirmatn-Bold.woff2') format('woff2')}
-:root{--ink:#111827;--g1:#1F2937;--g2:#263241;--teal:#0D9488;--teal2:#2DD4BF;--teal3:#5EEAD4;--bg:#F8FAFC;--line:#E2E7F0;--mut:#5A6B8C}
+/* Same kit as the Zhaket images (2026-10-24): Yekan Bakh, teal 400–900 + mint + one gold accent, patterned backgrounds. */
+@font-face{font-family:'YekanBakh';font-weight:400;font-display:swap;src:url('assets/font/YekanBakhFaNum-Regular.woff2') format('woff2')}
+@font-face{font-family:'YekanBakh';font-weight:700;font-display:swap;src:url('assets/font/YekanBakhFaNum-Bold.woff2') format('woff2')}
+@font-face{font-family:'YekanBakh';font-weight:800;font-display:swap;src:url('assets/font/YekanBakhFaNum-ExtraBold.woff2') format('woff2')}
+@font-face{font-family:'YekanBakh';font-weight:900;font-display:swap;src:url('assets/font/YekanBakhFaNum-Black.woff2') format('woff2')}
+:root{--ink:#042f2e;--g1:#134e4a;--g2:#115e59;--teal:#0D9488;--teal2:#2DD4BF;--teal3:#99F6E4;--gold:#FBBF24;--bg:#F0FDFA;--line:#CDEFE8;--mut:#3b5553}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Vazirmatn',Tahoma,sans-serif;background:var(--bg);color:#1F2937;line-height:1.9}
+body{font-family:'YekanBakh',Tahoma,sans-serif;background:radial-gradient(rgba(13,148,136,.10) 1.4px,transparent 1.8px) 0 0/26px 26px,linear-gradient(180deg,#F0FDFA,#E6FAF5);background-attachment:fixed;color:var(--ink);line-height:1.9}
 .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
-header{position:sticky;top:0;z-index:50;background:rgba(248,250,252,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header{position:sticky;top:0;z-index:50;background:rgba(240,253,250,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .hd{display:flex;align-items:center;gap:26px;height:66px}
-.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:19px;color:var(--g1)}
+.logo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:20px;color:var(--g1)}
 .logo .mk{width:36px;height:36px;border-radius:11px;background:linear-gradient(135deg,var(--teal2),#0F766E);display:flex;align-items:center;justify-content:center}
 .logo .mk svg{width:22px;height:22px}
 nav{display:flex;gap:20px;font-size:14px;color:var(--mut);margin-right:6px}
 nav a{color:inherit;text-decoration:none}
 .cta{margin-right:auto;display:inline-flex;align-items:center;background:linear-gradient(135deg,var(--teal2),var(--teal));color:#0b1512;font-weight:700;font-size:14px;padding:9px 20px;border-radius:12px;text-decoration:none;box-shadow:0 8px 18px rgba(13,148,136,.3)}
-.hero{position:relative;overflow:hidden;color:#fff;padding:64px 0 84px;background:radial-gradient(700px 380px at 88% -10%,rgba(13,148,136,.25),transparent 60%),linear-gradient(135deg,var(--g2),var(--g1) 55%,var(--ink))}
-.hero .dots{position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.08) 2px,transparent 2px);background-size:34px 34px;mask-image:linear-gradient(180deg,#000 30%,transparent 95%);-webkit-mask-image:linear-gradient(180deg,#000 30%,transparent 95%)}
+.hero{position:relative;overflow:hidden;color:#fff;padding:64px 0 84px;background:radial-gradient(520px 360px at 18% 70%,rgba(153,246,228,.45),transparent 70%),radial-gradient(520px 300px at 95% -5%,rgba(253,230,138,.30),transparent 70%),radial-gradient(600px 400px at 100% 110%,rgba(4,47,46,.5),transparent 75%),linear-gradient(155deg,#19c3ae,#0d9488 46%,#0b6f67)}
+.hero .dots{position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.22) 2px,transparent 2.6px);background-size:30px 30px;mask-image:radial-gradient(80% 80% at 50% 50%,transparent 30%,#000 90%);-webkit-mask-image:radial-gradient(80% 80% at 50% 50%,transparent 30%,#000 90%)}
+.hero .ring{position:absolute;border-radius:50%;border:2px solid rgba(255,255,255,.16);pointer-events:none}
 .hero .in{position:relative;display:grid;grid-template-columns:1fr 1.05fr;gap:44px;align-items:center}
-.eyebrow{display:inline-flex;color:var(--teal3);border:1.5px solid rgba(94,234,212,.45);padding:6px 16px;border-radius:999px;font-size:13px;font-weight:700;letter-spacing:1px}
-.hero h1{font-size:38px;line-height:1.55;margin:18px 0 12px}
-.hero h1 em{font-style:normal;color:var(--teal3)}
-.hero p.sub{color:#AEBAD4;font-size:16.5px;max-width:480px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--ink);background:var(--gold);padding:6px 16px;border-radius:999px;font-size:14px;font-weight:900;box-shadow:0 8px 18px -8px rgba(4,47,46,.6)}
+.hero h1{font-size:40px;font-weight:900;line-height:1.5;margin:18px 0 12px;text-shadow:0 3px 12px rgba(4,47,46,.25)}
+.hero h1 em{font-style:normal;color:#FDE68A}
+.hero p.sub{color:rgba(255,255,255,.92);font-size:16.5px;max-width:480px}
+.hero .robot{position:absolute;left:-74px;bottom:-62px;width:140px;height:auto;z-index:3;filter:drop-shadow(0 14px 18px rgba(4,47,46,.45))}
+.cta{white-space:nowrap}
+.zbadge{display:inline-flex;align-items:center;gap:10px;background:#fff;color:var(--ink);font-weight:800;font-size:14px;padding:7px 16px 7px 10px;border-radius:13px;box-shadow:0 10px 24px -10px rgba(4,47,46,.55)}
+.zbadge img{height:30px;width:auto;display:block}
 .acts{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 26px;border-radius:13px;font-weight:700;font-size:15px;text-decoration:none}
-.btn-a{background:linear-gradient(135deg,var(--teal2),var(--teal));color:#0b1512;box-shadow:0 10px 24px rgba(13,148,136,.4)}
-.btn-g{border:1.5px solid rgba(255,255,255,.25);color:#fff}
-.badges{display:flex;gap:18px;margin-top:26px;color:#8FA0C4;font-size:13px;flex-wrap:wrap}
-.badges span{display:inline-flex;align-items:center;gap:7px}
-.badges i{width:7px;height:7px;border-radius:50%;background:var(--teal2)}
+.btn-a{background:#fff;color:var(--g2);box-shadow:0 10px 24px rgba(4,47,46,.35)}
+.btn-g{border:1.5px solid rgba(255,255,255,.55);color:#fff}
+.badges{display:flex;gap:10px;margin-top:26px;font-size:13.5px;flex-wrap:wrap}
+.badges span{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.95);color:var(--ink);font-weight:800;padding:5px 12px;border-radius:999px}
+.badges i{width:8px;height:8px;border-radius:50%;background:var(--teal)}
 .mock{position:relative}
 .browser{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 40px 90px rgba(0,0,0,.45),0 8px 24px rgba(0,0,0,.3);border:1px solid rgba(255,255,255,.14)}
 .bbar{height:44px;background:#1B2437;display:flex;align-items:center;gap:9px;padding:0 18px}
@@ -46,20 +54,20 @@ nav a{color:inherit;text-decoration:none}
 .c1 i{background:#BBF7D0}
 .c2{bottom:100px;right:-22px;background:rgba(13,148,136,.95)}
 .c2 i{background:#99F6E4}
-.stats{background:var(--ink);color:#fff;padding:30px 0}
+.stats{background:linear-gradient(135deg,#134e4a,#042f2e);color:#fff;padding:30px 0}
 .st{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;text-align:center}
-.st .v{font-size:26px;font-weight:700;color:var(--teal3)}
-.st .l{color:#8FA0C4;font-size:13px;margin-top:2px}
+.st .v{font-size:27px;font-weight:900;color:var(--gold)}
+.st .l{color:#b6e9e0;font-size:13.5px;margin-top:2px}
 .sec{padding:64px 0}
 .sec-head{text-align:center;max-width:640px;margin:0 auto 40px}
-.k{display:inline-block;background:linear-gradient(135deg,var(--teal2),var(--teal));color:#0b1512;font-size:12.5px;font-weight:700;padding:5px 18px;border-radius:999px;margin-bottom:14px}
-.sec-head h2{font-size:30px;color:var(--g1)}
+.k{display:inline-block;background:linear-gradient(135deg,var(--teal2),var(--teal));color:#fff;font-size:13px;font-weight:900;padding:5px 18px;border-radius:999px;margin-bottom:14px}
+.sec-head h2{font-size:31px;font-weight:900;color:var(--g1)}
 .sec-head p{color:var(--mut);margin-top:8px;font-size:15px}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .f{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 20px}
-.f .ic{width:46px;height:46px;border-radius:13px;background:linear-gradient(135deg,#E6FFFB,#C7F5EE);display:flex;align-items:center;justify-content:center;margin-bottom:12px}
-.f .ic svg{width:24px;height:24px;stroke:#0F766E}
-.f h3{font-size:16px;color:var(--g1)}
+.f .ic{width:46px;height:46px;border-radius:13px;background:linear-gradient(145deg,var(--teal2),#0F766E);display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+.f .ic svg{width:24px;height:24px;stroke:#fff}
+.f h3{font-size:16.5px;font-weight:900;color:var(--g1)}
 .f p{font-size:13.5px;color:var(--mut);margin-top:5px}
 .show{display:grid;grid-template-columns:1fr 1fr;gap:22px}
 .shot{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 14px 34px rgba(31,41,55,.10)}
@@ -71,16 +79,24 @@ nav a{color:inherit;text-decoration:none}
 .proto a{display:inline-flex;align-items:center;gap:9px;background:#fff;border:1.5px dashed rgba(13,148,136,.6);color:#0F766E;font-weight:700;font-size:14px;padding:11px 26px;border-radius:999px;text-decoration:none}
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:s}
 .step{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;position:relative}
-.step::before{counter-increment:s;content:counter(s,persian);position:absolute;top:-14px;right:22px;width:34px;height:34px;border-radius:11px;background:linear-gradient(135deg,var(--teal2),var(--teal));color:#0b1512;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:16px}
-.step h3{font-size:16px;color:var(--g1);margin-top:6px}
+.step::before{counter-increment:s;content:counter(s,persian);position:absolute;top:-14px;right:22px;width:34px;height:34px;border-radius:11px;background:linear-gradient(135deg,var(--teal2),var(--teal));color:#fff;font-weight:900;display:flex;align-items:center;justify-content:center;font-size:16px}
+.step h3{font-size:16.5px;font-weight:900;color:var(--g1);margin-top:6px}
+.reqs{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.req{display:flex;gap:14px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 18px}
+.req .ic{flex-shrink:0;width:44px;height:44px;border-radius:13px;background:linear-gradient(145deg,var(--teal2),#0F766E);display:flex;align-items:center;justify-content:center}
+.req .ic svg{width:22px;height:22px;stroke:#fff}
+.req h3{font-size:16px;font-weight:900;color:var(--g1)}
+.req p{font-size:13.5px;color:var(--mut)}
 .step p{font-size:13.5px;color:var(--mut);margin-top:6px}
 details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin-bottom:12px}
-summary{font-weight:700;color:var(--g1);cursor:pointer;font-size:15px}
+summary{font-weight:800;color:var(--g1);cursor:pointer;font-size:15px}
 details p{color:var(--mut);font-size:14px;margin-top:10px}
-.final{background:radial-gradient(600px 300px at 85% -20%,rgba(13,148,136,.3),transparent 60%),linear-gradient(135deg,var(--g2),var(--ink));border-radius:24px;color:#fff;padding:46px 40px;text-align:center;margin:20px 0 70px}
-.final h2{font-size:28px}
-.final p{color:#AEBAD4;margin-top:8px}
+.final{position:relative;overflow:hidden;background:radial-gradient(rgba(255,255,255,.18) 2px,transparent 2.6px) 0 0/28px 28px,radial-gradient(500px 300px at 15% 100%,rgba(153,246,228,.45),transparent 70%),linear-gradient(155deg,#19c3ae,#0d9488 50%,#0b6f67);border-radius:24px;color:#fff;padding:46px 40px 46px 220px;text-align:center;margin:20px 0 70px}
+.final h2{font-size:30px;font-weight:900}
+.final p{color:rgba(255,255,255,.92);margin-top:8px}
 .final .btn{margin-top:22px}
+.final .robot{position:absolute;left:40px;bottom:-8px;width:126px;height:auto;filter:drop-shadow(0 12px 16px rgba(4,47,46,.45))}
+.final .zbadge{margin-top:22px;margin-right:10px}
 footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--mut);font-size:12.5px;text-align:center}
 .vids{display:grid;grid-template-columns:1fr;gap:22px;max-width:860px;margin:0 auto}
 .vnote{max-width:860px;margin:16px auto 0;text-align:center;color:var(--mut);font-size:14.5px}
@@ -89,7 +105,7 @@ footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--mut);fon
 .vid video{display:block;width:100%;aspect-ratio:16/9;background:#0a0f22}
 .vid figcaption{padding:12px 16px;font-size:13.5px;color:var(--mut);border-top:1px solid var(--line)}
 .vid figcaption b{color:var(--g1)}
-@media(max-width:900px){.hero .in{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.show{grid-template-columns:1fr}.vids{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.st{grid-template-columns:repeat(2,1fr)}nav{display:none}}
+@media(max-width:900px){.hero .in{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.show{grid-template-columns:1fr}.vids{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.reqs{grid-template-columns:1fr}.st{grid-template-columns:repeat(2,1fr)}nav{display:none}.hero .robot{display:none}.final{padding:40px 22px 200px}.final .robot{left:50%;margin-left:-60px;width:120px}.hd{gap:12px}.hd .zbadge span{display:none}.cta{padding:9px 14px}}
 </style>
 </head>
 <body>
@@ -97,7 +113,7 @@ footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--mut);fon
 <header>
   <div class="wrap hd">
     <div class="logo">
-      <span class="mk"><svg viewBox="0 0 24 24" fill="none"><path d="M6 2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" stroke="#0b1512" stroke-width="2" stroke-linejoin="round"/><path d="M14 2v6h6" stroke="#0b1512" stroke-width="2" stroke-linejoin="round"/><path d="M9 13h6M9 17h4" stroke="#0b1512" stroke-width="2" stroke-linecap="round"/></svg></span>
+      <span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2.5h12a1 1 0 0 1 1 1V21l-2.5-1.5L14 21l-2-1.5L10 21l-2.5-1.5L5 21V3.5a1 1 0 0 1 1-1z"/><path d="M9 11.5l2 2 4-4.5"/></svg></span>
       مالیات‌یار
     </div>
     <nav>
@@ -105,17 +121,21 @@ footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--mut);fon
       <a href="#features">امکانات</a>
       <a href="#shots">نمونه‌ها</a>
       <a href="#how">نحوهٔ کار</a>
+      <a href="#reqs">پیش‌نیازها</a>
       <a href="#faq">سوالات</a>
     </nav>
-    <a class="cta" href="#video">تماشای ویدیو</a>
+    <span class="zbadge" style="margin-right:auto"><img src="img/zhaket-logo.svg" alt="ژاکت"><span>به‌زودی در ژاکت</span></span>
+    <a class="cta" href="#video" style="margin-right:0">تماشای ویدیو</a>
   </div>
 </header>
 
 <section class="hero">
   <div class="dots"></div>
+  <span class="ring" style="width:520px;height:520px;left:-180px;top:120px"></span>
+  <span class="ring" style="width:360px;height:360px;right:-140px;top:-160px"></span>
   <div class="wrap in">
     <div>
-      <span class="eyebrow">WOOCOMMERCE E-INVOICE</span>
+      <span class="eyebrow">افزونه صورتحساب الکترونیکی ووکامرس</span>
       <h1>صورتحساب الکترونیکی، <em>بدون دردسرِ</em> سامانه مودیان</h1>
       <p class="sub">افزونه «مالیات‌یار» سفارش‌های ووکامرس را خودکار به صورتحساب الکترونیکی تبدیل و مستقیم به سامانه مودیان سازمان امور مالیاتی ارسال می‌کند — فقط با کلید، بدون گواهی امضا و بدون شرکت معتمد؛ کلیدسازی، آموزش و اتصال، همه داخل افزونه.</p>
       <div class="acts">
@@ -133,10 +153,11 @@ footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--mut);fon
     <div class="mock">
       <div class="browser">
         <div class="bbar"><span class="d d1"></span><span class="d d2"></span><span class="d d3"></span></div>
-        <img src="shots/hero-reports-110.jpg" alt="گزارش صورتحساب‌های مالیات‌یار">
+        <img src="shots/hero-reports-111.jpg" alt="گزارش صورتحساب‌های مالیات‌یار">
       </div>
       <span class="chip c1"><i></i>ارسال موفق</span>
       <span class="chip c2"><i></i>ثبت در سامانه</span>
+      <img class="robot" src="img/robot-key-111.webp" alt="" width="520" height="589">
     </div>
   </div>
 </section>
@@ -192,14 +213,14 @@ footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--mut);fon
       <h2>از ویزارد تا گزارش‌ها</h2>
     </div>
     <div class="show">
-      <figure class="shot"><div class="b"><i class="d1"></i><i class="d2"></i><i class="d3"></i></div><img src="shots/s-wizard-110.jpg" alt="ویزارد راه‌اندازی"><figcaption>ویزارد راه‌اندازی — ساخت کلید داخل افزونه و آموزش مصور کارپوشه</figcaption></figure>
-      <figure class="shot"><div class="b"><i class="d1"></i><i class="d2"></i><i class="d3"></i></div><img src="shots/s-orders-110.jpg" alt="فهرست سفارش‌ها"><figcaption>ستون «وضعیت مودیان» و شناسهٔ مالیاتی روی فهرست سفارش‌ها</figcaption></figure>
-      <figure class="shot"><div class="b"><i class="d1"></i><i class="d2"></i><i class="d3"></i></div><img src="shots/s-reports-110.jpg" alt="گزارش صورتحساب‌ها"><figcaption>گزارش با عملیات گروهی، جست‌وجو و خروجی اکسل</figcaption></figure>
-      <figure class="shot"><div class="b"><i class="d1"></i><i class="d2"></i><i class="d3"></i></div><img src="shots/s-cancel-110.jpg" alt="صورتحساب در صفحهٔ سفارش"><figcaption>ارسال، ابطال، اصلاحیه و برگشت از فروش از صفحهٔ سفارش</figcaption></figure>
-      <figure class="shot"><div class="b"><i class="d1"></i><i class="d2"></i><i class="d3"></i></div><img src="shots/s-variation-110.jpg" alt="کد کالای واریانت"><figcaption>کد کالا/خدمت جداگانه برای هر واریانت محصول</figcaption></figure>
-      <figure class="shot"><div class="b"><i class="d1"></i><i class="d2"></i><i class="d3"></i></div><img src="shots/s-checkout-110.jpg" alt="فرم صورت‌حساب رسمی در تسویه"><figcaption>نوع شخص و کد ملی / شناسهٔ ملی خریدار در تسویه‌حساب بلوکی</figcaption></figure>
+      <figure class="shot"><div class="b"><i class="d1"></i><i class="d2"></i><i class="d3"></i></div><img src="shots/s-wizard-111.jpg" alt="ویزارد راه‌اندازی"><figcaption>ویزارد راه‌اندازی — ساخت کلید داخل افزونه و آموزش مصور کارپوشه</figcaption></figure>
+      <figure class="shot"><div class="b"><i class="d1"></i><i class="d2"></i><i class="d3"></i></div><img src="shots/s-orders-111.jpg" alt="فهرست سفارش‌ها"><figcaption>ستون «وضعیت مودیان» و شناسهٔ مالیاتی روی فهرست سفارش‌ها</figcaption></figure>
+      <figure class="shot"><div class="b"><i class="d1"></i><i class="d2"></i><i class="d3"></i></div><img src="shots/s-reports-111.jpg" alt="گزارش صورتحساب‌ها"><figcaption>گزارش با عملیات گروهی، جست‌وجو و خروجی اکسل</figcaption></figure>
+      <figure class="shot"><div class="b"><i class="d1"></i><i class="d2"></i><i class="d3"></i></div><img src="shots/s-cancel-111.jpg" alt="صورتحساب در صفحهٔ سفارش"><figcaption>ارسال، ابطال، اصلاحیه و برگشت از فروش از صفحهٔ سفارش</figcaption></figure>
+      <figure class="shot"><div class="b"><i class="d1"></i><i class="d2"></i><i class="d3"></i></div><img src="shots/s-variation-111.jpg" alt="کد کالای واریانت"><figcaption>کد کالا/خدمت جداگانه برای هر واریانت محصول</figcaption></figure>
+      <figure class="shot"><div class="b"><i class="d1"></i><i class="d2"></i><i class="d3"></i></div><img src="shots/s-checkout-111.jpg" alt="فرم صورت‌حساب رسمی در تسویه"><figcaption>نوع شخص و کد ملی / شناسهٔ ملی خریدار در تسویه‌حساب بلوکی</figcaption></figure>
     </div>
-    <div class="proto"><a href="prototype-110.jpg" target="_blank">⤢ مشاهدهٔ تصویر کامل پروتوتایپ محصول</a></div>
+    <div class="proto"><a href="infographic-111.jpg" target="_blank">⤢ مشاهدهٔ اینفوگرافی کامل محصول</a></div>
   </div>
 </section>
 
@@ -211,8 +232,26 @@ footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--mut);fon
     </div>
     <div class="steps">
       <div class="step"><h3>کلید خودکار</h3><p>افزونه کلید RSA را می‌سازد (یا کلید فعلی‌تان را وارد می‌کنید) و کلید عمومی را برای کارپوشه آماده می‌کند.</p></div>
-      <div class="step"><h3>کارپوشه با آموزش مصور</h3><p>طبق راهنمای قدم‌به‌قدم داخل افزونه، کلید عمومی را در my.tax.gov.ir آپلود و شناسه یکتا را دریافت کنید.</p></div>
+      <div class="step"><h3>کارپوشه با آموزش مصور</h3><p>طبق راهنمای قدم‌به‌قدم داخل افزونه، کلید عمومی را در کارپوشه بارگذاری و شناسهٔ یکتای حافظه را دریافت کنید.</p></div>
       <div class="step"><h3>اتصال و ارسال خودکار</h3><p>شناسه یکتا و کد اقتصادی را وارد کنید و «آزمون اتصال» را بزنید؛ از این پس صورتحساب‌ها خودکار ارسال می‌شوند.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="reqs" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="k">پیش‌نیازها</span>
+      <h2>پیش‌نیازها و سازگاری</h2>
+      <p>پیش از خرید، این موارد را روی هاست و پروندهٔ مالیاتی‌تان بررسی کنید</p>
+    </div>
+    <div class="reqs">
+      <div class="req"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg></div><div><h3>وردپرس و ووکامرس</h3><p>وردپرس ۶٫۰ و ووکامرس ۸٫۰ به بالا؛ آزموده تا وردپرس ۷٫۱ و ووکامرس ۱۱٫۲</p></div></div>
+      <div class="req"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="7" rx="2"/><rect x="2" y="14" width="20" height="7" rx="2"/><path d="M6 6.5h.01M6 17.5h.01"/></svg></div><div><h3>PHP</h3><p>۷٫۴ یا ۸٫۱ به بالا (PHP ۸٫۰ پشتیبانی نمی‌شود)، با افزونهٔ OpenSSL</p></div></div>
+      <div class="req"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><div><h3>ionCube Loader</h3><p>نسخهٔ ۱۴ به بالا روی هاست؛ روی PHP ۸٫۴ نسخهٔ ۱۵. بیشتر هاست‌ها آن را در تنظیمات PHP دارند</p></div></div>
+      <div class="req"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2.5h12a1 1 0 0 1 1 1V21l-2.5-1.5L14 21l-2-1.5L10 21l-2.5-1.5L5 21V3.5a1 1 0 0 1 1-1z"/><path d="M9 11.5l2 2 4-4.5"/></svg></div><div><h3>پرونده در کارپوشه</h3><p>شناسهٔ یکتای حافظهٔ مالیاتی با روش ارسال «توسط مؤدی»</p></div></div>
+      <div class="req"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></div><div><h3>دسترسی به سامانه</h3><p>سرور داخل ایران، یا فایل پروکسی آماده برای هاست خارج از ایران</p></div></div>
+      <div class="req"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M1 2h4l2.7 12.4a2 2 0 0 0 2 1.6h8.7a2 2 0 0 0 2-1.6L22 6H6"/></svg></div><div><h3>قالب و تسویه‌حساب</h3><p>هر قالب استاندارد ووکامرس، تسویه‌حساب کلاسیک یا بلوکی، و HPOS</p></div></div>
     </div>
   </div>
 </section>
@@ -234,9 +273,11 @@ footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--mut);fon
 
 <div class="wrap">
   <div class="final">
+    <img class="robot" src="img/robot-wave-111.webp" alt="" width="420" height="595">
     <h2>فصل جدید صورتحساب‌های فروشگاه‌تان</h2>
-    <p>الان مالیات‌یار را نصب کنید و از جریمهٔ نبودن در سامانه مودیان دور بمانید.</p>
+    <p>صورتحساب هر سفارش، خودکار در سامانه مودیان؛ فقط با کلید و داخل ووکامرس.</p>
     <a class="btn btn-a" href="#video">تماشای ویدیو</a>
+    <span class="zbadge"><img src="img/zhaket-logo.svg" alt="ژاکت">به‌زودی در ژاکت</span>
   </div>
 </div>
 
